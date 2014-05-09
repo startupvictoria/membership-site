@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails'
 gem 'pg'
 gem 'rails', '4.1.1'

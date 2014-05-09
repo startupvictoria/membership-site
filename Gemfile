@@ -8,4 +8,5 @@ gem 'uglifier', '>= 1.3.0'
 
 group :test do
   gem 'rspec-rails', '>= 3.0.0.beta2'
+  gem 'capybara'
 end

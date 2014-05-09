@@ -27,3 +27,15 @@ Run the bootstrap script to set up the app dependencies:
 ```
 ./script/bootstrap.sh
 ```
+
+### Run!
+
+```
+foreman start
+```
+
+### Sanity Check
+
+```
+rspec
+```

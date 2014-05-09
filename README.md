@@ -14,3 +14,16 @@ Features:
 * logged-in members get access to more content
 
 The site is responsive.
+
+Setup
+=====
+
+### Bootstrap
+
+Prerequisites: postgresql
+
+Run the bootstrap script to set up the app dependencies:
+
+```
+./script/bootstrap.sh
+```

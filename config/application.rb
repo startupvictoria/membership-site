@@ -10,6 +10,7 @@ require "sprockets/railtie"
 Bundler.setup(*Rails.groups)
 
 require 'dotenv-rails'
+require 'haml'
 
 module StartupVictoria
   class Application < Rails::Application

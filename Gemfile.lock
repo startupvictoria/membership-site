@@ -52,6 +52,8 @@ GEM
     foreman (0.63.0)
       dotenv (>= 0.7)
       thor (>= 0.13.6)
+    haml (4.0.5)
+      tilt
     hike (1.2.3)
     i18n (0.6.9)
     json (1.8.1)
@@ -150,6 +152,7 @@ DEPENDENCIES
   capybara!
   dotenv-rails
   foreman
+  haml
   pg
   rails (= 4.1.1)
   rspec-rails (>= 3.0.0.beta2)

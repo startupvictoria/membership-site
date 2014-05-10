@@ -1,7 +1,7 @@
 require 'acceptance_spec_helper'
 
 feature "logging in" do
-  scenario "I can log in from the home page" do
+  scenario "I can log in & out from the home page" do
     User.create!(
       password: "att1cus",
       email: "atticus@gmail.com",
@@ -16,5 +16,9 @@ feature "logging in" do
     log_in_page.submit
 
     expect(page).to have_content("Logout")
+
+    page.click_on "Logout"
+
+    expect(page).to have_content("Login")
   end
 end

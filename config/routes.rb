@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get "/login", to: "authentication#login",    as: :login
   post "/authenticate", to: "authentication#create", as: :authenticate
+  get "/logout", to: "authentication#destroy",    as: :logout
 
   get "/forgot_password", to: "authentication#forgot_password", as: :forgot_password
 

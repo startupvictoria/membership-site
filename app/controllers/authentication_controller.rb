@@ -16,6 +16,11 @@ class AuthenticationController < ApplicationController
   def forgot_password
   end
 
+  def destroy
+    authenticator.log_out
+    redirect_to root_url
+  end
+
   private
 
   def log_in_form

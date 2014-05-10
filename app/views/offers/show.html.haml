@@ -1,0 +1,44 @@
+%div{ style: "min-height:600px;background-color: #ededed" }
+  .cont
+    %h3.redtitle{ style: "padding:30px 0 10px 0;font-size:27px;" }
+      Member Offers
+    .cleanit
+      .member-offers{ style: "float:left;width:742px;" }
+        %div{ style: "color:#00a2d3;padding-bottom:20px;line-height: 22px" }
+          %i
+            Here are all the freebies and discounts you get as a member.
+            Hover over each of them to see the crazy-good deals Startup Victoria members get
+            from start up friendly services across the globe.
+
+        %table
+          %tr
+            %td{ valign: "top", width: "260" }
+              %img{ src: @offer.logo_url, border: "0" }
+
+            %td{ valign: "top", style: "font-size:16px"}
+              %div{ style: "font-weight: bold;margin-bottom:5px" }
+                Company Name:
+              %div{ style: "margin-bottom:25px" }
+                = @offer.company_name
+
+              %div{ style: "font-weight: bold;margin-bottom:5px" }
+                Company URL:
+              %div{ style: "margin-bottom:25px" }
+                %a{ href: @offer.company_url, target: "_blank" }
+                  = @offer.company_url
+
+              %div{ style: "font-weight: bold;margin-bottom:5px" }
+                About:
+              %div{ style: "margin-bottom:25px" }
+                = @offer.company_about
+
+              %div{ style: "font-weight: bold;margin-bottom:5px" }
+                Offer:
+              %div{ style: "margin-bottom:25px" }
+                = @offer.description
+        
+              - if logged_in?
+                %div{ style: "font-weight: bold;margin-bottom:5px" }
+                  How to redeem:
+                %div{ style: "margin-bottom:25px" }
+                  = @offer.how_to_redeem

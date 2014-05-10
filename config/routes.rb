@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/about", to: "static_pages#about", as: :about
   get "/contact", to: "static_pages#contact", as: :contact
   get "/terms", to: "static_pages#terms_and_conditions", as: :terms_and_conditions
+  get "/privacy", to: "static_pages#privacy", as: :privacy
   resource :memberships,
     only: [:create]
 end

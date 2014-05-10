@@ -1,0 +1,106 @@
+.Directors-background
+{
+  margin-top: 50px;
+  background-color: #bb001c;
+  box-shadow: inset  0px 5px 5px #a20018,inset  0px -5px 5px #a20018;
+}
+
+.Directors
+{
+  width: 1142px;
+  margin: 0 auto;
+  position: relative;
+  padding: 50px 0;
+  @extend .cleanit;
+}
+
+.Directors-heading
+{
+  color:#fff;
+  padding-bottom:20px;
+  font-size:22px;font-weight: normal;
+}
+
+.Directors-table
+{
+  width: 100%;
+
+  td
+  {
+    text-align: center;
+    vertical-align: top;
+  }
+}
+
+.Director
+{
+  padding:15px;
+}
+
+.Director-circle
+{
+  width: 222px;
+  height: 222px;
+  border-radius: 111px;
+  -webkit-border-radius: 111px;
+  -moz-border-radius: 111px;
+  margin: 0 auto 15px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.Director-circleHover
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 222px;
+  height: 222px;
+  background-color: #000;
+  opacity: 0.8;
+  display: none;
+}
+
+.Director-circle:hover .Director-circleHover
+{
+  display:block;
+}
+
+.Director-circleLinkedIn
+{
+  display:inline-block;
+  margin-top:90px;
+}
+
+.Director-circle--leni
+{
+  background: url(/assets/Leni-Mayo.png) no-repeat;
+}
+
+.Director-circle--michelle
+{
+  background: url(/assets/Michelle-Bourke.png) no-repeat;
+}
+
+.Director-circle--scott
+{
+  background: url(/assets/Scott-Handsaker.png) no-repeat;
+}
+
+.Director-circle--brendan
+{
+  background: url(/assets/Brendan-Lewis.png) no-repeat;
+}
+
+.Director-bio
+{
+  color:#fff;
+  line-height:22px;
+  padding-top:10px;
+}
+
+.Director-name
+{
+  font-size: 19px;
+  margin-bottom: 7px;
+}

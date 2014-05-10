@@ -34,6 +34,7 @@
       <div class="Page-content">
         <%= yield %>
       </div>
+      <%= yield :after_page %>
     </div>
     <%= render "shared/footer" %>
   </body>

@@ -1,0 +1,18 @@
+<div class="Director">
+  <div class="Director-circle Director-circle--<%= director[:code] %>">
+    <div class="Director-circleHover">
+      <a href="http://au.linkedin.com/in/<%= director[:linkedin] %>"
+        rel="nofollow"
+        class="Director-circleLinkedIn"
+        target="_blank">
+
+        <img src="/assets/in.png" border="0" alt="in"/>
+      </a>
+    </div>
+  </div>
+  <div class="Director-bio">
+    <strong class="Director-name"><%= director[:name] %></strong>
+    <br/>
+    <%= director[:bio] %>
+  </div>
+</div>

@@ -24,8 +24,11 @@
             <img src="assets/logo.png" alt="startup victoria logo"/>
           </a>
         </div>
-        <a href="/logout" class="Header-btn">Logout</a>
-        <a href="/login" class="Header-btn">Login</a>
+        <% if logged_in? %>
+          <a href="/logout" class="Header-btn">Logout</a>
+        <% else %>
+          <a href="/login" class="Header-btn">Login</a>
+        <% end %>
       </div>
     </div>
     <%= flash[:notice] %>

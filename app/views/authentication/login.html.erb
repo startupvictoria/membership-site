@@ -2,15 +2,19 @@
   <div class="cont">
     <div class="cleanit">
       <h3 class="redtitle" style="padding:20px 0;font-size:27px;">Login</h3>
-      <form action="/login" method="POST" class="emailsub ajaxform" style="padding:0 0 60px 0;">
+
+      <%= form_for(log_in_form,
+                   url: authenticate_url,
+                   html: {class: "emailsub ajaxform", style: "padding: 0 0 60px 0"}) do |f| %>
+
         <div>Email:</div>
-        <input type="text" name="email" value="">
+        <%= f.email_field :email %>
         <div style="margin-top:15px">Password:</div>
-        <input type="password" name="password" value="">
+        <%= f.password_field :password %>
         <div style="margin-top:5px">
           <button type="submit" class="btn" style="margin-top:10px">Login</button>
         </div>
-      </form>
+      <% end %>
       <br>
       <div style="line-height: 26px;color:#666">
         Forgot password? <a href="http://www.startupvictoria.com.au/fpass">Click here</a> to get a new password.<br>

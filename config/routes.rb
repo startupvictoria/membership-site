@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   post "/memberships", to: "memberships#create", as: :create_membership
   get "/plans", to: "memberships#index", as: :memberships
 
-  get "/login", to: "authentication#login", as: :login
+  get "/login", to: "authentication#login",    as: :login
+  post "/authenticate", to: "authentication#create", as: :authenticate
+
   get "/forgot_password", to: "authentication#forgot_password", as: :forgot_password
 
   get "/about", to: "static_pages#about", as: :about

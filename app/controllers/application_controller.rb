@@ -6,9 +6,11 @@ class ApplicationController < ActionController::Base
   protected
 
   def logged_in?
-    # @ags TODO - replace this stub
-    true
+    authenticator.logged_in?
   end
   helper_method :logged_in?
 
+  def authenticator
+    @_authenticator ||= Authenticator.new(session)
+  end
 end

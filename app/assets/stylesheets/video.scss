@@ -1,0 +1,14 @@
+.Video
+{
+  width: 560px;
+  height: 315px;
+}
+
+
+@media(max-width: 768px)
+{
+  .Video
+  {
+    width: 100%;
+  }
+}

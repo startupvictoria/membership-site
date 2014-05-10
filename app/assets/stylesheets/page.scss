@@ -19,3 +19,38 @@
   width: 742px;
   padding-bottom:70px;
 }
+
+.Page-left
+{
+  width:50%;
+  float:left;
+}
+
+.Page-right
+{
+  width:48%;
+  margin-left: 2%;
+  float:left;
+}
+
+@media(max-width: 768px)
+{
+ .Page-content
+ {
+   width: 96%;
+   padding: 2%;
+ }
+
+ .Page-left
+ {
+   width: 100%;
+ }
+
+ .Page-right
+ {
+   margin-top: 30px;
+   clear:both;
+   width: 96%;
+ }
+}
+

@@ -1,6 +1,6 @@
 require 'acceptance_spec_helper'
 
-feature "registering for membership", vcr: true do
+feature "registering for membership", :vcr do
   scenario "I can register for a membership when I am logged out" do
     page = RegistrationPage.new(self)
     page.visit

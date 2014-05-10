@@ -26,7 +26,7 @@ class RegistrationPage < SimpleDelegator
   end
 
   def submit_registration
-    click_button "Register"
+    click_button "Pay & Register"
   end
 
   private
@@ -34,10 +34,8 @@ class RegistrationPage < SimpleDelegator
   def enter_payment_details(details={})
     next_month = Time.now.next_month
     find_stripe_field("number").set(details.fetch(:card))
-    find_stripe_field("exp-month").
-      set(details.fetch(:exp_month, next_month.strftime("%m")))
-    find_stripe_field("exp-year").
-      set(details.fetch(:exp_year, next_month.year))
+    page.select next_month.strftime("%m"), from: "exp_month"
+    page.select next_month.year, from: "exp_year"
     find_stripe_field("cvc").
       set(details.fetch(:cvc, 123))
   end
@@ -45,4 +43,5 @@ class RegistrationPage < SimpleDelegator
   def find_stripe_field(name)
     find(:xpath, "//input[@data-stripe='#{name}']")
   end
+
 end

@@ -21,7 +21,7 @@
     </div>
   <% end %>
 
-  <div class="Form-errors paymentErrors"></div>
+  <div class="paymentErrors"></div>
 
 
   <h3 class="Heading--primary">
@@ -53,6 +53,7 @@
       <label>Card Expiry:</label>
       <select
         class='exp_month'
+        id='exp_month'
         name='month'
         data-stripe="exp-month"
         style='font-size:14px;padding: 10px;margin-top:10px;border:none'>
@@ -76,6 +77,7 @@
     <div style="display: inline-block;">
       <select
         class='exp_year'
+        id="exp_year"
         name='year'
         data-stripe="exp-year"
         style='font-size:14px;padding: 10px;margin-top:10px;border:none'>
@@ -127,12 +129,11 @@
     var $form = $('#paymentForm');
 
     if (response.error) {
-      $form.find('.paymentErrors').show().text(response.error.message);
+      $form.find('.paymentErrors').addClass('Form-errors').text(response.error.message);
       $form.find('button').prop('disabled', false);
       window.scrollTo(0,0);
     } else {
       var token = response.id;
-      $form.find('.paymentErrors').hide();
       $form.append($('<input type="hidden" name="membership_registration_form[card_token]" />').val(token));
       $form.get(0).submit();
     }

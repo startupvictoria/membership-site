@@ -47,4 +47,12 @@ describe MembershipRegistrationForm do
 
     form.save
   end
+
+  it "adds stripe errors onto the form" do
+    expect(CreatesMembership).to \
+      receive(:new).and_raise(Stripe::CardError.new("oops", :foo, nil))
+
+    expect(form.save).to eq(false)
+    expect(form.errors.messages).to eq({foo: ["oops"]})
+  end
 end

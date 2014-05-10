@@ -11,4 +11,15 @@ feature "registering for membership", :vcr do
 
     expect(page).to have_content("Successfully registered")
   end
+
+  scenario "I see errors when my registration fails" do
+    page = RegistrationPage.new(self)
+    page.visit
+
+    page.enter_valid_personal_details
+    page.enter_invalid_payment_details
+    page.submit_registration
+
+    expect(page).to have_content("Your card was declined")
+  end
 end

@@ -25,15 +25,20 @@ class MembershipRegistrationForm
   def save
     return false unless valid?
 
-    user.save!
+    User.transaction do
+      user.save!
 
-    CreatesMembership.new(
-      user: user,
-      plan: MembershipPlan.premium,
-      card_token: card_token
-    ).call
+      CreatesMembership.new(
+        user: user,
+        plan: MembershipPlan.premium,
+        card_token: card_token
+      ).call
+    end
 
     true
+  rescue Stripe::StripeError => e
+    errors.add(e.param || :base, e.message)
+    false
   end
 
   def user

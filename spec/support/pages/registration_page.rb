@@ -12,11 +12,11 @@ class RegistrationPage < SimpleDelegator
   end
 
   def enter_valid_payment_details
-    next_month = Time.now.next_month
-    find_stripe_field("number").set("4242424242424242")
-    find_stripe_field("exp-month").set(next_month.strftime("%m"))
-    find_stripe_field("exp-year").set(next_month.year)
-    find_stripe_field("cvc").set(123)
+    enter_payment_details(card: "4242424242424242")
+  end
+
+  def enter_invalid_payment_details
+    enter_payment_details(card: "4000000000000341")
   end
 
   def enter_personal_details(attrs={})
@@ -30,6 +30,17 @@ class RegistrationPage < SimpleDelegator
   end
 
   private
+
+  def enter_payment_details(details={})
+    next_month = Time.now.next_month
+    find_stripe_field("number").set(details.fetch(:card))
+    find_stripe_field("exp-month").
+      set(details.fetch(:exp_month, next_month.strftime("%m")))
+    find_stripe_field("exp-year").
+      set(details.fetch(:exp_year, next_month.year))
+    find_stripe_field("cvc").
+      set(details.fetch(:cvc, 123))
+  end
 
   def find_stripe_field(name)
     find(:xpath, "//input[@data-stripe='#{name}']")

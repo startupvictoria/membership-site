@@ -7,8 +7,4 @@ class Offer < ActiveRecord::Base
     name
   end
 
-  def logo_path
-    "/assets" + logo_url
-  end
-  
 end

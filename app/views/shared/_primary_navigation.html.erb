@@ -1,0 +1,39 @@
+<div class="nav">
+  <div class="cont">
+    <ul class="dropdown">
+      <li>
+      <%= link_to "Home", "/", class: "mainlink" %>
+      </li>
+      <li>
+        <%= link_to "About", "/about", class: "mainlink" %>
+      </li>
+      <!--- only show if sesid < 1 --->
+      <li>
+        <%= link_to "Membership", "/plans", class: "mainlink" %>
+      </li>
+      <!--- //only show if sesid < 1 --->
+      <li>
+        <%= link_to "Offers", "/offers", class: "mainlink" %>
+      </li>
+      <li>
+        <%= link_to "Contact", "/contact", class: "mainlink" %>
+      </li>
+    </ul>
+    <a
+      href="https://www.facebook.com/StartupVictoria"
+      rel="nofollow"
+      target="_blank"
+      class="facebook">
+
+      <img src="/assets/facebook.png" border="0" alt="facebook"/>
+    </a>
+    <a
+      href="https://twitter.com/startupvic"
+      rel="nofollow"
+      target="_blank"
+      class="twitter">
+      
+      <img src="/assets/twitter.png" border="0" alt="twitter"/>
+    </a>
+  </div>
+</div>

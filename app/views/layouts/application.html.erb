@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>StartupVictoria</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+      Startup Victoria
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/theme/js/jquery.form.js"></script>
+    <script src="/theme/js/jquery.creditCardValidator.js"></script>
+    <script src="/theme/js/main.js"></script>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="header">
+      <div class="cont">
+        <div class="cleanit fixpos">
+          <div class="fl">
+            <a href="/" title="Homapge">
+              <img src="assets/logo.png" alt="startup victoria logo"/>
+            </a>
+          </div>
+          <div class="fr loginbutton">
+            <? if ($sesid < 1) { ?>
+              <a href="/login" class="btn">Login</a>
+              <? } else { ?>
+              <!--<a href="/account" class="btn">My Account</a>-->
+              <a href="/logout" class="btn">Logout</a>
+              <? } ?>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= flash[:notice] %>
+    <%= render "shared/primary_navigation" %>
+    <%= yield %>
+  </body>
+</html
 
-<%= flash[:notice] %>
-
-<%= yield %>
-
-</body>
-</html>

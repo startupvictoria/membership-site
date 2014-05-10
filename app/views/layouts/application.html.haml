@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title
+      Startup Victoria
+
+    %meta{ "http-equiv" => "Content-Type", content: "text/html; charset=UTF-8" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" }
+    %meta{ name: "description", content: "" }
+    %meta{ name: "keywords", content: "" }
+
+    %script{ src: "http://code.jquery.com/jquery-1.11.0.min.js" }
+    %script{ src: "http://code.jquery.com/jquery-migrate-1.2.1.min.js" }
+
+    = javascript_include_tag "jquery.form.js"
+    = javascript_include_tag "jquery.creditCardValidator.js"
+    = javascript_include_tag "main.js"
+
+    = stylesheet_link_tag 'application', media: 'all'
+    = csrf_meta_tags
+
+  %body
+    .Header
+      .Header-content
+        .fl
+          %a{ href: "/", title: "Homepage" }
+            = image_tag "logo.png", class: "Header-logo", alt: "startup victoria logo"
+
+        - if logged_in?
+          <a href="<%= logout_url %>" class="Header-btn">Logout</a>
+        - else
+          <a href="<%= login_url %>" class="Header-btn">Login</a>
+
+    = flash[:notice]
+
+    = render "shared/primary_navigation"
+
+    .Page
+      = yield :before_page
+
+      .Page-content
+        = yield
+
+      = yield :after_page
+    = render "shared/footer"

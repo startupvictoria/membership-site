@@ -10,4 +10,12 @@
   margin: 0 auto;
   position: relative;
   padding-top: 50px;
+  @extend .cleanit;
+}
+
+.Page-narrow
+{
+  float:left;
+  width: 742px;
+  padding-bottom:70px;
 }

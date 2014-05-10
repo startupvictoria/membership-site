@@ -21,7 +21,7 @@
       <div class="Header-content">
         <div class="fl">
           <a href="/" title="Homepage">
-            <img class="Header-logo" src="assets/logo.png" alt="startup victoria logo"/>
+            <%= image_tag "logo.png", class: "Header-logo", alt: "startup victoria logo" %>
           </a>
         </div>
         <% if logged_in? %>

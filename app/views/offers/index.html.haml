@@ -16,7 +16,7 @@
             %a.offerslink{ href: offer_path(offer) }
               .inneroffer
                 %div{ style: "position:relative;width:227px;height: 227px;overflow:hidden" }
-                  %img{ src: offer.logo_path, border: "0" }
+                  = image_tag offer.logo_path, border: "0"
                   .showdet
                     %br
                     Offer Details

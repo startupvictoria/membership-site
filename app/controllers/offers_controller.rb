@@ -1,11 +1,11 @@
 class OffersController < ApplicationController
 
   def index
-    @offers = Offer.all
+    @offers = Offer.all.map { |offer| offer.decorate }
   end
 
   def show
-    @offer = load_offer
+    @offer = load_offer.decorate
   end
 
   private

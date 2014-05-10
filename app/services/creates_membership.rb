@@ -10,7 +10,8 @@ class CreatesMembership
 
   def call
     stripe_customer = Stripe::Customer.create(
-      description: "#{user.id} (#{user.email})",
+      email: user.email,
+      description: "User ##{user.id}",
       card: card_token
     )
 

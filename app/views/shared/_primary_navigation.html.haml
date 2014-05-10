@@ -1,0 +1,20 @@
+.nav
+  .cont
+    .dropdown
+      %ul
+        %li
+          = link_to "Home", "/", class: "mainlink"
+        %li
+          = link_to "About", "/about", class: "mainlink"
+        %li
+          = link_to "Membership", "/plans", class: "mainlink"
+        %li
+          = link_to "Offers", "/offers", class: "mainlink"
+        %li
+          = link_to "Contact", "/contact", class: "mainlink"
+
+    %a.facebook{ href: "https://www.facebook.com/StartupVictoria", rel: "nofollow", target: "_blank" }
+      = image_tag "facebook.png", border: "0", alt: "facebook"
+
+    %a.twitter{ href: "https://twitter.com/startupvic", rel: "nofollow", target: "_blank" }
+      = image_tag "twitter.png", border: "0", alt: "twitter"

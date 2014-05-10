@@ -18,4 +18,5 @@ group :test do
   gem 'rspec-rails', '>= 3.0.0.beta2'
   gem 'shoulda-matchers'
   gem 'vcr'
+  gem 'webmock'
 end

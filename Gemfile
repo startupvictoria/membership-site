@@ -16,4 +16,5 @@ group :test do
   gem 'poltergeist'
   gem 'rspec-rails', '>= 3.0.0.beta2'
   gem 'shoulda-matchers'
+  gem 'vcr'
 end

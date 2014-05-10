@@ -8,6 +8,7 @@ class MembershipRegistrationForm
   attr_accessor :email
   attr_accessor :password
   attr_accessor :card_token
+  attr_accessor :authenticator
 
   validates :full_name,
     presence: true
@@ -33,6 +34,8 @@ class MembershipRegistrationForm
         plan: MembershipPlan.premium,
         card_token: card_token
       ).call
+
+      authenticator.log_in(user)
     end
 
     true

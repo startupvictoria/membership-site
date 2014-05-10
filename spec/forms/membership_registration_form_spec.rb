@@ -6,11 +6,13 @@ describe MembershipRegistrationForm do
   let(:email) { "peter@hooli.com" }
   let(:password) { "c1cadas" }
   let(:card_token) { "tok_123456" }
+  let(:authenticator) { double.as_null_object }
   let(:attributes) { {
     full_name: full_name,
     email: email,
     password: password,
-    card_token: card_token
+    card_token: card_token,
+    authenticator: authenticator
   } }
 
   subject(:form) { MembershipRegistrationForm.new(attributes) }
@@ -25,8 +27,12 @@ describe MembershipRegistrationForm do
 
   it { is_expected.to validate_presence_of(:card_token) }
 
+  before do
+    allow(CreatesMembership).to \
+      receive(:new).and_return(double(call: nil))
+  end
+
   it "creates a new User with the given attributes when saved" do
-    allow(CreatesMembership).to receive(:new).and_return(double(call: nil))
     expect(form.save).to eq(true)
 
     expect(form.user).to be_persisted
@@ -48,11 +54,19 @@ describe MembershipRegistrationForm do
     form.save
   end
 
-  it "adds stripe errors onto the form" do
-    expect(CreatesMembership).to \
-      receive(:new).and_raise(Stripe::CardError.new("oops", :foo, nil))
+  it "logs the user in" do
+    expect(authenticator).to receive(:log_in).with(form.user)
 
-    expect(form.save).to eq(false)
-    expect(form.errors.messages).to eq({foo: ["oops"]})
+    form.save
+  end
+
+  context "when a stripe error occurs" do
+    it "adds the error message onto the form" do
+      expect(CreatesMembership).to \
+        receive(:new).and_raise(Stripe::CardError.new("oops", :foo, nil))
+
+      expect(form.save).to eq(false)
+      expect(form.errors.messages).to eq({foo: ["oops"]})
+    end
   end
 end

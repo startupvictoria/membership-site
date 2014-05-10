@@ -15,7 +15,9 @@ class MembershipsController < ApplicationController
   private
 
   def registration_form
-    @_form ||= MembershipRegistrationForm.new(registration_params)
+    @_form ||= MembershipRegistrationForm.new(registration_params.merge(
+      authenticator: authenticator
+    ))
   end
 
   def registration_params

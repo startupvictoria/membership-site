@@ -21,6 +21,7 @@ SET default_with_oids = false;
 
 CREATE TABLE customers (
     id integer NOT NULL,
+    user_id integer NOT NULL,
     stripe_id character varying(255) NOT NULL,
     stripe_card_id character varying(255) NOT NULL,
     created_at timestamp without time zone NOT NULL,
@@ -120,6 +121,13 @@ ALTER TABLE ONLY users
 
 
 --
+-- Name: index_customers_on_user_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_customers_on_user_id ON customers USING btree (user_id);
+
+
+--
 -- Name: index_users_on_email; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -131,6 +139,14 @@ CREATE UNIQUE INDEX index_users_on_email ON users USING btree (email);
 --
 
 CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);
+
+
+--
+-- Name: customers_user_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY customers
+    ADD CONSTRAINT customers_user_id_fk FOREIGN KEY (user_id) REFERENCES users(id);
 
 
 --

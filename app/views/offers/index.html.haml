@@ -1,0 +1,28 @@
+%div{ style: "min-height:600px; background-color: #ededed" }
+  .cont
+    %h3.redtitle{ style: "padding:30px 0 10px 0;font-size:27px;" }
+      Member Offers
+
+    .cleanit
+      %div.member-offers{ style: "float:left;width:742px;" }
+        %div{ style: "color:#00a2d3;padding-bottom:20px;line-height: 22px" }
+          %i
+            Here's all the freebies and discounts you get as a member.
+            Hover over each of them to see the crazy-good deals Startup Victoria
+            members get from start up friendly services across the globe.
+
+        .cleanit
+          - @offers.each do |offer|
+            %a.offerslink{ href: offer_path(offer) }
+              .inneroffer
+                %div{ style: "position:relative;width:227px;height: 227px;overflow:hidden" }
+                  %img{ src: offer.teaser_logo_url, border: "0" }
+                  .showdet
+                    %br
+                    Offer Details
+                    %br
+                    %br
+                    %div{ style: "font-size:12px"}
+                      = offer.teaser_description
+                .compname
+                  = offer.teaser_name

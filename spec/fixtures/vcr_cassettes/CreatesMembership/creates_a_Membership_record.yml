@@ -32,33 +32,33 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sat, 10 May 2014 07:09:28 GMT
+      - Sat, 10 May 2014 10:31:39 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
       - '575'
-      Access-Control-Allow-Credentials:
-      - 'true'
       Access-Control-Max-Age:
       - '300'
-      Cache-Control:
-      - no-cache, no-store
+      Access-Control-Allow-Credentials:
+      - 'true'
       Access-Control-Allow-Methods:
       - GET, POST, HEAD, OPTIONS, DELETE
+      Cache-Control:
+      - no-cache, no-store
       Strict-Transport-Security:
       - max-age=31556926; includeSubDomains
     body:
       encoding: UTF-8
       string: |
         {
-          "id": "tok_1040Vd2Bqo1TlaLlk4ncovqU",
+          "id": "tok_1040Yt2Bqo1TlaLlrGrXShiT",
           "livemode": false,
-          "created": 1399705768,
+          "created": 1399717899,
           "used": false,
           "object": "token",
           "type": "card",
           "card": {
-            "id": "card_1040Vd2Bqo1TlaLlv0ThTYY3",
+            "id": "card_1040Yt2Bqo1TlaLlFArJXjE6",
             "object": "card",
             "last4": "4242",
             "type": "Visa",
@@ -77,13 +77,13 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Sat, 10 May 2014 07:09:28 GMT
+  recorded_at: Sat, 10 May 2014 10:31:39 GMT
 - request:
     method: post
     uri: https://api.stripe.com/v1/customers
     body:
       encoding: US-ASCII
-      string: description=1%20(bob%40bob.com)&card=tok_1040Vd2Bqo1TlaLlk4ncovqU
+      string: email=bob%40bob.com&description=User%20%233&card=tok_1040Yt2Bqo1TlaLlrGrXShiT
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
@@ -101,7 +101,7 @@ http_interactions:
         asmith-macbook.users 12.5.0 Darwin Kernel Version 12.5.0: Mon Jul 29 16:33:49
         PDT 2013; root:xnu-2050.48.11~1/RELEASE_X86_64 x86_64\"}"
       Content-Length:
-      - '65'
+      - '77'
   response:
     status:
       code: 200
@@ -110,19 +110,19 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sat, 10 May 2014 07:09:29 GMT
+      - Sat, 10 May 2014 10:31:40 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '1249'
+      - '1250'
       Access-Control-Allow-Credentials:
       - 'true'
+      Access-Control-Max-Age:
+      - '300'
       Cache-Control:
       - no-cache, no-store
       Access-Control-Allow-Methods:
       - GET, POST, HEAD, OPTIONS, DELETE
-      Access-Control-Max-Age:
-      - '300'
       Strict-Transport-Security:
       - max-age=31556926; includeSubDomains
     body:
@@ -130,18 +130,18 @@ http_interactions:
       string: |
         {
           "object": "customer",
-          "created": 1399705769,
-          "id": "cus_40VdJePJ8v5SmT",
+          "created": 1399717900,
+          "id": "cus_40YtmmQIQbmuzM",
           "livemode": false,
-          "description": "1 (bob@bob.com)",
-          "email": null,
+          "description": "User #3",
+          "email": "bob@bob.com",
           "delinquent": false,
           "metadata": {},
           "subscriptions": {
             "object": "list",
             "total_count": 0,
             "has_more": false,
-            "url": "/v1/customers/cus_40VdJePJ8v5SmT/subscriptions",
+            "url": "/v1/customers/cus_40YtmmQIQbmuzM/subscriptions",
             "data": []
           },
           "discount": null,
@@ -151,17 +151,17 @@ http_interactions:
             "object": "list",
             "total_count": 1,
             "has_more": false,
-            "url": "/v1/customers/cus_40VdJePJ8v5SmT/cards",
+            "url": "/v1/customers/cus_40YtmmQIQbmuzM/cards",
             "data": [
               {
-                "id": "card_1040Vd2Bqo1TlaLlv0ThTYY3",
+                "id": "card_1040Yt2Bqo1TlaLlFArJXjE6",
                 "object": "card",
                 "last4": "4242",
                 "type": "Visa",
                 "exp_month": 6,
                 "exp_year": 2014,
                 "fingerprint": "DhZaUzXhkx7dVHFD",
-                "customer": "cus_40VdJePJ8v5SmT",
+                "customer": "cus_40YtmmQIQbmuzM",
                 "country": "US",
                 "name": "Jim Bob",
                 "address_line1": null,
@@ -176,13 +176,13 @@ http_interactions:
               }
             ]
           },
-          "default_card": "card_1040Vd2Bqo1TlaLlv0ThTYY3"
+          "default_card": "card_1040Yt2Bqo1TlaLlFArJXjE6"
         }
     http_version: 
-  recorded_at: Sat, 10 May 2014 07:09:29 GMT
+  recorded_at: Sat, 10 May 2014 10:31:40 GMT
 - request:
     method: post
-    uri: https://api.stripe.com/v1/customers/cus_40VdJePJ8v5SmT/subscriptions
+    uri: https://api.stripe.com/v1/customers/cus_40YtmmQIQbmuzM/subscriptions
     body:
       encoding: US-ASCII
       string: plan=premium
@@ -212,30 +212,30 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sat, 10 May 2014 07:09:31 GMT
+      - Sat, 10 May 2014 10:31:41 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '718'
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Max-Age:
-      - '300'
-      Cache-Control:
-      - no-cache, no-store
+      - '717'
       Access-Control-Allow-Methods:
       - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Max-Age:
+      - '300'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - no-cache, no-store
       Strict-Transport-Security:
       - max-age=31556926; includeSubDomains
     body:
       encoding: UTF-8
       string: |
         {
-          "id": "sub_40Vdrq2Q6QEV9n",
+          "id": "sub_40Yt9pa3ziMjVM",
           "plan": {
             "interval": "year",
-            "name": "Premium",
-            "created": 1399705209,
+            "name": "Annual",
+            "created": 1399716349,
             "amount": 9900,
             "currency": "aud",
             "id": "premium",
@@ -247,12 +247,12 @@ http_interactions:
             "statement_description": null
           },
           "object": "subscription",
-          "start": 1399705770,
+          "start": 1399717901,
           "status": "active",
-          "customer": "cus_40VdJePJ8v5SmT",
+          "customer": "cus_40YtmmQIQbmuzM",
           "cancel_at_period_end": false,
-          "current_period_start": 1399705770,
-          "current_period_end": 1431241770,
+          "current_period_start": 1399717901,
+          "current_period_end": 1431253901,
           "ended_at": null,
           "trial_start": null,
           "trial_end": null,
@@ -262,5 +262,5 @@ http_interactions:
           "discount": null
         }
     http_version: 
-  recorded_at: Sat, 10 May 2014 07:09:39 GMT
+  recorded_at: Sat, 10 May 2014 10:31:41 GMT
 recorded_with: VCR 2.8.0

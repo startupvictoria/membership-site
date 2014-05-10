@@ -6,7 +6,7 @@ class MembershipsController < ApplicationController
   def create
     if registration_form.save
       flash[:notice] = "Successfully registered"
-      redirect_to root_url
+      redirect_to offers_path
     else
       render :new, locals: {registration_form: registration_form}
     end

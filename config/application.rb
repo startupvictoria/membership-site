@@ -6,7 +6,6 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
 
-require 'rails_12factor'
 require 'sass'
 require "sprockets/railtie"
 
@@ -15,6 +14,10 @@ Bundler.setup(*Rails.groups)
 require 'dotenv-rails'
 require 'foreigner'
 require 'haml'
+
+if Rails.env.production?
+  require 'rails_12factor'
+end
 
 module StartupVictoria
   def self.config

@@ -1,30 +1,123 @@
-<h1>new membership</h1>
-
-<% if registration_form.errors.any? %>
-  <ul>
-    <% registration_form.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+<div class="Page-left">
+<h3 class="Heading--primary">Buy Premium</h3>
+<div style="color:#00a2d3;padding-bottom:30px;line-height:20px">
+  <i>
+    After you input your details and click "Pay & Register", your credit card will be charged AU $99.
+    By doing this, you agree to our <a href="/terms" style="text-decoration: underline" target="_blank">Terms &amp; Conditions</a>.
+  </i>
+</div>
 
 <%= form_for(registration_form,
-             url: create_membership_url,
-             html: {id: "paymentForm"}) do |f| %>
+  url: create_membership_url,
+  html: {id: "paymentForm", class: "emailsub"}) do |f| %>
 
-  <span class='paymentErrors'></span>
+  <% if registration_form.errors.any? %>
+    <div class="Form-errors">
+      <ul>
+        <% registration_form.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-  <%= f.text_field :full_name %>
-  <%= f.email_field :email %>
-  <%= f.password_field :password %>
+  <div class="Form-errors paymentErrors"></div>
 
-  <input data-stripe="number"/>
-  <input data-stripe="cvc"/>
-  <input data-stripe="exp-month"/>
-  <input data-stripe="exp-year"/>
 
-  <%= f.submit "Register" %>
+  <h3 class="Heading--primary">
+    Personal Information
+  </h3>
+
+  <div>
+    <label>Full Name:</label>
+    <%= f.text_field :full_name %>
+  </div>
+  <div style="margin-top:15px">
+    <label>Email:</label>
+    <%= f.email_field :email %>
+  </div>
+  <div style="margin-top:15px">
+    <label>Password (at least 6 characters):</label>
+    <%= f.password_field :password %>
+  </div>
+
+  <h3 class="Heading--primary">Payment</h3>
+
+  <div>
+    <label>Credit Card Number:</label>
+    <input data-stripe="number"/>
+  </div>
+
+  <div style="margin-top:10px;">
+    <div style="display: inline-block;">
+      <label>Card Expiry:</label>
+      <select
+        class='exp_month'
+        name='month'
+        data-stripe="exp-month"
+        style='font-size:14px;padding: 10px;margin-top:10px;border:none'>
+
+        <option value="">Month</option>
+        <option value='01'>01</option>
+        <option value='02'>02</option>
+        <option value='03'>03</option>
+        <option value='04'>04</option>
+        <option value='05'>05</option>
+        <option value='06'>06</option>
+        <option value='01'>07</option>
+        <option value='01'>08</option>
+        <option value='09'>09</option>
+        <option value='10'>10</option>
+        <option value='11'>11</option>
+        <option value='12'>12</option>
+      </select>
+    </div>
+
+    <div style="display: inline-block;">
+      <select
+        class='exp_year'
+        name='year'
+        data-stripe="exp-year"
+        style='font-size:14px;padding: 10px;margin-top:10px;border:none'>
+
+        <option value="">Year</option>
+        <option value='2014'>2014</option>
+        <option value='2015'>2015</option>
+        <option value='2016'>2016</option>
+        <option value='2017'>2017</option>
+        <option value='2018'>2018</option>
+        <option value='2019'>2019</option>
+        <option value='2020'>2020</option>
+        <option value='2021'>2021</option>
+        <option value='2022'>2022</option>
+      </select>
+    </div>
+  </div>
+
+  <div style="margin-top:15px">
+    <label>CCV:</label>
+    <input type="text" class="ccv" name="ccv" data-stripe="cvc" value="" style='width:100px;'/>
+  </div>
+
+  <div style="margin-top:5px">
+    <%= f.submit "Pay & Register", class: "btn" %>
+  </div>
 <% end %>
+
+<div style="line-height: 26px;color:#666">
+  Please read our
+  <a href="/terms" target="_blank">
+    Terms and Conditions
+  </a>
+  and
+  <a href="/privacy" target="_blank">
+    Privacy Policy
+  </a>.
+  <p>
+    Forgot password? <a href="/fpass">Click here</a> to get a new password.<br/>
+    Already have an account? <a href="/login">Click here</a> to login.
+  </p>
+</div>
 
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
@@ -34,10 +127,12 @@
     var $form = $('#paymentForm');
 
     if (response.error) {
-      $form.find('.paymentErrors').text(response.error.message);
+      $form.find('.paymentErrors').show().text(response.error.message);
       $form.find('button').prop('disabled', false);
+      window.scrollTo(0,0);
     } else {
       var token = response.id;
+      $form.find('.paymentErrors').hide();
       $form.append($('<input type="hidden" name="membership_registration_form[card_token]" />').val(token));
       $form.get(0).submit();
     }
@@ -55,3 +150,4 @@
     });
   });
 </script>
+</div>

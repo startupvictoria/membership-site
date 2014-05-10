@@ -29,3 +29,14 @@
   @extend .btn;
   margin-top:10px;
 }
+
+.Form-errors
+{
+  background-color: #f2dede;
+  border:1px solid #ebccd1;
+  width: 60%;
+  padding:15px;
+  margin-bottom:15px;
+  color: #a94442;
+  display:none;
+}

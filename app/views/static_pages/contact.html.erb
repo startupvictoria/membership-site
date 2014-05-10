@@ -1,0 +1,26 @@
+<div style="min-height:600px;background-color: #ededed">
+  <div class="cont">
+    <h3 class="redtitle" style="padding:30px 0;font-size:27px;">Contact Us</h3>
+
+    <div class="cleanit">
+      <div style="float:left;width:742px;" class="contact-block">
+        <div id="mapheader" class="google-map" style="height:474px;"></div>
+        <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script>
+        <%= javascript_include_tag "map.js" %>
+
+        <h3 class="redtitle" style="padding:20px 0;font-size:27px;">Send Us An Email</h3>
+
+        <form action="/contact" method="POST" class="emailsub ajaxform" style="padding:0 0 60px 0;margin:0 0 60px 0;">
+          <input type="text" name="fullname" value="" placeholder="Your Name"/>
+          <input type="text" name="email" value="" placeholder="Your Email Address"/>
+          <input type="text" name="phone" value="" placeholder="Phone Number"/>
+          <textarea name="message"></textarea>
+          <button type="submit" class="btn" style="margin-top:10px">SEND</button>
+        </form>
+      </div>
+      <div style="float:right;width:365px;" class="contact-block">
+        <? include "./libs/rightside.php"; ?>
+      </div>
+    </div>
+  </div>
+</div>

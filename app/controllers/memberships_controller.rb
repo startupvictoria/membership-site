@@ -22,7 +22,8 @@ class MembershipsController < ApplicationController
     params.fetch(:membership_registration_form, {}).permit(
       :full_name,
       :email,
-      :password
+      :password,
+      :card_token
     )
   end
 end

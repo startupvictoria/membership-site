@@ -10,35 +10,31 @@
     <meta name="keywords" content="" />
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="/javascripts/jquery.form.js"></script>
-    <script src="/javascripts/jquery.creditCardValidator.js"></script>
-    <script src="/javascripts/main.js"></script>
+    <%= javascript_include_tag "jquery.form.js" %>
+    <%= javascript_include_tag "jquery.creditCardValidator.js" %>
+    <%= javascript_include_tag "main.js" %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div id="header">
-      <div class="cont">
-        <div class="cleanit fixpos">
-          <div class="fl">
-            <a href="/" title="Homapge">
-              <img src="assets/logo.png" alt="startup victoria logo"/>
-            </a>
-          </div>
-          <div class="fr loginbutton">
-            <!-- ifsesid < 1 -->
-              <a href="/login" class="btn">Login</a>
-            <!-- else -->
-              <a href="/logout" class="btn">Logout</a>
-            <!-- end -->
-          </div>
+    <div class="Header">
+      <div class="Header-content">
+        <div class="fl">
+          <a href="/" title="Homepage">
+            <img src="assets/logo.png" alt="startup victoria logo"/>
+          </a>
         </div>
+        <a href="/logout" class="Header-btn">Logout</a>
+        <a href="/login" class="Header-btn">Login</a>
       </div>
     </div>
     <%= flash[:notice] %>
     <%= render "shared/primary_navigation" %>
-    <%= yield %>
+    <div class="Page">
+      <div class="Page-content">
+        <%= yield %>
+      </div>
+    </div>
     <%= render "shared/footer" %>
   </body>
-</html
-
+</html>

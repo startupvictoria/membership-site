@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   get "/buy",   to: "memberships#new", as: :new_membership
+  post "/memberships", to: "memberships#create", as: :create_membership
   get "/plans", to: "memberships#index", as: :memberships
 
   get "/login", to: "authentication#login", as: :login
@@ -17,4 +18,5 @@ Rails.application.routes.draw do
 
   resources :offers,
     only: [:index, :show]
+
 end

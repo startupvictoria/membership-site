@@ -1,22 +1,6 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-root { 
+root {
     display: block;
-} 
+}
 
 *{margin:0;padding:0;}
 html{background-color: #262626;}
@@ -41,8 +25,8 @@ a.twitter{position: absolute;top:10px;right:45px;}
 a.rss{position: absolute;top:10px;right:0px;}
 ul.dropdown{ position: relative;}
 ul.dropdown ul { width: 220px; visibility: hidden; position: absolute;top:52px;z-index:9999}
-ul.dropdown ul li { font-weight: normal; background: #f6f6f6; color: #000; border-bottom: 1px solid #ccc; float: none; } 
-ul.dropdown ul li a { border-right: none; width: 100%; display: inline-block;background-color: #bb001c;color:#fff } 
+ul.dropdown ul li { font-weight: normal; background: #f6f6f6; color: #000; border-bottom: 1px solid #ccc; float: none; }
+ul.dropdown ul li a { border-right: none; width: 100%; display: inline-block;background-color: #bb001c;color:#fff }
 ul.dropdown ul li a:hover{background-color: #a20018;}
 .navhover .mainlink{background-color: #bb001c;color:#fff;}
 #sponsors{height:250px;background-color: #fff;width:100%;}
@@ -53,21 +37,21 @@ ul.dropdown ul li a:hover{background-color: #a20018;}
 .sponsorstop{padding-top:45px;}
 #footer{padding:20px 0;}
 .aboutus{width:50%;min-height: 148px;}
-.other{width:25%;} 
+.other{width:25%;}
 .hello{width:25%;}
 .xtitle{color:#fff;font-size:23px;}
 .descx{color:#666;margin-top:10px;font-size:12px;padding:0 20px 0 0}
 .otherx{margin-top:10px;}
-.otherx a{color:#666;display:block;margin: 0 40px 10px 5px} 
-.otherx a:hover{color:#bb001c;} 
-.descx a{color:#666; margin: 0 40px 10px 5px} 
-.descx a:hover{color:#bb001c;} 
+.otherx a{color:#666;display:block;margin: 0 40px 10px 5px}
+.otherx a:hover{color:#bb001c;}
+.descx a{color:#666; margin: 0 40px 10px 5px}
+.descx a:hover{color:#bb001c;}
 
 .descx{line-height: 20px;}
 #footeralt{padding:20px 0; text-align: center;background-color: #202020;line-height: 20px;font-size:12px}
 #footeralt .xxx{margin:0 10px;}
 #footeralt, #footeralt a{ color: #949494}
-#footeralt a:hover{color:#bb001c;} 
+#footeralt a:hover{color:#bb001c;}
 #footeralt div{margin-top:8px;}
 .newsarea {color:#777}
 .newsarea a{color:#333;font-weight: bold;font-size:15px;display:block;margin-bottom:5px}
@@ -83,7 +67,7 @@ ul.dropdown ul li a:hover{background-color: #a20018;}
     height: 222px;
     border-radius: 111px;
     -webkit-border-radius: 111px;
-    -moz-border-radius: 111px; 
+    -moz-border-radius: 111px;
     margin: 0 auto;
     position:relative;
     overflow: hidden

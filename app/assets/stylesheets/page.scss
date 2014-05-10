@@ -1,9 +1,13 @@
 .Page
 {
+  min-height: 600px;
+  background-color: #ededed;
 }
 
 .Page-content
 {
-  min-height: 600px;
-  background-color: #ededed;
+  width: 1142px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 50px;
 }

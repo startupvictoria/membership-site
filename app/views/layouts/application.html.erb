@@ -30,8 +30,10 @@
     </div>
     <%= flash[:notice] %>
     <%= render "shared/primary_navigation" %>
-    <div class="Page-content">
-      <%= yield %>
+    <div class="Page">
+      <div class="Page-content">
+        <%= yield %>
+      </div>
     </div>
     <%= render "shared/footer" %>
   </body>

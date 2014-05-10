@@ -8,9 +8,50 @@
   </ul>
 <% end %>
 
-<%= form_for(registration_form, url: memberships_path) do |f| %>
+<%= form_for(registration_form,
+             url: memberships_url,
+             html: {id: "paymentForm"}) do |f| %>
+
+  <span class='paymentErrors'></span>
+
   <%= f.text_field :full_name %>
   <%= f.email_field :email %>
   <%= f.password_field :password %>
+
+  <input data-stripe="number"/>
+  <input data-stripe="cvc"/>
+  <input data-stripe="exp-month"/>
+  <input data-stripe="exp-year"/>
+
   <%= f.submit "Register" %>
 <% end %>
+
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+  Stripe.setPublishableKey('<%= StartupVictoria.config.stripe_publishable_key %>');
+
+  var stripeResponseHandler = function(status, response) {
+    var $form = $('#paymentForm');
+
+    if (response.error) {
+      $form.find('.paymentErrors').text(response.error.message);
+      $form.find('button').prop('disabled', false);
+    } else {
+      var token = response.id;
+      $form.append($('<input type="hidden" name="membership_registration_form[card_token]" />').val(token));
+      $form.get(0).submit();
+    }
+  };
+
+  jQuery(function($) {
+    $('#paymentForm').submit(function(e) {
+      var $form = $(this);
+
+      $form.find('button').prop('disabled', true);
+
+      Stripe.card.createToken($form, stripeResponseHandler);
+
+      return false;
+    });
+  });
+</script>

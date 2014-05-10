@@ -45,6 +45,7 @@ GEM
     cliver (0.3.2)
     crack (0.4.1)
       safe_yaml (~> 0.9.0)
+    database_cleaner (1.2.0)
     diff-lcs (1.2.5)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
@@ -102,7 +103,7 @@ GEM
     rake (10.3.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    rspec-collection_matchers (0.0.2)
+    rspec-collection_matchers (0.0.4)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.0.0.beta2)
       rspec-support (= 3.0.0.beta2)
@@ -173,6 +174,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   capybara!
+  database_cleaner
   dotenv-rails
   foreigner
   foreman

@@ -10,9 +10,14 @@ require "sprockets/railtie"
 Bundler.setup(*Rails.groups)
 
 require 'dotenv-rails'
+require 'foreigner'
 require 'haml'
 
 module StartupVictoria
+  def self.config
+    Rails.application.config
+  end
+
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

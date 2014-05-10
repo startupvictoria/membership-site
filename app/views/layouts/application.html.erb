@@ -17,27 +17,22 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div id="header">
-      <div class="cont">
-        <div class="cleanit fixpos">
-          <div class="fl">
-            <a href="/" title="Homapge">
-              <img src="assets/logo.png" alt="startup victoria logo"/>
-            </a>
-          </div>
-          <div class="fr loginbutton">
-            <!-- ifsesid < 1 -->
-              <a href="/login" class="btn">Login</a>
-            <!-- else -->
-              <a href="/logout" class="btn">Logout</a>
-            <!-- end -->
-          </div>
+    <div class="Header">
+      <div class="Header-content">
+        <div class="fl">
+          <a href="/" title="Homepage">
+            <img src="assets/logo.png" alt="startup victoria logo"/>
+          </a>
         </div>
+        <a href="/logout" class="Header-btn">Logout</a>
+        <a href="/login" class="Header-btn">Login</a>
       </div>
     </div>
     <%= flash[:notice] %>
     <%= render "shared/primary_navigation" %>
-    <%= yield %>
+    <div class="Page-content">
+      <%= yield %>
+    </div>
     <%= render "shared/footer" %>
   </body>
 </html>

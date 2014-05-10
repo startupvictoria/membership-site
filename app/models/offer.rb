@@ -6,5 +6,9 @@ class Offer < ActiveRecord::Base
   def to_param
     name
   end
+
+  def logo_path
+    "/assets" + logo_url
+  end
   
 end

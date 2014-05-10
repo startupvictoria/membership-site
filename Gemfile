@@ -11,7 +11,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'unicorn'
 
 group :test do
-  gem 'rspec-rails', '>= 3.0.0.beta2'
   gem 'capybara', git: "git@github.com:jnicklas/capybara.git"
+  gem 'poltergeist'
+  gem 'rspec-rails', '>= 3.0.0.beta2'
   gem 'shoulda-matchers'
 end

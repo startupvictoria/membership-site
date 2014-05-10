@@ -10,9 +10,9 @@
     <meta name="keywords" content="" />
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="/javascripts/jquery.form.js"></script>
-    <script src="/javascripts/jquery.creditCardValidator.js"></script>
-    <script src="/javascripts/main.js"></script>
+    <%= javascript_include_tag "jquery.form.js" %>
+    <%= javascript_include_tag "jquery.creditCardValidator.js" %>
+    <%= javascript_include_tag "main.js" %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= csrf_meta_tags %>
   </head>

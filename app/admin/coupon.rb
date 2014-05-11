@@ -7,7 +7,7 @@ ActiveAdmin.register Coupon do
     :name,
     :teaser_name,
     :teaser_description,
-    :comapny_name,
+    :company_name,
     :company_url,
     :company_about,
     :logo_filename,

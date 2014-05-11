@@ -12,6 +12,9 @@
           = link_to "Coupons", "/coupons", class: "mainlink"
         %li
           = link_to "Contact", "/contact", class: "mainlink"
+        %li
+          - if logged_in? && current_user.admin?
+            = link_to "Admin", "/admin", class: "mainlink", style: "color: red"
 
     %a.facebook{ href: "https://www.facebook.com/StartupVictoria", rel: "nofollow", target: "_blank" }
       = image_tag "facebook.png", border: "0", alt: "facebook"

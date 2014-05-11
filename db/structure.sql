@@ -30,6 +30,45 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
+-- Name: coupons; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE coupons (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    teaser_name character varying(255) NOT NULL,
+    teaser_description character varying(255) NOT NULL,
+    company_name character varying(255) NOT NULL,
+    company_url character varying(255) NOT NULL,
+    company_about character varying(255) NOT NULL,
+    logo_filename character varying(255) NOT NULL,
+    description text NOT NULL,
+    how_to_redeem text NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+--
+-- Name: coupons_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE coupons_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: coupons_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE coupons_id_seq OWNED BY coupons.id;
+
+
+--
 -- Name: customers; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -93,45 +132,6 @@ ALTER SEQUENCE memberships_id_seq OWNED BY memberships.id;
 
 
 --
--- Name: offers; Type: TABLE; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE TABLE offers (
-    id integer NOT NULL,
-    name character varying(255) NOT NULL,
-    teaser_name character varying(255) NOT NULL,
-    teaser_description character varying(255) NOT NULL,
-    company_name character varying(255) NOT NULL,
-    company_url character varying(255) NOT NULL,
-    company_about character varying(255) NOT NULL,
-    logo_filename character varying(255) NOT NULL,
-    description text NOT NULL,
-    how_to_redeem text NOT NULL,
-    created_at timestamp without time zone,
-    updated_at timestamp without time zone
-);
-
-
---
--- Name: offers_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE offers_id_seq
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: offers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE offers_id_seq OWNED BY offers.id;
-
-
---
 -- Name: schema_migrations; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -177,6 +177,13 @@ ALTER SEQUENCE users_id_seq OWNED BY users.id;
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY coupons ALTER COLUMN id SET DEFAULT nextval('coupons_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY customers ALTER COLUMN id SET DEFAULT nextval('customers_id_seq'::regclass);
 
 
@@ -191,14 +198,15 @@ ALTER TABLE ONLY memberships ALTER COLUMN id SET DEFAULT nextval('memberships_id
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY offers ALTER COLUMN id SET DEFAULT nextval('offers_id_seq'::regclass);
-
-
---
--- Name: id; Type: DEFAULT; Schema: public; Owner: -
---
-
 ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
+
+
+--
+-- Name: coupons_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY coupons
+    ADD CONSTRAINT coupons_pkey PRIMARY KEY (id);
 
 
 --
@@ -218,19 +226,18 @@ ALTER TABLE ONLY memberships
 
 
 --
--- Name: offers_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
---
-
-ALTER TABLE ONLY offers
-    ADD CONSTRAINT offers_pkey PRIMARY KEY (id);
-
-
---
 -- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
 ALTER TABLE ONLY users
     ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: index_coupons_on_name; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_coupons_on_name ON coupons USING btree (name);
 
 
 --
@@ -245,13 +252,6 @@ CREATE UNIQUE INDEX index_customers_on_user_id ON customers USING btree (user_id
 --
 
 CREATE UNIQUE INDEX index_memberships_on_customer_id ON memberships USING btree (customer_id);
-
-
---
--- Name: index_offers_on_name; Type: INDEX; Schema: public; Owner: -; Tablespace: 
---
-
-CREATE UNIQUE INDEX index_offers_on_name ON offers USING btree (name);
 
 
 --
@@ -299,4 +299,8 @@ INSERT INTO schema_migrations (version) VALUES ('20140510051746');
 INSERT INTO schema_migrations (version) VALUES ('20140510051751');
 
 INSERT INTO schema_migrations (version) VALUES ('20140510120503');
+
+INSERT INTO schema_migrations (version) VALUES ('20140511014253');
+
+INSERT INTO schema_migrations (version) VALUES ('20140511014340');
 

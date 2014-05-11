@@ -1,6 +1,6 @@
 require 'draper'
 
-class OfferDecorator < Draper::Decorator
+class CouponDecorator < Draper::Decorator
   delegate_all
 
   def logo_path

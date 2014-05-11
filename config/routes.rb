@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   resource :memberships,
     only: [:create]
 
-  resources :offers,
+  resources :coupons,
     only: [:index, :show]
 
 end

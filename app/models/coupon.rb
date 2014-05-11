@@ -1,6 +1,6 @@
-class Offer < ActiveRecord::Base
+class Coupon < ActiveRecord::Base
   def self.from_param(name)
-    Offer.find_by_name name.to_s
+    Coupon.find_by_name name.to_s
   end
 
   def to_param

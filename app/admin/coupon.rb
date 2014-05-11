@@ -14,4 +14,19 @@ ActiveAdmin.register Coupon do
     :description,
     :how_to_redeem,
   )
+
+  filter :name
+  filter :teaser_description
+  filter :company_url
+  filter :created_at
+
+  index do
+    column :name
+    column :teaser_description
+    column :company_url
+    column :created_at
+
+    default_actions
+  end
+
 end

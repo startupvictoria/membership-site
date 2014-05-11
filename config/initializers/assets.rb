@@ -3,4 +3,5 @@ StartupVictoria.config.assets.precompile += [
   "jquery.creditCardValidator.js",
   "map.js",
   "main.js",
+  "memberships/new.js"
 ]

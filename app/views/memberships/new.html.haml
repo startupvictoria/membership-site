@@ -1,0 +1,109 @@
+.Page-left
+  %h3.Heading--primary
+    Become a member
+
+  %div{ style: "color:#00a2d3;padding-bottom:30px;line-height:20px" }
+    %i
+      Startup Victoria membership costs only $99 AUD per year.
+
+  = form_for(registration_form, url: create_membership_url, html: {id: "paymentForm", class: "emailsub"}) do |f|
+    - if registration_form.errors.any?
+      .Form-errors
+        %ul
+          = registration_form.errors.full_messages.each do |message|
+            %li
+              = message
+
+    .paymentErrors
+
+    %h3.Heading--primary
+      Personal Information
+
+    %div
+      %label
+        Full Name:
+      = f.text_field :full_name
+
+    %div{ style: "margin-top:15px" }
+      %label
+        Email:
+      = f.email_field :email
+
+    %div{ style: "margin-top:15px" }
+      %label
+        Password (at least 6 characters):
+      = f.password_field :password
+
+    %h3.Heading--primary
+      Payment
+
+    %div
+      %label
+        Credit Card Number:
+      %input{ "data-stripe" => "number" }
+
+    %div{ style: "margin-top:10px;" }
+      %div{ style: "display: inline-block;" }
+        %label
+          Card Expiry:
+
+        %select{ class: 'exp_month', id: 'exp_month', name: 'month', "data-stripe" => "exp-month", style: 'font-size:14px;padding: 10px;margin-top:10px;border:none' }
+
+          %option{ value: "" }
+            Month
+
+          - [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'].each do |mm|
+            %option{ value: mm }
+              = mm
+
+      %div{ style: "display: inline-block;" }
+        %select{ class: 'exp_year', id: "exp_year", name: 'year', "data-stripe" => "exp-year", style: 'font-size:14px;padding: 10px;margin-top:10px;border:none' }
+
+          %option{ value: "" }
+            Year
+
+          - [ '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'].each do |yyyy|
+            %option{ value: yyyy }
+              = yyyy
+
+    %div{ style: "margin-top:15px" }
+      %label
+        CCV:
+
+      %input{ type: "text", class: "ccv", name: "ccv", "data-stripe" => "cvc", value: "", style: 'width:100px;' }
+
+    %div{ style: "margin-top:5px" }
+      = f.submit "Pay & Register", class: "btn"
+
+  %div{ style: "line-height: 26px;color:#666" }
+    By completing this form, you agree to our
+
+    %a{ href: "/terms", target: "_blank" }
+      Terms and Conditions
+
+    and
+
+    %a{ href: "/privacy", target: "_blank" }
+      Privacy Policy
+
+    %p
+      Forgot password?
+      %a{ href: "/fpass" }
+        Click here
+      to get a new password.
+
+      %br
+
+      Already have an account? Click
+
+      %a{ href: "/login" }
+        here
+
+      to login.
+
+  = javascript_include_tag "https://js.stripe.com/v2/"
+  
+  = javascript_include_tag "memberships/new"
+
+  :javascript
+    startup_victoria_memberships_stripe_card_create_token( "#{StartupVictoria.config.stripe_publishable_key}" )

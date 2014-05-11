@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
   def current_user
     authenticator.current_user
   end
+  helper_method :current_user
 
   def authenticate_admin_user!
     unless current_user.admin?

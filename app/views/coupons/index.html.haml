@@ -10,6 +10,10 @@
             Members get freebies and discounts from tons of startup-friendly services across the globe.
             %br
             Each logo has a crazy-good deal behind it.
+            - if logged_in?
+              %br
+              %br
+              Click the logo to access the coupon code.
 
         .cleanit
           - @coupons.each do |coupon|

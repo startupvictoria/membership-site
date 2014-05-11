@@ -27,9 +27,11 @@
             = image_tag "logo.png", class: "Header-logo", alt: "startup victoria logo"
 
         - if logged_in?
-          <a href="<%= logout_url %>" class="Header-btn">Logout</a>
+          %a.Header-btn{ href: logout_path }
+            Logout
         - else
-          <a href="<%= login_url %>" class="Header-btn">Login</a>
+          %a.Header-btn{ href: login_path }
+            Login
 
     = flash[:notice]
 

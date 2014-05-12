@@ -9,6 +9,20 @@ SET standard_conforming_strings = on;
 SET check_function_bodies = false;
 SET client_min_messages = warning;
 
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
 SET search_path = public, pg_catalog;
 
 SET default_tablespace = '';
@@ -173,7 +187,8 @@ CREATE TABLE users (
     password_digest character varying(255) NOT NULL,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
-    admin boolean DEFAULT false NOT NULL
+    admin boolean DEFAULT false NOT NULL,
+    faction integer DEFAULT 0 NOT NULL
 );
 
 
@@ -366,4 +381,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140511014340');
 INSERT INTO schema_migrations (version) VALUES ('20140513113707');
 
 INSERT INTO schema_migrations (version) VALUES ('20140513114512');
+
+INSERT INTO schema_migrations (version) VALUES ('20140513114513');
 

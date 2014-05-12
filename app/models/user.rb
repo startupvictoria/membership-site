@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
   has_one :membership,
     through: :customer
+
+  enum faction: { unknown: 0, non_founder: 1, aspiring_founder: 2, practising_founder: 3 }
 end

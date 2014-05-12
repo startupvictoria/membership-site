@@ -17,6 +17,7 @@ ActiveAdmin.register User, :as => "Member" do
   filter :created_at
 
   index do
+    column :id
     column :email
     column :full_name
     column :faction
@@ -26,16 +27,18 @@ ActiveAdmin.register User, :as => "Member" do
     default_actions
   end
 
-   show do |user|
-     attributes_table do
-       row :email
-       row :full_name
-       row :faction
-       row :admin
-       row :created_at
+  show do |user|
+    attributes_table do
+      row :id
+      row :email
+      row :full_name
+      row :faction
+      row :admin
+      row :created_at
      end
+
      active_admin_comments
-   end
+  end
 
   form do |f|
     f.inputs "UserDetails" do

@@ -4,8 +4,8 @@ class ContactMailer < ActionMailer::Base
 
     mail(
       to:      "contact@startupvictoria.com.au",
-      from:    "no-reply@startupvictoria.com.au",
-      subject: "new contact"
+      from:    "\"#{attributes[:full_name]}\" <#{attributes[:email]}>",
+      subject: "contact: #{attributes[:subject]}"
     )
   end
 end

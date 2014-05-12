@@ -15,10 +15,12 @@ describe ContactMailer do
   subject { ContactMailer.contact(attributes) }
 
   specify { expect(subject.to).to eq(["contact@startupvictoria.com.au"]) }
-  specify { expect(subject.from).to eq(["no-reply@startupvictoria.com.au"]) }
 
-  specify { expect(subject.body).to include(full_name) }
-  specify { expect(subject.body).to include(email) }
-  specify { expect(subject.body).to include(subj) }
+  specify { expect(subject[:from].to_s).to include(full_name) }
+  specify { expect(subject[:from].to_s).to include(email) }
+  specify { expect(subject.from).to include(email) }
+
+  specify { expect(subject.subject).to include(subj) }
+
   specify { expect(subject.body).to include(message) }
 end

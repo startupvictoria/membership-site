@@ -4,6 +4,7 @@ ActiveAdmin.register User do
 
   filter :email
   filter :full_name
+  filter :admin
   filter :created_at
 
   index do

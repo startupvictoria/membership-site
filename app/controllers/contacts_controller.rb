@@ -22,7 +22,7 @@ class ContactsController < ApplicationController
     params.fetch(:contact_form, {}).permit(
       :email,
       :full_name,
-      :phone,
+      :subject,
       :message
     )
   end

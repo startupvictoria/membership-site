@@ -4,12 +4,12 @@ require 'shoulda/matchers'
 describe ContactForm do
   let(:full_name) { "Peter Gregory" }
   let(:email) { "peter@hooli.com" }
-  let(:phone) { "123" }
+  let(:subject) { "a question" }
   let(:message) { "blah" }
   let(:attributes) { {
     full_name: full_name,
     email: email,
-    phone: "123",
+    subject: "a question",
     message: "blah"
   } }
 
@@ -19,6 +19,7 @@ describe ContactForm do
   it { is_expected.to validate_presence_of(:email) }
   it { is_expected.to allow_value("foo@bar.com").for(:email) }
   it { is_expected.not_to allow_value("foobar.com").for(:email) }
+  it { is_expected.to validate_presence_of(:subject) }
   it { is_expected.to validate_presence_of(:message) }
 
   it "sends a contact email" do

@@ -3,13 +3,13 @@ require 'spec_helper'
 describe ContactMailer do
   let(:full_name) { "Peter Gregory" }
   let(:email) { "peter@hooli.com" }
-  let(:phone) { "123" }
+  let(:subj) { "a question" }
   let(:message) { "blah" }
   let(:attributes) { {
     full_name: full_name,
     email: email,
-    phone: "123",
-    message: "blah"
+    subject: subj,
+    message: message
   } }
 
   subject { ContactMailer.contact(attributes) }
@@ -19,6 +19,6 @@ describe ContactMailer do
 
   specify { expect(subject.body).to include(full_name) }
   specify { expect(subject.body).to include(email) }
-  specify { expect(subject.body).to include(phone) }
+  specify { expect(subject.body).to include(subj) }
   specify { expect(subject.body).to include(message) }
 end

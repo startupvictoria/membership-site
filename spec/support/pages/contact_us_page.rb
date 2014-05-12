@@ -11,8 +11,8 @@ class ContactUsPage < SimpleDelegator
     fill_in "contact_form[email]", with: email
   end
 
-  def enter_phone_number(number)
-    fill_in "contact_form[phone]", with: number
+  def enter_subject(subject)
+    fill_in "contact_form[subject]", with: subject
   end
 
   def enter_message(message)

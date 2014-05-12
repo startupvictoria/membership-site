@@ -7,7 +7,7 @@ feature "'contact us' form" do
 
     page.enter_name("Bob")
     page.enter_email("bob@example.com")
-    page.enter_phone_number("123456")
+    page.enter_subject("q question")
     page.enter_message("hello startup victoria")
 
     page.submit_message

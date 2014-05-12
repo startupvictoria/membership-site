@@ -5,7 +5,7 @@ class ContactForm
 
   attr_accessor :email
   attr_accessor :full_name
-  attr_accessor :phone
+  attr_accessor :subject
   attr_accessor :message
 
   validates :full_name,
@@ -14,6 +14,9 @@ class ContactForm
   validates :email,
     presence: true,
     format: {with: Formats::EMAIL}
+
+  validates :subject,
+    presence: true
 
   validates :message,
     presence: true

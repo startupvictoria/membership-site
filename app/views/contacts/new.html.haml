@@ -1,0 +1,31 @@
+%h3.Heading--primary
+  Contact Us
+
+.Page-narrow
+  .Map#mapheader
+
+  = javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false"
+  = javascript_include_tag "map.js"
+
+  %h3.Heading--primary
+    Send Us An Email
+
+  = form_for(contact_form, url: contacts_path, html: {class: "Form Form--contactUs emailsub"}) do |f|
+    = contact_form.errors.full_messages
+
+    - if contact_form.errors.any?
+      .Form-errors
+        %ul
+          - contact_form.errors.full_messages.each do |message|
+            %li
+              = message
+
+    = f.text_field :full_name, class: "Form-input", placeholder: "Your Name"
+
+    = f.email_field :email, class: "Form-input", placeholder: "Your Email Address"
+
+    = f.phone_field :phone, class: "Form-input", placeholder: "Your Phone Number"
+
+    = f.text_area :message, class: "Form-text_area", placeholder: "Your message"
+
+    = f.submit "SEND", class: "Form-btn"

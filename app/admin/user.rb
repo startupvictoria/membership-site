@@ -1,4 +1,12 @@
-ActiveAdmin.register User do
+ActiveAdmin.register User, :as => "Member" do
+
+  scope_to do
+    Class.new do
+      def self.members
+        User.joins(:membership)
+      end
+    end
+  end
 
   permit_params :email, :full_name, :faction, :admin
 

@@ -4,7 +4,7 @@ ActiveAdmin.register User do
 
   filter :email
   filter :full_name
-  filter :faction
+  filter :faction, as: :select, collection: proc { User.factions }
   filter :admin
   filter :created_at
 

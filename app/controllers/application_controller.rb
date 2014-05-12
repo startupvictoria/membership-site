@@ -22,6 +22,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticator
-    @_authenticator ||= Authenticator.new(session)
+    @_authenticator ||= ::Authenticator.new(session)
   end
 end

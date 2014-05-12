@@ -1,4 +1,4 @@
-class AddFactionToUser < ActiveRecord::Migration
+class AddFactionToUsers < ActiveRecord::Migration
   def change
     change_table :users do |t|
       t.integer :faction,

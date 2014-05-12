@@ -29,7 +29,7 @@ ActiveAdmin.register User, :as => "Member" do
     default_actions
   end
 
-  show do |user|
+  show do
     attributes_table do
       row :id
       row :email
@@ -43,7 +43,7 @@ ActiveAdmin.register User, :as => "Member" do
   end
 
   form do |f|
-    f.inputs "UserDetails" do
+    f.inputs "Member Details" do
       f.input :email
       f.input :full_name
       f.input :faction,

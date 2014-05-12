@@ -11,7 +11,8 @@
     Send Us An Email
 
   = form_for(contact_form, url: contacts_path, html: {class: "Form Form--contactUs emailsub"}) do |f|
-    = contact_form.errors.full_messages
+    - if contact_form.errors.any?
+      = contact_form.errors.full_messages
 
     - if contact_form.errors.any?
       .Form-errors

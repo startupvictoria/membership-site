@@ -8,6 +8,8 @@ ActiveAdmin.register User, :as => "Member" do
     end
   end
 
+  actions :all, :except => [ :destroy, :new ]
+
   permit_params :email, :full_name, :faction, :admin
 
   filter :email

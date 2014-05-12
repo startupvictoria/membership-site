@@ -21,12 +21,12 @@
             %li
               = message
 
-    = f.text_field :full_name, class: "Form-input", placeholder: "Your Name"
+    = f.text_field :full_name, class: "Form-input", placeholder: "Full Name"
 
-    = f.email_field :email, class: "Form-input", placeholder: "Your Email Address"
+    = f.email_field :email, class: "Form-input", placeholder: "you@example.com"
 
     = f.phone_field :phone, class: "Form-input", placeholder: "Your Phone Number"
 
-    = f.text_area :message, class: "Form-text_area", placeholder: "Your message"
+    = f.text_area :message, class: "Form-text_area", placeholder: "Message"
 
     = f.submit "SEND", class: "Form-btn"

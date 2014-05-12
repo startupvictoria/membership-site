@@ -4,8 +4,8 @@ class PasswordResetMailer < ActionMailer::Base
 
     mail(
       to: token.user.email,
-      from: "no-reply@startupvictoria.com.au",
-      subject: "Your password has been reset"
+      from: "\"Startup Victoria\" <no-reply@startupvictoria.com.au>",
+      subject: "Startup Victoria password reset confirmation"
     )
   end
 end

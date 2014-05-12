@@ -23,7 +23,11 @@ ActiveAdmin.register Coupon do
   index do
     column :name
     column :teaser_description
-    column :company_url
+    column :company_url do |coupon|
+      link_to \
+        coupon.company_url.gsub(%r{\w*://}, ""),
+        coupon.company_url
+    end
     column :created_at
 
     default_actions

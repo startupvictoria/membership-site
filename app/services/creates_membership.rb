@@ -24,5 +24,7 @@ class CreatesMembership
     )
 
     Membership.create!(customer_id: customer.id, plan_id: plan.id)
+
+    MembershipCreatedMailer.create(user.id).deliver
   end
 end

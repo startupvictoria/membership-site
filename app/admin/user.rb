@@ -3,7 +3,7 @@ ActiveAdmin.register User, :as => "Member" do
   scope_to do
     Class.new do
       def self.members
-        User.joins(:membership)
+        User.with_membership
       end
     end
   end

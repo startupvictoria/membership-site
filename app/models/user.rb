@@ -11,4 +11,6 @@ class User < ActiveRecord::Base
     dependent: :destroy
 
   enum faction: { unassigned: 0, civilian: 1, aspirant: 2, practitioner: 3 }
+
+  scope :with_membership, -> { joins(:membership) }
 end

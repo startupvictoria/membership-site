@@ -1,6 +1,7 @@
 class Authenticator
   class AnonUser
     def nil?; true; end
+    def admin?; false; end
   end
 
   def initialize(session)

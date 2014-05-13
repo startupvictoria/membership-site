@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
+
   root to: "home#index"
 
   get "/buy",   to: "memberships#new", as: :new_membership
@@ -21,5 +23,4 @@ Rails.application.routes.draw do
 
   resources :coupons,
     only: [:index, :show]
-
 end

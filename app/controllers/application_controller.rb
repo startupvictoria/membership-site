@@ -10,6 +10,16 @@ class ApplicationController < ActionController::Base
   end
   helper_method :logged_in?
 
+  def current_user
+    authenticator.current_user
+  end
+
+  def authenticate_admin_user!
+    unless current_user.admin?
+      redirect_to root_url
+    end
+  end
+
   def authenticator
     @_authenticator ||= Authenticator.new(session)
   end

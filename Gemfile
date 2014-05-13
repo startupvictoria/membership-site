@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails'
 gem 'draper'

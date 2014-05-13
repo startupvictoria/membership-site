@@ -11,6 +11,7 @@ require "sprockets/railtie"
 
 Bundler.setup(*Rails.groups)
 
+require 'activeadmin'
 require 'dotenv-rails'
 require 'draper'
 require 'foreigner'

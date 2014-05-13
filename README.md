@@ -43,10 +43,12 @@ rspec
 Roadmap
 =======
 
-High:
+We would love to receive pull-requests for the items on this roadmap.
+
+High Priority:
 
 * pdf receipts for membership payment that can be downloaded by members
 
-Medium:
+Medium Priority:
 
-Low:
+Low Priority:

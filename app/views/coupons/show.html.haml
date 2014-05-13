@@ -41,3 +41,8 @@
                   How to redeem:
                 %div{ style: "margin-bottom:25px" }
                   = @coupon.how_to_redeem.html_safe
+                  - if @coupon.how_to_redeem.include? "membership number"
+                    %br
+                    %br
+                    Your Startup Victoria Membership number is
+                    = "#{current_user.id}."

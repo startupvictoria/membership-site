@@ -33,14 +33,14 @@
           %a.Header-btn{ href: login_path }
             Login
 
-    = flash[:notice]
-
     = render "shared/primary_navigation"
 
     .Page
       = yield :before_page
 
       .Page-content
+        = render "shared/flash_messages"
+
         = yield
 
       = yield :after_page

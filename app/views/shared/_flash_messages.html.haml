@@ -1,6 +1,7 @@
 .flash-messages
   - types = { notice: "", error: "alert", success: "success" }
   - types.keys.each do |type|
+    / - flash.notice = "Test Message Goes Here"
     - if flash[type]
       - messages = Array(flash[type])
       - messages.each do |message|

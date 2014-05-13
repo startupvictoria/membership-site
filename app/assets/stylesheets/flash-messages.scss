@@ -1,0 +1,23 @@
+.flash-messages
+{
+
+}
+  .flash-messages .alert-box
+  {
+    margin: 1.25em;
+    text-align: center;
+    vertical-align: center;
+
+    .close
+    {
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }

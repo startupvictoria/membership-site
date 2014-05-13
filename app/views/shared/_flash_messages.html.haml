@@ -1,0 +1,14 @@
+.flash-messages
+  - types = { notice: "", error: "alert", success: "success" }
+  - types.keys.each do |type|
+    - if flash[type]
+      - messages = Array(flash[type])
+      - messages.each do |message|
+        %h2
+          %hr
+          .alert-box.radius{:class => types[type], "data-alert" => ""}
+            = message
+            %a.close{href: ""} ×
+          %hr
+      - flash[type] = nil
+

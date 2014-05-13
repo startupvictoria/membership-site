@@ -1,7 +1,7 @@
 membership-site
 ===============
 
-The public facing web site of Startup Victoria: startupvictoria.com.au
+The public web site of Startup Victoria: startupvictoria.com.au is open-source.  You can contribute to it.
 
 Features:
 
@@ -39,3 +39,14 @@ foreman start
 ```
 rspec
 ```
+
+Roadmap
+=======
+
+High:
+
+* pdf receipts for membership payment that can be downloaded by members
+
+Medium:
+
+Low:

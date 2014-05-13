@@ -6,8 +6,4 @@ class User < ActiveRecord::Base
 
   has_one :membership,
     through: :customer
-
-  def admin?
-    true
-  end
 end

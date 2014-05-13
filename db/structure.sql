@@ -172,7 +172,8 @@ CREATE TABLE users (
     full_name character varying(255) NOT NULL,
     password_digest character varying(255) NOT NULL,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    admin boolean DEFAULT false NOT NULL
 );
 
 
@@ -363,4 +364,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140511014253');
 INSERT INTO schema_migrations (version) VALUES ('20140511014340');
 
 INSERT INTO schema_migrations (version) VALUES ('20140513113707');
+
+INSERT INTO schema_migrations (version) VALUES ('20140513114512');
 

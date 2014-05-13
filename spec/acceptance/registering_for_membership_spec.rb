@@ -9,7 +9,7 @@ feature "registering for membership", :vcr do
     page.enter_valid_payment_details
     page.submit_registration
 
-    expect(page).to have_content("Successfully registered")
+    expect(page).to have_content("Payment Complete.  Welcome to Startup Victoria!")
   end
 
   scenario "I see errors when my registration fails" do

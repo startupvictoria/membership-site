@@ -11,7 +11,7 @@
         %li
           = link_to "Coupons", "/coupons", class: "mainlink"
         %li
-          = link_to "Contact", "/contact", class: "mainlink"
+          = link_to "Contact", new_contact_path, class: "mainlink"
         %li
           - if logged_in? && current_user.admin?
             = link_to "Admin", "/admin", class: "mainlink", style: "color: red"

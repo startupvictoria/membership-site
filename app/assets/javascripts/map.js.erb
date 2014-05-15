@@ -9,7 +9,7 @@ function mapinitializeheader() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   var map = new google.maps.Map(document.getElementById("mapheader"), myOptions);
-  var image = "/theme/img/map-pin.png";
+  var image = "<%= asset_path('map-pin.png') %>";
   var marker = new google.maps.Marker({
     map: map,
     icon: image,

@@ -9,7 +9,15 @@ class PasswordResetToken < ActiveRecord::Base
     new(user: user, token: token, active: true)
   end
 
+  def self.from_param(param)
+    find_by_token(param)
+  end
+
   def deactivate
     update_attributes!(active: false)
+  end
+
+  def to_param
+    token
   end
 end

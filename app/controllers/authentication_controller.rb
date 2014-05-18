@@ -13,9 +13,6 @@ class AuthenticationController < ApplicationController
     end
   end
 
-  def forgot_password
-  end
-
   def destroy
     authenticator.log_out
     redirect_to root_url

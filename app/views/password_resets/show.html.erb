@@ -1,0 +1,31 @@
+<div style="min-height:600px;background-color: #ededed">
+  <div class="cont">
+    <div class="cleanit">
+      <h3 class="redtitle" style="padding:20px 0;font-size:27px;">
+        Update Password
+      </h3>
+
+      <%= form_for(password_update_form,
+                   url: password_reset_url(password_update_form.token),
+                   method: :patch,
+                   html: {class: "emailsub", style: "padding: 0 0 60px 0"}) do |f| %>
+
+        <% if password_update_form.errors.any? %>
+          <div class="Form-errors">
+            <% password_update_form.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        <% end %>
+
+        <div>Password:</div>
+        <%= f.password_field :password %>
+        <div style="margin-top:5px">
+          <button type="submit" class="btn" style="margin-top:10px">
+            UPDATE PASSWORD
+          </button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

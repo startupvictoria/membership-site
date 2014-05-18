@@ -11,8 +11,6 @@ Rails.application.routes.draw do
   post "/authenticate", to: "authentication#create", as: :authenticate
   get "/logout", to: "authentication#destroy",    as: :logout
 
-  get "/forgot_password", to: "authentication#forgot_password", as: :forgot_password
-
   get "/about", to: "static_pages#about", as: :about
   get "/terms", to: "static_pages#terms_and_conditions", as: :terms_and_conditions
   get "/privacy", to: "static_pages#privacy", as: :privacy
@@ -25,4 +23,8 @@ Rails.application.routes.draw do
 
   get "/contact-us", to: "contacts#new", as: :new_contact
   resource :contacts, only: [:create]
+
+  resources :password_resets,
+    only: [:index, :show, :create, :update],
+    path: "forgot-password"
 end

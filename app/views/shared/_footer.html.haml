@@ -1,50 +1,47 @@
-#footer
-  .cont
-    .cleanit
-      .fl.aboutus
-        .xtitle
-          About Us
+.row.footer
+  .container
+    .col-sm-12
+      .col-sm-3
+        %ul.list-unstyled
+          %li
+            %h3
+              About Us
+          %li
+            %p
+              Startup Victoria is a nonprofit organisation which works to create more and better startups in Victoria.
 
-        .descx
-          Startup Victoria is a nonprofit organisation dedicated to supporting
-          and building Victoria's startup ecosystem.
+      .col-sm-3
+        %ul.list-unstyled
+          %li
+            %h3
+              Things we do
+          %li
+            %a{ href: "http://www.meetup.com/Lean-Startup-Melbourne/", target: "_blank" }
+              Lean Startup Melbourne
 
-        %a.btn{ href: "/contact", style: "margin-top:20px;margin-right:5px;" }
-          BECOME A VOLUNTEER
+      .col-sm-3
+        %ul.list-unstyled
+          %li
+            %h3
+              Things to do
+          %li
+            %a{ href: "https://confirmsubscription.com/h/i/EFC3DD47E212C653", rel: "nofollow" }
+              Get email news
 
-        %a.btn{ href: "https://confirmsubscription.com/h/i/EFC3DD47E212C653" }
-          GET EMAIL NEWS
+          %li
+            %a{ href: new_contact_path }
+              Become a volunteer
 
-      .fl.other
-        .xtitle
-          Other Resources
-        .otherx
-          %a{ href: "http://www.meetup.com/Lean-Startup-Melbourne/", target: "_blank" }
-            Lean Startup Melbourne
 
-      .fl.hello
-        .xtitle
-          Say Hello
-        .descx
-          Email:
+      .col-sm-3
+        %ul.list-unstyled
+          %li
+            %h3
+              Open Source
+          %li
+            %p
+              This web site is open source software.
 
-          %a{ href: "mailto:hello@startupvictoria.com.au" }
-            hello@startupvictoria.com.au
-
-    %a{ href: "https://github.com/startupvictoria/membership-site" }
-      %img{ style: "position: absolute; bottom: 0; right: 0; border: 0;", alt: "Fork me on GitHub", src: "https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" }
-
-#footeralt
-  %a.xxx{ href: "/contact" }
-    Contact
-    |
-    %a.xxx{ href: "/terms" }
-      Terms and Conditions
-    |
-    %a.xxx{ href: "/privacy"}
-      Privacy Policy
-
-  %div
-    Copyright &copy; Startup Victoria
-
-  #ajaxreturn
+          %li
+            %a{ href: "https://github.com/startupvictoria/membership-site" }
+              Fork me on Github

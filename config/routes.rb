@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  constraints(:host => /^www\./) do
+    get "(*x)" => redirect { |params, request|
+      URI.parse(request.url).tap {|url| url.host.sub!('www.', '') }.to_s
+    }
+  end
+
   ActiveAdmin.routes(self)
 
   root to: "home#index"

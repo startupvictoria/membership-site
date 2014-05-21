@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   post "/authenticate", to: "authentication#create", as: :authenticate
   get "/logout", to: "authentication#destroy",    as: :logout
 
-  get "/about", to: "static_pages#about", as: :about
+  get "/about/us", to: "about#us", as: :about_us
   get "/terms", to: "static_pages#terms_and_conditions", as: :terms_and_conditions
   get "/privacy", to: "static_pages#privacy", as: :privacy
 

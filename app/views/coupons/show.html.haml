@@ -1,48 +1,40 @@
-%div{ style: "min-height:600px;background-color: #ededed" }
-  .cont
-    %h3.redtitle{ style: "padding:30px 0 10px 0;font-size:27px;" }
-      Coupon brought to you by
+.row
+  %h3
+    Coupon brought to you by
+    = @coupon.company_name
+
+.row
+  .col-sm-4
+    = image_tag asset_path(@coupon.logo_filename), border: "0"
+
+  .col-sm-8.coupon-hsep
+    %h4
+      Company Name
+    %p
       = @coupon.company_name
 
-    %br
+    %h4
+      Company URL
+    %p
+    = @coupon.company_url
 
-    .cleanit
-      .member-offers{ style: "float:left;width:742px;" }
+    %h4
+      About
+    %p
+      = @coupon.company_about
 
-        %table
-          %tr
-            %td{ valign: "top", width: "260" }
-              = image_tag asset_path(@coupon.logo_filename), border: "0"
+    %h4
+      Coupon
+    %p
+      = @coupon.description
 
-            %td{ valign: "top", style: "font-size:16px"}
-              %div{ style: "font-weight: bold;margin-bottom:5px" }
-                Company Name:
-              %div{ style: "margin-bottom:25px" }
-                = @coupon.company_name
-
-              %div{ style: "font-weight: bold;margin-bottom:5px" }
-                Company URL:
-              %div{ style: "margin-bottom:25px" }
-                %a{ href: @coupon.company_url, target: "_blank" }
-                  = @coupon.company_url
-
-              %div{ style: "font-weight: bold;margin-bottom:5px" }
-                About:
-              %div{ style: "margin-bottom:25px" }
-                = @coupon.company_about
-
-              %div{ style: "font-weight: bold;margin-bottom:5px" }
-                Coupon:
-              %div{ style: "margin-bottom:25px" }
-                = @coupon.description
-
-              - if logged_in?
-                %div{ style: "font-weight: bold;margin-bottom:5px" }
-                  How to redeem:
-                %div{ style: "margin-bottom:25px" }
-                  = @coupon.how_to_redeem.html_safe
-                  - if @coupon.how_to_redeem.include? "membership number"
-                    %br
-                    %br
-                    Your Startup Victoria Membership number is
-                    = "#{current_user.id}."
+    - if logged_in?
+      %h4
+        How to redeem
+      %p
+        = @coupon.how_to_redeem.html_safe
+        - if @coupon.how_to_redeem.include? "membership number"
+          %br
+          %br
+          Your Startup Victoria Membership number is
+          = "#{current_user.id}."

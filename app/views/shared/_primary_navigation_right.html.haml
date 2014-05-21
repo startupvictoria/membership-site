@@ -1,0 +1,18 @@
+%ul.nav.navbar-nav.navbar-right
+  - if logged_in?
+    %li.dropdown
+
+      %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+        = current_user.full_name
+        %b.caret
+
+      %ul.dropdown-menu
+        / %li.divider
+
+        %li
+          %a{ href: logout_path }
+            Logout
+  - else
+    %li
+      %a{ href: login_path }
+        Login

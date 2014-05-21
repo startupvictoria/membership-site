@@ -1,33 +1,35 @@
-%div{ style: "min-height:600px; background-color: #ededed" }
-  .cont
-    %h3.redtitle{ style: "padding:30px 0 10px 0;font-size:27px;" }
+.row
+  .col-sm-10
+    %h2
       Coupons for members
 
-    .cleanit
-      %div.member-offers{ style: "float:left;width:742px;" }
-        %div{ style: "color:#00a2d3;padding-bottom:20px;line-height: 22px" }
-          %i
-            Members get freebies and discounts from tons of startup-friendly services across the globe.
-            %br
-            Each logo has a crazy-good deal behind it.
-            - if logged_in?
-              %br
-              %br
-              Click the logo to access the coupon code.
+    %p
+      Startup Victoria members get discounted or free access to a huge array of startup-friendly services.
+    %p
+      Each logo has a crazy-good deal behind it.
+    - if logged_in?
+      %p
+        Click the logo to access the coupon code.
 
-        .cleanit
-          - @coupons.each do |coupon|
-            %a.offerslink{ href: coupon_path(coupon) }
-              .inneroffer
-                %div{ style: "position:relative;width:227px;height: 227px;overflow:hidden" }
-                  - if !coupon.logo_filename.empty?
-                    = image_tag asset_path(coupon.logo_filename), border: "0"
-                  .showdet
-                    %br
-                    Coupon Details
-                    %br
-                    %br
-                    %div{ style: "font-size:12px"}
-                      = coupon.teaser_description
-                .compname
-                  = coupon.teaser_name
+%hr
+
+.container
+  - @coupons.each_index do |i|
+    - coupon = @coupons[i]
+    - if (i % 3) == 0
+      .row
+    .col-sm-4
+      %a.offerslink{ href: coupon_path(coupon) }
+        .inneroffer
+          %div
+            - if !coupon.logo_filename.empty?
+              = image_tag asset_path(coupon.logo_filename), border: "0"
+            .showdet
+              %br
+              %h3
+                Coupon Details
+              %br
+              %br
+              = coupon.teaser_description
+          .compname
+            = coupon.teaser_name

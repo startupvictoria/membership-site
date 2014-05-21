@@ -1,23 +1,31 @@
-.nav
-  .cont
-    .dropdown
-      %ul
+%div.navbar.navbar-inverse.navbar-fixed-top{ role: "navigation" }
+  .container
+    .navbar-header
+      %a.navbar-brand{ href: root_path }
+        Startup Victoria
+
+    .navbar-collapse.collapse
+      %ul.nav.navbar-nav
+        %li.active
+          %a{ href: root_path }
+            Home
         %li
-          = link_to "Home", "/", class: "mainlink"
+          %a{ href: about_us_path }
+            About
         %li
-          = link_to "About", "/about", class: "mainlink"
+          %a{ href: memberships_path }
+            Membership
         %li
-          = link_to "Membership", "/plans", class: "mainlink"
+          %a{ href: coupons_path }
+            Coupons
         %li
-          = link_to "Coupons", "/coupons", class: "mainlink"
-        %li
-          = link_to "Contact", new_contact_path, class: "mainlink"
+          %a{ href: new_contact_path }
+            Contact
         %li
           - if logged_in? && current_user.admin?
-            = link_to "Admin", "/admin", class: "mainlink", style: "color: red"
+            = link_to "Admin", admin_root_path, style: "color: red"
 
-    %a.facebook{ href: "https://www.facebook.com/StartupVictoria", rel: "nofollow", target: "_blank" }
-      = image_tag "facebook.png", border: "0", alt: "facebook"
-
-    %a.twitter{ href: "https://twitter.com/startupvic", rel: "nofollow", target: "_blank" }
-      = image_tag "twitter.png", border: "0", alt: "twitter"
+      - if content_for? :primary_navigation_right
+        = yield :primary_navigation_right
+      - else
+        = render "shared/primary_navigation_right"

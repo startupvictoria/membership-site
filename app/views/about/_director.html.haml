@@ -1,0 +1,7 @@
+.col-sm-3
+  %center
+    = image_tag asset_path("directors/" + director[:image_filename]), border: "0", class: "img-circle"
+    %h3
+      = director[:name]
+    %p
+      = director[:bio]

@@ -1,0 +1,15 @@
+- content_for :primary_navigation_right do
+  /
+
+%div.form-basic.login-form{ role: "form" }
+  = form_for(log_in_form, url: authenticate_url) do |f|
+
+    %h2.form-basic-heading
+      Login
+
+    = f.email_field :email, class: "form-control", placeholder: "Email address", :autofocus => 'autofocus'
+
+    = f.password_field :password, class: "form-control", placeholder: "Password"
+
+    %button.btn.btn-lg.btn-primary.btn-block{ type: "submit" }
+      Login

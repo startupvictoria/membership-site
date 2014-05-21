@@ -12,7 +12,7 @@
         %table
           %tr
             %td{ valign: "top", width: "260" }
-              = image_tag @coupon.logo_path, border: "0"
+              = image_tag asset_path(@coupon.logo_filename), border: "0"
 
             %td{ valign: "top", style: "font-size:16px"}
               %div{ style: "font-weight: bold;margin-bottom:5px" }

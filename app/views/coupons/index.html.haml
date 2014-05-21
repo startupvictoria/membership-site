@@ -21,7 +21,7 @@
               .inneroffer
                 %div{ style: "position:relative;width:227px;height: 227px;overflow:hidden" }
                   - if !coupon.logo_filename.empty?
-                    = image_tag coupon.logo_path, border: "0"
+                    = image_tag asset_path(coupon.logo_filename), border: "0"
                   .showdet
                     %br
                     Coupon Details

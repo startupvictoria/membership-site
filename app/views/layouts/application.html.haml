@@ -23,4 +23,5 @@
 
       = yield
 
-    = render "shared/footer"
+    - if ![ login_path, new_membership_path ].include? request.path
+      = render "shared/footer"

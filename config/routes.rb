@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   constraints subdomain: 'www' do
+    Rails.logger.debug "AMHERE LENI: route constraint matched"
     get ':any', to: redirect(subdomain: nil, path: '/%{any}'), any: /.*/
   end
 

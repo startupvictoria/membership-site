@@ -247,6 +247,7 @@ DEPENDENCIES
   foreigner
   foreman
   haml
+  jquery-rails
   pg
   poltergeist
   rails (= 4.1.1)

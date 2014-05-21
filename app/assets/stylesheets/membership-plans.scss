@@ -1,0 +1,115 @@
+/* Use a wide full screen for small screens like tablets. */
+@media (min-width: 768px) and (max-width:992px) {
+  .membership-plans {
+    width: initial;
+    padding-left: 2em;
+    padding-right: 2em;        
+  }
+}
+
+/* --- Plans ---------------------------- */
+
+.membership-plans .preface {
+  margin-bottom: 40px;
+}
+
+.membership-plans .header,
+.membership-plans .footer {
+  text-align: center;
+  color: white;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+.membership-plans .title {
+  font-size: 2em;
+  font-weight: bold;
+}
+.membership-plans .price {
+  font-size: 1.4em;
+  font-weight: bold;    
+}
+.membership-plans .duration {
+}
+.membership-plans .description {
+  margin-top: 1em;
+}
+
+@media (max-width: 768px) {
+  .membership-plans .title {
+    font-size: small;
+  }    
+}
+
+/* --- Features ------------------------- */
+
+.membership-plans .feature {
+  line-height: 2.8em;   
+}
+
+@media (max-width: 768px) {
+  .membership-plans .feature {
+    text-align: center;
+  }
+}
+
+.membership-plans .feature-row {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  border: 0.1em solid rgb(163, 163, 163);
+}    
+
+/* --- Plan 1 --------------------------- */
+.membership-plans .plan1 {
+  background: rgb(224,234,242);
+}
+
+.membership-plans .header .plan1 a,
+.membership-plans .footer .plan1 a {
+  background: rgb(72, 109, 139);
+}
+
+.membership-plans .header .plan1 {
+  background: rgb(105, 153, 193);
+  border-bottom: thick solid rgb(72, 109, 139);
+}
+
+/* --- Plan 2 --------------------------- */
+.membership-plans .plan2 {
+  background: rgb(230,235,218);
+}
+
+.membership-plans .header .plan2 a,
+.membership-plans .footer .plan2 a {
+  background: rgb(108, 131, 62);
+}
+
+.membership-plans .header .plan2 {
+  background: rgb(134, 162, 77);
+  border-bottom: thick solid rgb(108, 131, 62);
+}
+
+.membership-plans .plan-feature {
+  text-align: center;
+  font-size: 2em;
+}
+
+.membership-plans .plan-feature i.check {
+  color: green;
+}
+
+.membership-plans .glyphicon-ok {
+  color: green;
+}
+
+.membership-plans .glyphicon-remove {
+  color: red;
+}
+
+.membership-plans .header a,
+.membership-plans .footer a {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  font-weight: bold;    
+}

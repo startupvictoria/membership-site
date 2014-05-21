@@ -1,0 +1,45 @@
+.offerslink{
+    color:#333;
+    font-weight: bold;
+}
+.inneroffer{
+    float:left;
+    border:1px solid #c3c3c3;
+    background-color: #e4e4e4;
+    margin:0 8px 16px 8px;
+    position:relative;
+    overflow:hidden
+}
+.compname{
+    padding:10px;
+    text-align: center;
+    background-color: #c3c3c3;
+    margin:0
+}
+.showdet{
+    opacity: 0.9;
+    background-color: #a20018;
+    color:#fff;
+    position: absolute;
+    top:0px;
+    left:0px;
+    display: none;
+    width:227px;
+    height:227px;
+    text-align: center
+}
+
+.offerslink:hover .inneroffer{
+    border:1px solid #a20018;
+    background-color: #a20018
+}
+.offerslink:hover .compname{
+    color:#fff;
+    background-color: #760018
+}
+.offerslink:hover .showdet{
+    display:block;
+}
+.coupon-hsep h4{
+    margin:20px 0 0 0;
+}

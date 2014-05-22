@@ -28,11 +28,9 @@
     %h2
       Our Location
 
-    .contact-map#contact-map-header
+    .contact-map#contact-map-header{ "data-map-pin-image" => "#{asset_path('map-pin.png')}",
+      "data-office-location" => "<b>Office</b><br><br>Level 1, 41 Stewart St,<br><br>Richmond, Victoria, 3121" }
 
-    = javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false"
-
-    :javascript
-      contact_map_initialise();
-
+= javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false"
+= javascript_include_tag "contact-map"
 = javascript_include_tag "on-form-error"

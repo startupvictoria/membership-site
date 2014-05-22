@@ -14,5 +14,4 @@
 //= require jquery.min
 //= require jquery_ujs
 //= require bootstrap.min
-//= require contact-map
 //= require membership-new

@@ -12,6 +12,7 @@ gem 'rails', '4.1.1'
 gem 'rails_12factor'
 # gem 'rb-readline'
 gem 'stripe'
+gem 'turbolinks'
 gem 'unicorn'
 
 group :assets do

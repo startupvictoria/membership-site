@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= stub active_admin
-//= require jquery
+//= require jquery.min
 //= require jquery_ujs
 //= require bootstrap.min
 //= require turbolinks

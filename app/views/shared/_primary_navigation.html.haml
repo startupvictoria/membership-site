@@ -25,7 +25,5 @@
           - if logged_in? && current_user.admin?
             = link_to "Admin", admin_root_path, style: "color: red"
 
-      - if content_for? :primary_navigation_right
-        = yield :primary_navigation_right
-      - else
+      - if !content_for? :spartan_header_footer
         = render "shared/primary_navigation_right"

@@ -7,22 +7,14 @@
       Become a member
 
     %p
-      Startup Victoria membership costs only $99 AUD per year.
+      Startup Victoria membership costs only $99 per year.
 
   .row
     .form-basic.form-horizontal{ role: "form" }
       = form_for(registration_form, url: create_membership_url, html: { id: "paymentForm" }) do |f|
-        - if registration_form.errors.any?
-          .leni-TODO-Form-errors
-            %ul
-              = registration_form.errors.full_messages.each do |message|
-                %li
-                  = message
+        = render :partial => "shared/on_form_error", :locals => { form: registration_form }
 
-        .paymentErrors
-
-        %h3
-          Personal Information
+        .on-form-error-message
 
         .form-group
           = label_tag(:full_name, "Full Name", :class => "col-sm-3 control-label")
@@ -39,8 +31,8 @@
           .col-sm-9
             = f.password_field :password, class: "form-control", placeholder: "Password (at least 6 characters)"
 
-        %h3
-          Payment
+        %br
+        %br
 
         .form-group
           = label_tag(:card_number, "Card Number", :class => "col-sm-3 control-label")
@@ -49,24 +41,28 @@
 
         .form-group
           = label_tag(:expiry_date, "Expiry Date", :class => "col-sm-3 control-label")
-          .col-sm-3
-            %select{ class: 'exp_month', id: 'exp_month', name: 'month', "data-stripe" => "exp-month" }
-              %option{ value: "" }
-                Month
+          .col-sm-9
+            .row
+              .col-xs-2
+                %select{ class: 'exp_month', id: 'exp_month', name: 'month', "data-stripe" => "exp-month" }
+                  %option{ value: "" }
+                    Month
 
-              - [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'].each do |mm|
-                %option{ value: mm }
-                  = mm
+                  - [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'].each do |mm|
+                    %option{ value: mm }
+                      = mm
 
-          .col-sm-3
-            %select{ class: 'exp_year', id: "exp_year", name: 'year', "data-stripe" => "exp-year" }
+              .col-xs-1
 
-              %option{ value: "" }
-                Year
+              .col-xs-2
+                %select{ class: 'exp_year', id: "exp_year", name: 'year', "data-stripe" => "exp-year" }
 
-              - [ '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'].each do |yyyy|
-                %option{ value: yyyy }
-                  = yyyy
+                  %option{ value: "" }
+                    Year
+
+                  - [ '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'].each do |yyyy|
+                    %option{ value: yyyy }
+                      = yyyy
 
         .form-group
           = label_tag(:card_cvc, "CVC", :class => "col-sm-3 control-label")

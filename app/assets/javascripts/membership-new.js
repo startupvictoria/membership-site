@@ -6,7 +6,7 @@ function startup_victoria_memberships_stripe_card_create_token(stripe_publishabl
     var $form = $('#paymentForm');
 
     if (response.error) {
-      $form.find('.paymentErrors').addClass('Form-errors').text(response.error.message);
+      $form.find('.on-form-error-messages').append("<li>" + response.error.message + "</li>");
       $form.find('button').prop('disabled', false);
       window.scrollTo(0,0);
     } else {
@@ -19,6 +19,8 @@ function startup_victoria_memberships_stripe_card_create_token(stripe_publishabl
   jQuery(function($) {
     $('#paymentForm').submit(function(e) {
       var $form = $(this);
+
+      $form.find('.on-form-error-messages').empty();
 
       $form.find('button').prop('disabled', true);
 

@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Note: gems are not auto-loaded
+# If you need a gem loaded on rails startup, see config/application.rb
+
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails'

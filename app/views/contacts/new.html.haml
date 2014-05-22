@@ -5,16 +5,6 @@
 
     .form-basic{ role: "form" }
       = form_for(contact_form, url: contacts_path) do |f|
-        - if contact_form.errors.any?
-          = contact_form.errors.full_messages
-
-        - if contact_form.errors.any?
-          / leni TODO
-          .Form-errors
-            %ul
-              - contact_form.errors.full_messages.each do |message|
-                %li
-                  = message
 
         = f.text_field :full_name, class: "form-control", placeholder: "Full Name", :autofocus => 'autofocus'
 
@@ -23,6 +13,13 @@
         = f.text_field :subject, class: "form-control", placeholder: "Subject"
 
         = f.text_area :message, class: "form-control", id: "contact-us-form-text-area", placeholder: "Message"
+
+        - if contact_form.errors.any?
+
+          %ul.list-unstyled.on-form-error-message
+            - contact_form.errors.full_messages.each do |message|
+              %li
+                = message
 
         %button.btn.btn-lg.btn-primary.btn-block{ type: "submit" }
           Send
@@ -37,3 +34,5 @@
 
     :javascript
       contact_map_initialise();
+
+= javascript_include_tag "on-form-error"

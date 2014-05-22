@@ -14,12 +14,7 @@
 
         = f.text_area :message, class: "form-control", id: "contact-us-form-text-area", placeholder: "Message"
 
-        - if contact_form.errors.any?
-
-          %ul.list-unstyled.on-form-error-message
-            - contact_form.errors.full_messages.each do |message|
-              %li
-                = message
+        = render :partial => "shared/on_form_error", :locals => { form: contact_form }
 
         %button.btn.btn-lg.btn-primary.btn-block{ type: "submit" }
           Send

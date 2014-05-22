@@ -1,0 +1,6 @@
+- if form.errors.any?
+
+  %ul.list-unstyled.on-form-error-message
+    - form.errors.full_messages.each do |message|
+      %li
+        = message

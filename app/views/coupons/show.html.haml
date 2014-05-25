@@ -5,7 +5,8 @@
 
 .row
   .col-sm-4
-    = image_tag asset_path(@coupon.logo_filename), border: "0"
+    - if @coupon.has_logo?
+      = image_tag @coupon.logo_path, border: "0"
 
   .col-sm-8.coupon-hsep
     %h4

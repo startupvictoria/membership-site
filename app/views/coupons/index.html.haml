@@ -22,8 +22,8 @@
       %a.offerslink{ href: coupon_path(coupon) }
         .inneroffer
           %div
-            - if !coupon.logo_filename.empty?
-              = image_tag asset_path(coupon.logo_filename), border: "0"
+            - if coupon.has_logo?
+              = image_tag coupon.logo_path, border: "0"
             .showdet
               %br
               %h3

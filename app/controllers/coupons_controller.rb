@@ -1,11 +1,11 @@
 class CouponsController < ApplicationController
 
   def index
-    @coupons = Coupon.all
+    @coupons = Coupon.all.map { |coupon| coupon.decorate }
   end
 
   def show
-    @coupon = load_coupon
+    @coupon = load_coupon.decorate
   end
 
   private

@@ -13,8 +13,7 @@
   margin-bottom: 40px;
 }
 
-.membership-plans .header,
-.membership-plans .footer {
+.membership-plans .header {
   text-align: center;
   color: white;
   padding-top: 0.2em;
@@ -59,12 +58,12 @@
 }    
 
 /* --- Plan 1 --------------------------- */
-.membership-plans .plan1 {
+.membership-plans .feature-row .plan1 {
   background: rgb(224,234,242);
 }
 
 .membership-plans .header .plan1 a,
-.membership-plans .footer .plan1 a {
+.membership-plans .bottom .plan1 a {
   background: rgb(72, 109, 139);
 }
 
@@ -74,12 +73,12 @@
 }
 
 /* --- Plan 2 --------------------------- */
-.membership-plans .plan2 {
+.membership-plans .feature-row .plan2 {
   background: rgb(230,235,218);
 }
 
 .membership-plans .header .plan2 a,
-.membership-plans .footer .plan2 a {
+.membership-plans .bottom .plan2 a {
   background: rgb(108, 131, 62);
 }
 
@@ -105,8 +104,12 @@
   color: red;
 }
 
+.membership-plans .bottom {
+  text-align: center;
+}
+
 .membership-plans .header a,
-.membership-plans .footer a {
+.membership-plans .bottom a {
   color: white;
   margin-top: 20px;
   margin-bottom: 20px;

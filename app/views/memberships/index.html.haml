@@ -10,12 +10,12 @@
       %p
         Solidarity and local support networks help build your business success!
 
-  .row
+  .row.header
     .col-xs-6
       %center
         = image_tag "highres_331026862.jpeg", border: "0", style: "width: 50%"
 
-    .col-xs-3.header
+    .col-xs-3
       .plan1
         .title
           Premium
@@ -28,7 +28,7 @@
         %a.btn.btn-primary.btn-large{ href: new_membership_path }
           Register
 
-    .col-xs-3.header
+    .col-xs-3
       .plan2
         .title
           Business
@@ -60,12 +60,12 @@
             - else
               .glyphicon.glyphicon-remove
 
-  .row.footer
+  .row.bottom
     .col-xs-3.col-xs-offset-6
       .plan1
         %a.btn.btn-primary.btn-large{ href: new_membership_path }
           Register
     .col-xs-3
       .plan2
-        %a.btn.btn-primary.btn-large{ href: new_contact_path }
+        %a.plan2.btn.btn-primary.btn-large{ href: new_contact_path }
           Contact Us

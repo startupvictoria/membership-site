@@ -11,7 +11,9 @@
 
   .row
     .form-basic.form-horizontal{ role: "form" }
-      = form_for(registration_form, url: create_membership_url, html: { id: "paymentForm" }) do |f|
+      = form_for(registration_form, url: create_membership_url, html: { id: "paymentForm",
+          "data-stripe-publishable-key" => "#{StartupVictoria.config.stripe_publishable_key}" }) do |f|
+
         = render :partial => "shared/on_form_error", :locals => { form: registration_form }
 
         .on-form-error-message
@@ -103,6 +105,5 @@
               to login.
 
 = javascript_include_tag "https://js.stripe.com/v2/"
-
-:javascript
-  startup_victoria_memberships_stripe_card_create_token( "#{StartupVictoria.config.stripe_publishable_key}" )
+= javascript_include_tag "on-form-error"
+= javascript_include_tag "membership-new"

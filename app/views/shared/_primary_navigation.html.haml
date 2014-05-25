@@ -31,9 +31,6 @@
         %li
           %a{ href: new_contact_path }
             Contact
-        %li
-          - if logged_in? && current_user.admin?
-            = link_to "Admin", admin_root_path, style: "color: red"
 
       - if !content_for? :spartan_header_footer
         = render "shared/primary_navigation_right"

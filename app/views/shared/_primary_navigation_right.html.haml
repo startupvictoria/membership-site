@@ -7,7 +7,10 @@
         %b.caret
 
       %ul.dropdown-menu
-        / %li.divider
+        - if logged_in? && current_user.admin?
+          %li
+            = link_to "Admin", admin_root_path, style: "color: red"
+          %li.divider
 
         %li
           %a{ href: logout_path }

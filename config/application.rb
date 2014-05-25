@@ -15,6 +15,7 @@ require 'activeadmin'
 require 'dotenv-rails'
 require 'draper'
 require 'foreigner'
+require 'just-datetime-picker'
 require 'haml'
 require 'turbolinks'
 

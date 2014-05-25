@@ -2,6 +2,8 @@ membership_new_on_ready = ->
   stripe_response_handler = (status, response) ->
     $form = $('#paymentForm')
 
+    $form.find('.on-form-error-messages').empty()
+
     if (response.error)
       html = "<li>" + response.error.message + "</li>"
       $form.find('.on-form-error-messages').append html
@@ -14,8 +16,6 @@ membership_new_on_ready = ->
 
   submit = (e) ->
     $form = $(this)
-
-    $form.find('.on-form-error-messages').empty()
 
     $form.find('button').prop 'disabled', true
 

@@ -1,5 +1,5 @@
 .membership-plans
-  .row.preface
+  .row
     .col-xs-6
       %h2
         Membership
@@ -10,12 +10,7 @@
       %p
         Solidarity and local support networks help build your business success!
 
-  .row.header
-    .col-xs-6
-      %center
-        = image_tag "highres_331026862.jpeg", border: "0", style: "width: 50%"
-
-    .col-xs-3
+    .col-xs-3.header
       .plan1
         .title
           Premium
@@ -28,7 +23,7 @@
         %a.btn.btn-primary.btn-large{ href: new_membership_path }
           Register
 
-    .col-xs-3
+    .col-xs-3.header
       .plan2
         .title
           Business
@@ -60,12 +55,15 @@
             - else
               .glyphicon.glyphicon-remove
 
-  .row.bottom
-    .col-xs-3.col-xs-offset-6
-      .plan1
-        %a.btn.btn-primary.btn-large{ href: new_membership_path }
-          Register
-    .col-xs-3
-      .plan2
-        %a.plan2.btn.btn-primary.btn-large{ href: new_contact_path }
-          Contact Us
+  .col-xs-12.col-sm-6
+
+  .col-xs-12.col-sm-6
+    .row.bottom
+      .col-xs-4.col-sm-6
+        .plan1
+          %a.btn.btn-primary.btn-large{ href: new_membership_path }
+            Register
+      .col-xs-4.col-sm-6
+        .plan2
+          %a.plan2.btn.btn-primary.btn-large{ href: new_contact_path }
+            Contact Us

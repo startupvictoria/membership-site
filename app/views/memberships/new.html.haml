@@ -11,12 +11,8 @@
 
   .row
     .form-basic.form-horizontal{ role: "form" }
-      = form_for(registration_form, url: create_membership_url, html: { id: "paymentForm",
+      = form_for(registration_form, url: memberships_url, html: { id: "paymentForm",
           "data-stripe-publishable-key" => "#{StartupVictoria.config.stripe_publishable_key}" }) do |f|
-
-        = render :partial => "shared/on_form_error", :locals => { form: registration_form }
-
-        .on-form-error-message
 
         .form-group
           = label_tag(:full_name, "Full Name", :class => "col-sm-3 control-label")
@@ -33,7 +29,6 @@
           .col-sm-9
             = f.password_field :password, class: "form-control", placeholder: "Password (at least 6 characters)"
 
-        %br
         %br
 
         .form-group
@@ -70,6 +65,10 @@
           = label_tag(:card_cvc, "CVC", :class => "col-sm-3 control-label")
           .col-sm-3
             %input{ type: "text", class: "form-control", name: "cvc", "data-stripe" => "cvc", value: "" }
+
+        .col-sm-9.col-sm-offset-3
+          = render :partial => "shared/on_form_error", :locals => { form: registration_form }
+          .on-form-error-message
 
         .form-group
           .col-sm-5.col-sm-offset-3

@@ -7,8 +7,7 @@
             %h3
               About Us
           %li
-            %p
-              Startup Victoria is a nonprofit organisation which works to make more and better startups in Victoria.
+            = link_to "Our Mission", about_us_path(:anchor => "mission")
 
       .col-sm-3
         %ul.list-unstyled
@@ -38,10 +37,6 @@
           %li
             %h3
               Open Source
-          %li
-            %p
-              This web site is open source software.
-
           %li
             %a{ href: "https://github.com/startupvictoria/membership-site" }
               Fork me on Github

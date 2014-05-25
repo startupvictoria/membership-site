@@ -6,22 +6,21 @@
     %p
       A list of startup-friendly events across Victoria
 
-
 - @events.each do |event|
+  %hr
   .row
-    %hr
-    .col-xs-2
+    .col-md-2
       .h4
         = event.starts_at_day
       %p
         = event.starts_at_hour
 
-    .col-xs-2
-      %br
-      = link_to "See Detais", event.url, class: "btn btn-info btn-lg center-block"
-
-    .col-xs-6
+    .col-md-6
       .h4
         = event.title
       %p
         = event.short_description
+
+    .col-md-2
+      %br
+      = link_to "See Details", event.url, class: "btn btn-info btn-lg center-block"

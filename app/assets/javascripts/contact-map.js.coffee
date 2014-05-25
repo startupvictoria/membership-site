@@ -1,4 +1,4 @@
-contact_map_populate = ->
+window.contact_map_populate = ->
   latlng = new google.maps.LatLng(-37.823735, 144.991075)
 
   myOptions = {
@@ -24,4 +24,10 @@ contact_map_populate = ->
 
   google.maps.event.addListener marker, "click", listener
 
-$(document).on 'ready page:load', contact_map_populate
+load_script = ->
+  script = document.createElement('script')
+  script.type = 'text/javascript'
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=2&sensor=false&callback=contact_map_populate'
+  document.body.appendChild(script)
+
+$(document).on 'ready page:load', load_script

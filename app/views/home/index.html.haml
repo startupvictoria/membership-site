@@ -1,49 +1,132 @@
-.jumbotron
-  %h2
-    Startup Victoria
-
-  %h3
-    More Founders, Better Founders
-
-  %p
-    Startup Victoria is a nonprofit organisation dedicated to supporting and building Victoria's startup ecosystem.
-
-  %p
-    %a.btn.btn-primary.btn-large{ href: memberships_path }
-      Become a member »
-
-.row
-  .span12
+.home-index
+  .jumbotron
     %h2
+      Startup Victoria
+
+    %h3
       More Founders, Better Founders
-    %p
-      Startup Victoria wants to:
-    %ul
-      %li
-        encourage more people to found startups, and
-      %li
-        help startup founders be more successful.
 
-.row
-  .span12
-    %h2
-      What we do
-.row
-  .span2
     %p
-      Some of the things we do
-.row
-  %div
-    %ul
-      %li
-        Events
-      %li
-        Education
-      %li
-        inspiration
-      %li
-        networking
-      %li
-        resources
-      %li
-        peer support
+      Startup Victoria is a nonprofit organisation dedicated to seeing more and better startups in Victoria, Australia.
+
+    %p
+      %a.btn.btn-primary.btn-large{ href: memberships_path }
+        Become a member »
+
+  .row.band1
+    .col-sm-offset-1
+      .col-sm-7.col-sm-offset-3
+        %p
+          Startup Victoria wants to:
+        %ul.list-unstyled
+          / %ul{ style: "padding-left: 15px;"}
+          %li
+            = "- encourage more people to found startups, and"
+          %li
+            = "- help startup founders be more successful."
+        %p
+          Here's how we're going about it.
+
+  .row.band-left
+    .col-sm-offset-1
+      %hr
+      .col-sm-3
+        = image_tag "lean-startup-melbourne-171x180.png", class: "thumbnail", width: "171px"
+
+      .col-sm-7.col-sm-offset-1
+        %h3
+          Events
+        %p
+          Startup Victoria volunteers operate
+          = link_to("Lean Startup Melbourne", "http://www.meetup.com/Lean-Startup-Melbourne/") + ","
+          the largest tech meetup in Australia.
+        %p
+          = link_to "See Events", events_path, class: "btn btn-default btn-lg"
+
+  .row.band-right
+    .col-sm-offset-1
+      %hr
+      .col-sm-7
+        %h3
+          Education
+        %p
+          Startup Victoria holds educational events for beginners and experts.
+        %p
+          Educational events are open to the public but members get free (or discounted) access.
+
+      .col-sm-3.col-sm-offset-1
+        Image goes here
+        %br
+        Can you
+        = link_to("help", "https://github.com/startupvictoria/membership-site/") + "?"
+
+  .row.band-left
+    .col-sm-offset-1
+      %hr
+      .col-sm-3
+        Image goes here
+        %br
+        Can you
+        = link_to("help", "https://github.com/startupvictoria/membership-site/") + "?"
+
+      .col-sm-7.col-sm-offset-1
+        %h3
+          Inspiration
+        %p
+          Startup Victoria is on the speaking circuit for the best and brightest visitors to Melbourne.
+        %p
+          Startup Victoria holds an annual conference as part of Startup Week that challenges people to think in new ways.
+
+  .row.band-right
+    .col-sm-offset-1
+      %hr
+      .col-sm-7
+        %h3
+          Networking
+        %p
+          Startup Victoria helps startup founders meet.
+        %p
+          Speed-dating events (co-founders, mentors) are focused on networking but most networking happens in the regular event calendar.
+
+      .col-sm-3.col-sm-offset-1
+        Image goes here
+        %br
+        Can you
+        = link_to("help", "https://github.com/startupvictoria/membership-site/") + "?"
+
+  .row.band-left
+    .col-sm-offset-1
+      %hr
+      .col-sm-3
+        Image goes here
+        %br
+        Can you
+        = link_to("help", "https://github.com/startupvictoria/membership-site/") + "?"
+
+      .col-sm-7.col-sm-offset-1
+        %h3
+          Resources
+        %p
+          Startup Victoria wants to lower the cost of paperwork
+          by having standard documents for privacy, terms of service, capital raising etc.
+        %p
+          Let us know if you've got a particular need in this area.
+        %p
+          = link_to "Get in touch", contacts_path, class: "btn btn-default btn-lg"
+
+  .row.band-right
+    .col-sm-offset-1
+      %hr
+      .col-sm-7
+        %h3
+          Peer Support
+        %p
+          Startup Victoria helps startup founders organise into groups that meet monthly.
+        %p
+          Founders celebrate wins or talk about challenges and peers offer insight or experiences.
+
+      .col-sm-3.col-sm-offset-1
+        Image goes here
+        %br
+        Can you
+        = link_to("help", "https://github.com/startupvictoria/membership-site/") + "?"

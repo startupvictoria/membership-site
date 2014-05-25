@@ -1,24 +1,49 @@
-membership-site
-===============
+# membership-site
 
-The public web site of Startup Victoria: startupvictoria.com.au is open-source.  You can contribute to it.
+[Startup Victoria](https://startupvictoria.com.au/)'s web site is open-source.
 
-Features:
+## Roadmap
 
-* basic content site
+If you have skills in any of: design, Ruby on Rails, PostgreSQL, ActiveAdmin, Haml, CoffeeScript or Bootstrap
+and would like to tackle something on this roadmap, we'd be grateful!
+
+High Priority:
+
+* design
+
+* a blog on /blog (install octopress into /public ?)
+
+* /committees to showcase the committees
+
+* /supporters to acknowledge and thank sponsors and corporate members
+
+Medium Priority:
+
+* pdf receipts for membership payment that can be downloaded by members
+
+Low Priority:
+
+## Features
+
+The basic features of the web site:
+
+* content
 
 * member registration
 
 * payment via stripe
 
-* logged-in members get access to more content
+* logged-in members get access to coupons
 
-The site is responsive.
+* calendar of events
 
-Setup
-=====
+* administration (ActiveAdmin)
 
-### Bootstrap
+* responsive
+
+## Setup
+
+### Get Started
 
 Prerequisites: postgresql
 
@@ -39,16 +64,3 @@ foreman start
 ```
 rspec
 ```
-
-Roadmap
-=======
-
-We would love to receive pull-requests for the items on this roadmap.
-
-High Priority:
-
-* pdf receipts for membership payment that can be downloaded by members
-
-Medium Priority:
-
-Low Priority:

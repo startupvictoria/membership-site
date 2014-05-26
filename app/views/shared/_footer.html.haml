@@ -4,7 +4,21 @@
       .col-sm-3
         %ul.list-unstyled
           %li
-            %h3
+            %h4
+              &nbsp;
+          %li
+            &copy; Startup Victoria, 2014
+          %li
+            %a{ href: privacy_path, target: "_blank" }
+              Privacy Policy
+          %li
+            %a{ href: terms_and_conditions_path, target: "_blank" }
+              Terms and Conditions
+
+      .col-sm-3
+        %ul.list-unstyled
+          %li
+            %h4
               About Us
           %li
             = link_to "Our Mission", about_us_path(:anchor => "mission")
@@ -12,30 +26,25 @@
       .col-sm-3
         %ul.list-unstyled
           %li
-            %h3
-              Things we do
-          %li
-            %a{ href: "http://www.meetup.com/Lean-Startup-Melbourne/", target: "_blank" }
-              Lean Startup Melbourne
-
-      .col-sm-3
-        %ul.list-unstyled
-          %li
-            %h3
+            %h4
               Things to do
           %li
             %a{ href: "https://confirmsubscription.com/h/i/EFC3DD47E212C653", rel: "nofollow" }
-              Get email news
+              Subscribe to the newsletter
 
           %li
             %a{ href: new_contact_path }
-              Become a volunteer
+              Volunteer
+
+          %li
+            %a{ href: "http://www.meetup.com/Lean-Startup-Melbourne/", target: "_blank" }
+              Join Lean Startup Melbourne
 
 
       .col-sm-3
         %ul.list-unstyled
           %li
-            %h3
+            %h4
               Open Source
           %li
             %a{ href: "https://github.com/startupvictoria/membership-site" }

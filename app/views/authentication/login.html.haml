@@ -1,6 +1,9 @@
 - content_for :spartan_header_footer do
   /
 
+- content_for :page_title do
+  Login
+
 .form-basic.login-form{ role: "form" }
   = form_for(log_in_form, url: authenticate_url) do |f|
 

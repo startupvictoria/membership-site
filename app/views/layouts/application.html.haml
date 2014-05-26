@@ -2,7 +2,7 @@
 %html
   %head
     %title
-      Startup Victoria
+      = content_for?(:page_title) ? yield(:page_title) + " - Startup Victoria" : 'Startup Victoria'
 
     %meta{ "http-equiv" => "Content-Type", content: "text/html; charset=UTF-8" }
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }

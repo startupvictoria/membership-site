@@ -21,6 +21,8 @@ Medium Priority:
 
 * pdf receipts for membership payment that can be downloaded by members
 
+* ActiveAdmin datepicker for the starts_at field of /admin/events/new
+
 Low Priority:
 
 ## Features

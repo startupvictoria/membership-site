@@ -1,5 +1,5 @@
 .row.contact-page
-  .col-sm-5
+  .col-sm-6.col-sm-offset-1
     %h2
       Send Us An Email
 
@@ -19,12 +19,24 @@
         %button.btn.btn-lg.btn-primary.btn-block{ type: "submit" }
           Send
 
-  .col-sm-5.col-sm-offset-1
+  .col-sm-3.col-sm-offset-1
     %h2
-      Our Location
+      Our office
 
-    .contact-map#contact-map-header{ "data-map-pin-image" => "#{asset_path('map-pin.png')}",
-      "data-office-location" => "<b>Office</b><br><br>Level 1, 41 Stewart St,<br><br>Richmond, Victoria, 3121" }
+    = image_tag "startup-victoria-office-location-300x210.png"
 
-= javascript_include_tag "contact-map"
+    %p
+      = link_to "View this Map", "https://www.google.com/maps/@-37.8239522,144.9910936,14z"
+
+    %hr
+
+    %p
+      Level 1
+      %br
+      41-43 Stewart st
+      %br
+      Richmond
+      %br
+      3121
+
 = javascript_include_tag "on-form-error"

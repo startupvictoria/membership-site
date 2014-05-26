@@ -36,8 +36,8 @@ ActiveAdmin.register Event do
       f.input :short_description
       f.input :event_venue, :include_blank => false
       f.input :event_promoter, :include_blank => false
-      f.input :url
-      f.input :starts_at, :as => :just_datetime_picker
+      f.input :url, placeholder: "http://example.com"
+      f.input :starts_at  # throws an exception: starts_at is NULL , :as => :just_datetime_picker
     end
 
     f.actions

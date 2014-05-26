@@ -15,3 +15,4 @@
 //= require jquery_ujs
 //= require bootstrap.min
 //= require turbolinks
+//= require navbar-set-active

@@ -43,3 +43,28 @@ Coupon.create \
       logo_filename: "Learnable-Logo.jpg",
       description: "Get a xx months Learnable membership with access to all books and courses FREE!",
       how_to_redeem: "not shown"
+
+EventVenue.delete_all
+
+EventVenue.create! \
+      code: "inspire9",
+      name: "Inspire9",
+      address: "Level 1, 41-43 Stewart st, Richmond, VIC 3121",
+      url: "http://inspire9.com"
+
+EventOrganizer.delete_all
+
+EventOrganizer.create! \
+      code: "startup-victoria",
+      name: "Startup Victoria",
+      url: "https://startupvictoria.com.au"
+
+Event.delete_all
+
+Event.create! \
+      title: "The ups-and-downs of the entrepreneurial journey",
+      short_description: "a panel of fantastic speakers who will use their experience to teach you a thing or two about staying sane while running your startup",
+      event_venue: EventVenue.find_by_code("inspire9"),
+      event_organizer: EventOrganizer.find_by_code("startup-victoria"),
+      url: "http://www.meetup.com/Lean-Startup-Melbourne/events/182531822/",
+      starts_at: DateTime.parse('27 May 2014 6:30 PM')

@@ -1,1 +1,0 @@
-Emre Rothzerg says hi!

@@ -8,5 +8,5 @@ cp sample.env .env
 bundle
 
 # database setup
-rake db:create db:migrate
+rake db:create db:migrate db:seed
 RAILS_ENV=test rake db:create db:migrate

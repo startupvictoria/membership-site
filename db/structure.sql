@@ -9,6 +9,20 @@ SET standard_conforming_strings = on;
 SET check_function_bodies = false;
 SET client_min_messages = warning;
 
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
 SET search_path = public, pg_catalog;
 
 SET default_tablespace = '';
@@ -121,6 +135,109 @@ CREATE SEQUENCE customers_id_seq
 --
 
 ALTER SEQUENCE customers_id_seq OWNED BY customers.id;
+
+
+--
+-- Name: event_organizers; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE event_organizers (
+    id integer NOT NULL,
+    code character varying(255) NOT NULL,
+    name character varying(255),
+    url character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+--
+-- Name: event_organizers_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE event_organizers_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: event_organizers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE event_organizers_id_seq OWNED BY event_organizers.id;
+
+
+--
+-- Name: event_venues; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE event_venues (
+    id integer NOT NULL,
+    code character varying(255) NOT NULL,
+    name character varying(255),
+    address character varying(255),
+    url character varying(255),
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+--
+-- Name: event_venues_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE event_venues_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: event_venues_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE event_venues_id_seq OWNED BY event_venues.id;
+
+
+--
+-- Name: events; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE events (
+    id integer NOT NULL,
+    title character varying(255) NOT NULL,
+    short_description character varying(255),
+    event_venue_id integer,
+    event_organizer_id integer,
+    url character varying(255),
+    starts_at timestamp without time zone NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+--
+-- Name: events_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE events_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: events_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE events_id_seq OWNED BY events.id;
 
 
 --
@@ -255,6 +372,27 @@ ALTER TABLE ONLY customers ALTER COLUMN id SET DEFAULT nextval('customers_id_seq
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY event_organizers ALTER COLUMN id SET DEFAULT nextval('event_organizers_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY event_venues ALTER COLUMN id SET DEFAULT nextval('event_venues_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY events ALTER COLUMN id SET DEFAULT nextval('events_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY memberships ALTER COLUMN id SET DEFAULT nextval('memberships_id_seq'::regclass);
 
 
@@ -294,6 +432,30 @@ ALTER TABLE ONLY coupons
 
 ALTER TABLE ONLY customers
     ADD CONSTRAINT customers_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: event_organizers_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY event_organizers
+    ADD CONSTRAINT event_organizers_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: event_venues_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY event_venues
+    ADD CONSTRAINT event_venues_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: events_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY events
+    ADD CONSTRAINT events_pkey PRIMARY KEY (id);
 
 
 --
@@ -356,6 +518,27 @@ CREATE UNIQUE INDEX index_customers_on_user_id ON customers USING btree (user_id
 
 
 --
+-- Name: index_event_organizers_on_code; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_event_organizers_on_code ON event_organizers USING btree (code);
+
+
+--
+-- Name: index_event_venues_on_code; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE UNIQUE INDEX index_event_venues_on_code ON event_venues USING btree (code);
+
+
+--
+-- Name: index_events_on_starts_at; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_events_on_starts_at ON events USING btree (starts_at);
+
+
+--
 -- Name: index_memberships_on_customer_id; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -389,6 +572,22 @@ CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (v
 
 ALTER TABLE ONLY customers
     ADD CONSTRAINT customers_user_id_fk FOREIGN KEY (user_id) REFERENCES users(id);
+
+
+--
+-- Name: events_event_organizer_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY events
+    ADD CONSTRAINT events_event_organizer_id_fk FOREIGN KEY (event_organizer_id) REFERENCES event_organizers(id);
+
+
+--
+-- Name: events_event_venue_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY events
+    ADD CONSTRAINT events_event_venue_id_fk FOREIGN KEY (event_venue_id) REFERENCES event_venues(id);
 
 
 --
@@ -434,4 +633,10 @@ INSERT INTO schema_migrations (version) VALUES ('20140513114512');
 INSERT INTO schema_migrations (version) VALUES ('20140513114513');
 
 INSERT INTO schema_migrations (version) VALUES ('20140518034357');
+
+INSERT INTO schema_migrations (version) VALUES ('20140525030604');
+
+INSERT INTO schema_migrations (version) VALUES ('20140525030608');
+
+INSERT INTO schema_migrations (version) VALUES ('20140525030854');
 

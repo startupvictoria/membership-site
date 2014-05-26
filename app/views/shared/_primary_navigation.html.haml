@@ -1,23 +1,36 @@
-.nav
-  .cont
-    .dropdown
-      %ul
-        %li
-          = link_to "Home", "/", class: "mainlink"
-        %li
-          = link_to "About", "/about", class: "mainlink"
-        %li
-          = link_to "Membership", "/plans", class: "mainlink"
-        %li
-          = link_to "Coupons", "/coupons", class: "mainlink"
-        %li
-          = link_to "Contact", new_contact_path, class: "mainlink"
-        %li
-          - if logged_in? && current_user.admin?
-            = link_to "Admin", "/admin", class: "mainlink", style: "color: red"
+.navbar.navbar-inverse.navbar-fixed-top{ role: "navigation" }
+  .container
+    .navbar-header
+      %button.navbar-toggle{ type: "button", "data-toggle" =>"collapse", "data-target" => ".navbar-collapse" }
+        %spon.sr-only
+          Toggle navigation
+        .icon-bar
+        .icon-bar
+        .icon-bar
 
-    %a.facebook{ href: "https://www.facebook.com/StartupVictoria", rel: "nofollow", target: "_blank" }
-      = image_tag "facebook.png", border: "0", alt: "facebook"
+      %a.navbar-brand{ href: root_path }
+        Startup Victoria
 
-    %a.twitter{ href: "https://twitter.com/startupvic", rel: "nofollow", target: "_blank" }
-      = image_tag "twitter.png", border: "0", alt: "twitter"
+    .navbar-collapse.collapse
+      %ul.nav.navbar-nav
+        %li.active
+          %a{ href: root_path }
+            Home
+        %li
+          %a{ href: about_us_path }
+            About
+        %li
+          %a{ href: memberships_path }
+            Membership
+        %li
+          %a{ href: coupons_path }
+            Coupons
+        %li
+          %a{ href: events_path }
+            Events
+        %li
+          %a{ href: new_contact_path }
+            Contact
+
+      - if !content_for? :spartan_header_footer
+        = render "shared/primary_navigation_right"

@@ -15,7 +15,9 @@ require 'activeadmin'
 require 'dotenv-rails'
 require 'draper'
 require 'foreigner'
+require 'just-datetime-picker'
 require 'haml'
+require 'turbolinks'
 
 if Rails.env.production?
   require 'rails_12factor'

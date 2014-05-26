@@ -1,109 +1,108 @@
-.Page-left
-  %h3.Heading--primary
-    Become a member
+- content_for :spartan_header_footer do
+  /
 
-  %div{ style: "color:#00a2d3;padding-bottom:30px;line-height:20px" }
-    %i
-      Startup Victoria membership costs only $99 AUD per year.
-
-  = form_for(registration_form, url: create_membership_url, html: {id: "paymentForm", class: "emailsub"}) do |f|
-    - if registration_form.errors.any?
-      .Form-errors
-        %ul
-          = registration_form.errors.full_messages.each do |message|
-            %li
-              = message
-
-    .paymentErrors
-
-    %h3.Heading--primary
-      Personal Information
-
-    %div
-      %label
-        Full Name:
-      = f.text_field :full_name
-
-    %div{ style: "margin-top:15px" }
-      %label
-        Email:
-      = f.email_field :email
-
-    %div{ style: "margin-top:15px" }
-      %label
-        Password (at least 6 characters):
-      = f.password_field :password
-
-    %h3.Heading--primary
-      Payment
-
-    %div
-      %label
-        Credit Card Number:
-      %input{ "data-stripe" => "number" }
-
-    %div{ style: "margin-top:10px;" }
-      %div{ style: "display: inline-block;" }
-        %label
-          Card Expiry:
-
-        %select{ class: 'exp_month', id: 'exp_month', name: 'month', "data-stripe" => "exp-month", style: 'font-size:14px;padding: 10px;margin-top:10px;border:none' }
-
-          %option{ value: "" }
-            Month
-
-          - [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'].each do |mm|
-            %option{ value: mm }
-              = mm
-
-      %div{ style: "display: inline-block;" }
-        %select{ class: 'exp_year', id: "exp_year", name: 'year', "data-stripe" => "exp-year", style: 'font-size:14px;padding: 10px;margin-top:10px;border:none' }
-
-          %option{ value: "" }
-            Year
-
-          - [ '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'].each do |yyyy|
-            %option{ value: yyyy }
-              = yyyy
-
-    %div{ style: "margin-top:15px" }
-      %label
-        CCV:
-
-      %input{ type: "text", class: "ccv", name: "ccv", "data-stripe" => "cvc", value: "", style: 'width:100px;' }
-
-    %div{ style: "margin-top:5px" }
-      = f.submit "Pay & Register", class: "btn"
-
-  %div{ style: "line-height: 26px;color:#666" }
-    By completing this form, you agree to our
-
-    %a{ href: "/terms", target: "_blank" }
-      Terms and Conditions
-
-    and
-
-    %a{ href: "/privacy", target: "_blank" }
-      Privacy Policy
+.col-sm-6.membership-new
+  .row
+    %h2
+      Become a member
 
     %p
-      Forgot password?
-      %a{ href: "/fpass" }
-        Click here
-      to get a new password.
+      Startup Victoria membership costs only $99 per year.
 
-      %br
+  .row
+    .form-basic.form-horizontal{ role: "form" }
+      = form_for(registration_form, url: memberships_url, html: { id: "paymentForm",
+          "data-stripe-publishable-key" => "#{StartupVictoria.config.stripe_publishable_key}" }) do |f|
 
-      Already have an account? Click
+        .form-group
+          = label_tag(:full_name, "Full Name", :class => "col-sm-3 control-label")
+          .col-sm-9
+            = f.text_field :full_name, class: "form-control", placeholder: "Full Name", :autofocus => 'autofocus'
 
-      %a{ href: "/login" }
-        here
+        .form-group
+          = label_tag(:email, "Email", :class => "col-sm-3 control-label")
+          .col-sm-9
+            = f.email_field :email, class: "form-control", placeholder: "me@example.com"
 
-      to login.
+        .form-group
+          = label_tag(:password, "Password", :class => "col-sm-3 control-label")
+          .col-sm-9
+            = f.password_field :password, class: "form-control", placeholder: "Password (at least 6 characters)"
 
-  = javascript_include_tag "https://js.stripe.com/v2/"
+        %br
 
-  = javascript_include_tag "memberships/new"
+        .form-group
+          = label_tag(:card_number, "Card Number", :class => "col-sm-3 control-label")
+          .col-sm-9
+            %input{ "data-stripe" => "number", class: "form-control" }
 
-  :javascript
-    startup_victoria_memberships_stripe_card_create_token( "#{StartupVictoria.config.stripe_publishable_key}" )
+        .form-group
+          = label_tag(:expiry_date, "Expiry Date", :class => "col-sm-3 control-label")
+          .col-sm-9
+            .row
+              .col-xs-2
+                %select{ class: 'exp_month', id: 'exp_month', name: 'month', "data-stripe" => "exp-month" }
+                  %option{ value: "" }
+                    Month
+
+                  - [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'].each do |mm|
+                    %option{ value: mm }
+                      = mm
+
+              .col-xs-1
+
+              .col-xs-2
+                %select{ class: 'exp_year', id: "exp_year", name: 'year', "data-stripe" => "exp-year" }
+
+                  %option{ value: "" }
+                    Year
+
+                  - [ '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022'].each do |yyyy|
+                    %option{ value: yyyy }
+                      = yyyy
+
+        .form-group
+          = label_tag(:card_cvc, "CVC", :class => "col-sm-3 control-label")
+          .col-sm-3
+            %input{ type: "text", class: "form-control", name: "cvc", "data-stripe" => "cvc", value: "" }
+
+        .col-sm-9.col-sm-offset-3
+          = render :partial => "shared/on_form_error", :locals => { form: registration_form }
+          .on-form-error-message
+
+        .form-group
+          .col-sm-5.col-sm-offset-3
+            = f.submit "Pay & Register", class: "btn btn-lg btn-primary btn-block"
+
+        .col-sm-9.col-sm-offset-3
+          %p
+            By completing this form, you agree to our
+
+            %a{ href: terms_and_conditions_path, target: "_blank" }
+              Terms and Conditions
+
+            and
+
+            %a{ href: privacy_path, target: "_blank" }
+              Privacy Policy
+
+            %p
+              Forgot password?
+
+              %a{ href: password_resets_path }
+                Click here
+
+              to get a new password.
+
+            %p
+
+              Already have an account? Click
+
+              %a{ href: login_path }
+                here
+
+              to login.
+
+= javascript_include_tag "https://js.stripe.com/v2/"
+= javascript_include_tag "on-form-error"
+= javascript_include_tag "membership-new"

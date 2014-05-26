@@ -5,43 +5,23 @@
       Startup Victoria
 
     %meta{ "http-equiv" => "Content-Type", content: "text/html; charset=UTF-8" }
-    %meta{ name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
     %meta{ name: "description", content: "" }
     %meta{ name: "keywords", content: "" }
 
-    %script{ src: "http://code.jquery.com/jquery-1.11.0.min.js" }
-    %script{ src: "http://code.jquery.com/jquery-migrate-1.2.1.min.js" }
+    = stylesheet_link_tag 'application', media: 'all', "data-turbolinks-track" => true
 
-    = javascript_include_tag "jquery.form.js"
-    = javascript_include_tag "jquery.creditCardValidator.js"
-    = javascript_include_tag "main.js"
+    = javascript_include_tag "application", "data-turbolinks-track" => true
 
-    = stylesheet_link_tag 'application', media: 'all'
     = csrf_meta_tags
 
   %body
-    .Header
-      .Header-content
-        .fl
-          %a{ href: "/", title: "Homepage" }
-            = image_tag "logo.png", class: "Header-logo", alt: "startup victoria logo"
-
-        - if logged_in?
-          %a.Header-btn{ href: logout_path }
-            Logout
-        - else
-          %a.Header-btn{ href: login_path }
-            Login
-
     = render "shared/primary_navigation"
 
-    .Page
-      = yield :before_page
+    .container
+      = render "shared/flash_messages"
 
-      .Page-content
-        = render "shared/flash_messages"
+      = yield
 
-        = yield
-
-      = yield :after_page
-    = render "shared/footer"
+    - if !content_for? :spartan_header_footer
+      = render "shared/footer"

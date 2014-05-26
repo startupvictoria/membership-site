@@ -1,6 +1,6 @@
 class RegistrationPage < SimpleDelegator
   def visit
-    super("/buy")
+    super("/memberships/new")
   end
 
   def enter_valid_personal_details

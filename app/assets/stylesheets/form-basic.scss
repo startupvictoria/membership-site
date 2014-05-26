@@ -1,0 +1,39 @@
+.form-basic {
+  margin: 0 auto;
+}
+
+.form-basic .form-basic-heading,
+.form-basic .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-basic .checkbox {
+  font-weight: normal;
+}
+
+.form-basic .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-basic .form-control:focus {
+  z-index: 2;
+}
+
+.form-basic input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-basic input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+

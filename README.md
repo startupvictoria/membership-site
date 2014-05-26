@@ -25,6 +25,8 @@ Medium Priority:
 
 Low Priority:
 
+* email capture for the newsletter that doesn't take the user off site.
+
 ## Features
 
 The basic features of the web site:

@@ -20,6 +20,6 @@ class ContactUsPage < SimpleDelegator
   end
 
   def submit_message
-    click_on "SEND"
+    click_on "Send"
   end
 end

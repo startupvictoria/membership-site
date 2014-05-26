@@ -12,7 +12,7 @@ class LogInPage < SimpleDelegator
   end
 
   def submit
-    within ".Page-content" do
+    within ".login-form" do
       click_on "Login"
     end
   end

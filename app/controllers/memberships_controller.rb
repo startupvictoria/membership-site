@@ -32,17 +32,14 @@ class MembershipsController < ApplicationController
 
   def triplets
     [
-      [ true,  true,  "Regular email and blog updates" ],
-      [ true,  true,  "Access to content on our membership site" ],
-      [ true,  true,  "A member profile" ],
-      [ true,  true,  "Access to peer networking events" ],
-      [ true,  true,  "Participate in virtual office hours" ],
-      [ true,  true,  "Participate in Startup Victoria board elections" ],
-      [ true,  true,  "Early access to special offers and event tickets" ],
-      [ false, true,  "2 individual memberships included in business membership fee" ],
+      [ true,  false, "Thousands of dollars of discount coupons to startup products+services" ],
       [ true,  true,  "Discounted tickets to Startup Victoria events and workshops" ],
-      [ true,  false, "Exclusive discounts on products and services for your business" ],
-      [ true,  true,  "Opportunities to share content with our membership base" ],
+      [ true,  true,  "Early access to special offers and event tickets" ],
+      [ true,  true,  "Access to peer networking events" ],
+      [ true,  true,  "Virtual office hours" ],
+      [ true,  true,  "Vote in Startup Victoria board elections" ],
+      [ false, true,  "2 individual memberships included in business membership fee" ],
+      [ true,  true,  "Share content with our membership base" ],
       [ false, true,  "Offer discounted products/services to our membership base" ],
       [ true,  false, "Participate in virtual office hours or mentorship programs" ]
     ].map do |a|

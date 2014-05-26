@@ -9,18 +9,18 @@
 - @events.each do |event|
   %hr
   .row
-    .col-md-2
+    .col-sm-2.col-sm-offset-1
       .h4
         = event.starts_at_day
       %p
         = event.starts_at_hour
 
-    .col-md-6
+    .col-sm-6
       .h4
         = event.title
       %p
         = event.short_description
 
-    .col-md-2
+    .col-sm-3
       %br
       = link_to "See Details", event.url, class: "btn btn-info btn-lg center-block"

@@ -4,11 +4,12 @@ class CreateEvents < ActiveRecord::Migration
       t.string :title, null: false
       t.string :short_description
       t.integer :event_venue_id
-      t.integer :event_promoter_id
+      t.integer :event_organizer_id
       t.string :url
       t.datetime :starts_at, null: false
 
       t.foreign_key :event_venues
+      t.foreign_key :event_organizers
 
       t.timestamps
     end

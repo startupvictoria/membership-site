@@ -138,10 +138,10 @@ ALTER SEQUENCE customers_id_seq OWNED BY customers.id;
 
 
 --
--- Name: event_promoters; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+-- Name: event_organizers; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE TABLE event_promoters (
+CREATE TABLE event_organizers (
     id integer NOT NULL,
     code character varying(255) NOT NULL,
     name character varying(255),
@@ -152,10 +152,10 @@ CREATE TABLE event_promoters (
 
 
 --
--- Name: event_promoters_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+-- Name: event_organizers_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
-CREATE SEQUENCE event_promoters_id_seq
+CREATE SEQUENCE event_organizers_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -164,10 +164,10 @@ CREATE SEQUENCE event_promoters_id_seq
 
 
 --
--- Name: event_promoters_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+-- Name: event_organizers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
-ALTER SEQUENCE event_promoters_id_seq OWNED BY event_promoters.id;
+ALTER SEQUENCE event_organizers_id_seq OWNED BY event_organizers.id;
 
 
 --
@@ -213,7 +213,7 @@ CREATE TABLE events (
     title character varying(255) NOT NULL,
     short_description character varying(255),
     event_venue_id integer,
-    event_promoter_id integer,
+    event_organizer_id integer,
     url character varying(255),
     starts_at timestamp without time zone NOT NULL,
     created_at timestamp without time zone,
@@ -372,7 +372,7 @@ ALTER TABLE ONLY customers ALTER COLUMN id SET DEFAULT nextval('customers_id_seq
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY event_promoters ALTER COLUMN id SET DEFAULT nextval('event_promoters_id_seq'::regclass);
+ALTER TABLE ONLY event_organizers ALTER COLUMN id SET DEFAULT nextval('event_organizers_id_seq'::regclass);
 
 
 --
@@ -435,11 +435,11 @@ ALTER TABLE ONLY customers
 
 
 --
--- Name: event_promoters_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+-- Name: event_organizers_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
-ALTER TABLE ONLY event_promoters
-    ADD CONSTRAINT event_promoters_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY event_organizers
+    ADD CONSTRAINT event_organizers_pkey PRIMARY KEY (id);
 
 
 --
@@ -518,10 +518,10 @@ CREATE UNIQUE INDEX index_customers_on_user_id ON customers USING btree (user_id
 
 
 --
--- Name: index_event_promoters_on_code; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+-- Name: index_event_organizers_on_code; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
-CREATE UNIQUE INDEX index_event_promoters_on_code ON event_promoters USING btree (code);
+CREATE UNIQUE INDEX index_event_organizers_on_code ON event_organizers USING btree (code);
 
 
 --
@@ -572,6 +572,14 @@ CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (v
 
 ALTER TABLE ONLY customers
     ADD CONSTRAINT customers_user_id_fk FOREIGN KEY (user_id) REFERENCES users(id);
+
+
+--
+-- Name: events_event_organizer_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY events
+    ADD CONSTRAINT events_event_organizer_id_fk FOREIGN KEY (event_organizer_id) REFERENCES event_organizers(id);
 
 
 --

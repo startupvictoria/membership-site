@@ -52,9 +52,9 @@ EventVenue.create! \
       address: "Level 1, 41-43 Stewart st, Richmond, VIC 3121",
       url: "http://inspire9.com"
 
-EventPromoter.delete_all
+EventOrganizer.delete_all
 
-EventPromoter.create! \
+EventOrganizer.create! \
       code: "startup-victoria",
       name: "Startup Victoria",
       url: "https://startupvictoria.com.au"
@@ -65,6 +65,6 @@ Event.create! \
       title: "The ups-and-downs of the entrepreneurial journey",
       short_description: "a panel of fantastic speakers who will use their experience to teach you a thing or two about staying sane while running your startup",
       event_venue: EventVenue.find_by_code("inspire9"),
-      event_promoter: EventPromoter.find_by_code("startup-victoria"),
+      event_organizer: EventOrganizer.find_by_code("startup-victoria"),
       url: "http://www.meetup.com/Lean-Startup-Melbourne/events/182531822/",
       starts_at: DateTime.parse('27 May 2014 6:30 PM')

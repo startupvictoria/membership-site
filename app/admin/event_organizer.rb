@@ -1,4 +1,4 @@
-ActiveAdmin.register EventPromoter do
+ActiveAdmin.register EventOrganizer do
   menu false
 
   config.filters = false

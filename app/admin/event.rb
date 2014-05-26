@@ -5,26 +5,26 @@ ActiveAdmin.register Event do
     :title,
     :short_description,
     :event_venue_id,
-    :event_promoter_id,
+    :event_organizer_id,
     :url,
     :starts_at,
   )
 
-  sidebar :promoters_and_venues do
+  sidebar :organizers_and_venues do
     ul do
-      li link_to "Promoters", admin_event_promoters_path
+      li link_to "Organizers", admin_event_organizers_path
       li link_to "Venues", admin_event_venues_path
     end
   end
 
   filter :title
   filter :event_venue
-  filter :event_promoter
+  filter :event_organizer
 
   index do
     column :title
     column :event_venue
-    column :event_promoter
+    column :event_organizer
     column :created_at
 
     default_actions
@@ -35,7 +35,7 @@ ActiveAdmin.register Event do
       f.input :title
       f.input :short_description
       f.input :event_venue, :include_blank => false
-      f.input :event_promoter, :include_blank => false
+      f.input :event_organizer, :include_blank => false
       f.input :url, placeholder: "http://example.com"
       f.input :starts_at  # throws an exception: starts_at is NULL , :as => :just_datetime_picker
     end

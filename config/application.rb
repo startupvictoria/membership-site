@@ -1,26 +1,10 @@
 require File.expand_path('../boot', __FILE__)
 
-require "active_model/railtie"
-require "active_record/railtie"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_view/railtie"
+require 'rails/all'
 
-require 'sass'
-require "sprockets/railtie"
-
-Bundler.setup(*Rails.groups)
-
-require 'activeadmin'
-require 'dotenv-rails'
-require 'draper'
-require 'foreigner'
-require 'haml'
-require 'turbolinks'
-
-if Rails.env.production?
-  require 'rails_12factor'
-end
+# Require the gems listed in Gemfile, including any gems
+# you've limited to :test, :development, or :production.
+Bundler.require(*Rails.groups)
 
 module StartupVictoria
   def self.config

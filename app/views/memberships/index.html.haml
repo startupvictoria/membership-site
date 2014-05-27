@@ -3,7 +3,7 @@
 
 .membership-plans
   .row
-    .col-xs-6
+    .col-xs-12.col-sm-6
       %h2
         Membership
 
@@ -15,7 +15,7 @@
 
     .col-xs-12.col-sm-6.header
       .row
-        .col-xs-4.col-sm-6.plan1
+        .col-xs-5.col-sm-6.plan1
           .title
             Premium
           .price
@@ -24,11 +24,11 @@
             per year
           %p.description
             Perfect for everyone interested in startups!
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
           %a.btn.btn-primary.btn-large{ href: new_membership_path }
             Register
 
-        .col-xs-4.col-sm-6.plan2
+        .col-xs-5.col-sm-6.plan2
           .title
             Business
           .price
@@ -43,17 +43,19 @@
   - triplets.each do |triplet|
     .row.feature-row
       .col-xs-12.col-sm-6.feature
-        = triplet[:feature]
+        .parent
+          .child
+            = triplet[:feature]
 
       .col-xs-12.col-sm-6
         .row
-          .col-xs-4.col-sm-6.plan-feature.plan1
+          .col-xs-5.col-sm-6.plan-feature.plan1
             - if triplet[:premium]
               .glyphicon.glyphicon-ok
             - else
               .glyphicon.glyphicon-remove
 
-          .col-xs-4.col-sm-6.plan-feature.plan2
+          .col-xs-5.col-sm-6.plan-feature.plan2
             - if triplet[:business]
               .glyphicon.glyphicon-ok
             - else
@@ -63,11 +65,11 @@
 
   .col-xs-12.col-sm-6
     .row.bottom
-      .col-xs-4.col-sm-6
+      .col-xs-5.col-sm-6
         .plan1
           %a.btn.btn-primary.btn-large{ href: new_membership_path }
             Register
-      .col-xs-4.col-sm-6
+      .col-xs-5.col-sm-6
         .plan2
           %a.plan2.btn.btn-primary.btn-large{ href: new_contact_path }
             Contact Us

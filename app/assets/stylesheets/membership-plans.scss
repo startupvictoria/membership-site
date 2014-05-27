@@ -20,6 +20,7 @@
   padding-bottom: 0.2em;
 }
 .membership-plans .title {
+  padding-top: 0.4em;
   font-size: 2em;
   font-weight: bold;
 }
@@ -42,7 +43,6 @@
 /* --- Features ------------------------- */
 
 .membership-plans .feature {
-  line-height: 2.8em;   
 }
 
 @media (max-width: 768px) {
@@ -120,3 +120,11 @@
   font-size: 1.4em;
   font-weight: bold;    
 }
+.membership-plans .feature .parent {
+  padding: 0.5% 0;
+}
+
+.membership-plans .feature .child {
+  padding: 1% 0;
+}
+

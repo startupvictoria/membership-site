@@ -2,5 +2,5 @@ class Event < ActiveRecord::Base
   belongs_to :event_venue
   belongs_to :event_organizer
 
-  scope :upcoming, -> { where("starts_at > ?", Time.now) }
+  scope :upcoming, -> { where("starts_at > ?", Time.now).order("events.starts_at ASC") }
 end

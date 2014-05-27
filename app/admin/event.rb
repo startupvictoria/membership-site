@@ -1,6 +1,14 @@
 ActiveAdmin.register Event do
   config.sort_order = "created_at_desc"
 
+  controller do
+    def new
+      super do |format|
+        @event.starts_at = Time.zone.now.noon + 6.hours + 30.minutes
+      end
+    end
+  end
+
   permit_params(
     :title,
     :short_description,
@@ -37,7 +45,7 @@ ActiveAdmin.register Event do
       f.input :event_venue, :include_blank => false
       f.input :event_organizer, :include_blank => false
       f.input :url, placeholder: "http://example.com"
-      f.input :starts_at  # throws an exception: starts_at is NULL , :as => :just_datetime_picker
+      f.input :starts_at
     end
 
     f.actions

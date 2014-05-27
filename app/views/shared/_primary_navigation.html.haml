@@ -17,20 +17,20 @@
           %a{ href: root_path }
             Home
         %li
-          %a{ href: about_us_path }
-            About
+          %a{ href: coupons_path }
+            Coupons
         %li
           %a{ href: memberships_path }
             Membership
-        %li
-          %a{ href: coupons_path }
-            Coupons
         %li
           %a{ href: events_path }
             Events
         %li
           %a{ href: new_contact_path }
             Contact
+        %li
+          %a{ href: about_us_path }
+            About
 
       - if !content_for? :spartan_header_footer
         = render "shared/primary_navigation_right"

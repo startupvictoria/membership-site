@@ -16,3 +16,4 @@
 //= require bootstrap.min
 //= require turbolinks
 //= require navbar-set-active
+//= require google-analytics-turbolinks

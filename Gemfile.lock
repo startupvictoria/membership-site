@@ -88,6 +88,8 @@ GEM
       request_store (~> 1.0.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
     foreigner (1.6.1)
       activerecord (>= 3.0.0)
     foreman (0.63.0)
@@ -100,6 +102,7 @@ GEM
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
+    hashie (2.1.1)
     hike (1.2.3)
     i18n (0.6.9)
     inherited_resources (1.4.1)
@@ -125,6 +128,7 @@ GEM
     mini_portile (0.5.3)
     minitest (5.3.3)
     multi_json (1.10.0)
+    multipart-post (2.0.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     pg (0.17.1)
@@ -200,6 +204,10 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
+    sentry-raven (0.9.1)
+      faraday (>= 0.7.6)
+      hashie (>= 1.1.0)
+      uuidtools
     shoulda-matchers (2.6.1)
       activesupport (>= 3.0.0)
     sprockets (2.11.0)
@@ -232,6 +240,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    uuidtools (2.1.4)
     vcr (2.8.0)
     webmock (1.14.0)
       addressable (>= 2.2.7)
@@ -262,6 +271,7 @@ DEPENDENCIES
   rb-readline
   rspec-rails (>= 3.0.0.beta2)
   sass-rails (~> 4.0.3)
+  sentry-raven
   shoulda-matchers
   stripe
   turbolinks

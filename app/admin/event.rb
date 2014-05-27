@@ -1,5 +1,5 @@
 ActiveAdmin.register Event do
-  config.sort_order = "starts_at_desc"
+  config.sort_order = "starts_at_asc"
 
   controller do
     def new
@@ -33,7 +33,9 @@ ActiveAdmin.register Event do
     column :title
     column :event_venue
     column :event_organizer
-    column :starts_at
+    column "Start Date" do |event|
+      event.starts_at.to_date
+    end
 
     default_actions
   end

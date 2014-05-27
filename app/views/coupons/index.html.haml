@@ -7,12 +7,17 @@
       Coupons for members
 
     %p
-      Startup Victoria members get discounted or free access to a huge array of startup-friendly services.
+      Startup Victoria members get thousands of dollars worth of free/discounted access to huge range of startup-friendly services.
     %p
       Each logo has a crazy-good deal behind it.
     - if logged_in?
       %p
         Click the logo to access the coupon code.
+    - else
+      %p
+        You must be a
+        = link_to("member", memberships_path)
+        to access the coupon codes.
 
 %hr
 

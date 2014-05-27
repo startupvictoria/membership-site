@@ -19,7 +19,9 @@ ActiveAdmin.register User, :as => "Member" do
   filter :created_at
 
   index do
-    column :id
+    column "Membership Number" do |u|
+      u.membership_number
+    end
     column :email
     column :full_name
     column :faction
@@ -31,7 +33,9 @@ ActiveAdmin.register User, :as => "Member" do
 
   show do
     attributes_table do
-      row :id
+      row "Membership Number" do |u|
+        u.membership_number
+      end
       row :email
       row :full_name
       row :faction

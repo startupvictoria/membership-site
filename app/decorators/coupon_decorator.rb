@@ -1,5 +1,3 @@
-require 'draper'
-
 class CouponDecorator < Draper::Decorator
   delegate_all
 

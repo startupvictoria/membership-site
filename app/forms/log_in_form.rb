@@ -1,5 +1,3 @@
-require 'active_model'
-
 class LogInForm
   include ActiveModel::Model
 

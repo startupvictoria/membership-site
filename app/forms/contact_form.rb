@@ -1,5 +1,3 @@
-require 'active_model'
-
 class ContactForm
   include ActiveModel::Model
 

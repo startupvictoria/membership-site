@@ -1,5 +1,3 @@
-require 'active_model'
-
 class PasswordResetForm
   include ActiveModel::Model
 

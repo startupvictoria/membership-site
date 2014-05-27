@@ -1,6 +1,3 @@
-require 'active_model'
-require 'stripe'
-
 class CreatesMembership
   include ActiveModel::Model
 

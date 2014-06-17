@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Startup Victoria Blog]]></title>
+  <link href="https://startupvictoria.com.au/blog/atom.xml" rel="self"/>
+  <link href="https://startupvictoria.com.au/blog/"/>
+  <updated>2014-06-18T07:28:02+10:00</updated>
+  <id>https://startupvictoria.com.au/blog/</id>
+  <author>
+    <name><![CDATA[This blog has many authors]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Welcome]]></title>
+    <link href="https://startupvictoria.com.au/blog/2014/06/17/welcome/"/>
+    <updated>2014-06-17T00:00:00+10:00</updated>
+    <id>https://startupvictoria.com.au/blog/2014/06/17/welcome</id>
+    <content type="html"><![CDATA[<p>Welcome to startup victoria!</p>
+
+<p>This is a sample post.</p>
+
+<p>This is how links work &ndash; eg <a href="https://startupvictoria.com.au">startup victoria</a>.</p>
+
+<h2>This is a h2 heading</h2>
+
+<p>Bullet point list</p>
+
+<ul>
+<li><p>one</p></li>
+<li><p>two</p></li>
+<li><p>three</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

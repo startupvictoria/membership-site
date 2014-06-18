@@ -1,0 +1,21 @@
+- content_for :page_title do
+  Forgot Password
+
+.form-basic.login-form{ role: "form" }
+  = form_for(password_reset_form, url: password_resets_url) do |f|
+
+    %h2.form-basic-heading
+      Forgot Password?
+
+    %p.form-instructions-after-heading
+      Enter your email address. You'll receive an email that explains
+      how to reset your password.
+
+    = f.email_field :email, class: "form-control", placeholder: "Email address", :autofocus => 'autofocus'
+
+    = render :partial => "shared/on_form_error", :locals => { form: password_reset_form }
+
+    %button.btn.btn-lg.btn-primary.btn-block{ type: "submit" }
+      Reset Password
+
+= javascript_include_tag "on-form-error"

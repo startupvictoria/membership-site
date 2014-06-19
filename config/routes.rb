@@ -32,6 +32,11 @@ Rails.application.routes.draw do
     only: [:index, :show, :create, :update],
     path: "forgot-password"
 
+  resources :receipts, only: [:index, :create]
+  resources :receipts, only: [:show],
+    defaults: { format: 'pdf' },
+    :constraints => { :format => 'pdf' }
+
   resources :dashboards, only: [:index] do
     get 'membership', on: :collection
     get 'welcome', on: :collection

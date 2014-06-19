@@ -1,0 +1,24 @@
+- content_for :page_title do
+  Receipts
+
+%h1
+  Receipts
+
+%table.table
+  %thead
+    %tr
+      %th
+        Invoice Id
+      %th
+        Amount
+      %th
+        Receipt
+  %tbody
+    - @receipts.each do |receipt|
+      %tr
+        %td
+          = receipt.invoice_id
+        %td
+          = receipt.amount
+        %td
+          = link_to "Receipt", receipt_path(receipt.invoice_id)

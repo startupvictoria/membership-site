@@ -5,8 +5,7 @@ navbar_set_active_class = (parent_class) ->
       $(this).parent().addClass "active"
       return false
 
-navbar_set_active_classes = ->
+navbar_set_active = ->
   navbar_set_active_class(".navbar-set-active")
-  navbar_set_active_class(".subnav-set-active")
 
-$(document).on 'ready page:load', navbar_set_active_classes
+$(document).on 'ready page:load', navbar_set_active

@@ -12,6 +12,8 @@ gem 'foreman'
 gem 'haml'
 gem 'just-datetime-picker'
 gem 'pg'
+gem "prawn"
+gem "prawn_rails"
 gem 'rails', '4.1.1'
 gem 'rails_12factor'
 gem 'rb-readline'

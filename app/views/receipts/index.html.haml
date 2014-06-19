@@ -4,21 +4,22 @@
 %h1
   Receipts
 
-%table.table
-  %thead
-    %tr
-      %th
-        Invoice Id
-      %th
-        Amount
-      %th
-        Receipt
-  %tbody
-    - @receipts.each do |receipt|
+.col-xs-8
+  %table.table
+    %thead
       %tr
-        %td
-          = receipt.invoice_id
-        %td
-          = receipt.amount
-        %td
-          = link_to "Receipt", receipt_path(receipt.invoice_id)
+        %th
+          Invoice Id
+        %th
+          Amount
+        %th
+          Receipt
+    %tbody
+      - @receipts.each do |receipt|
+        %tr
+          %td
+            = receipt.invoice_id
+          %td
+            = receipt.amount
+          %td
+            = link_to "Receipt", receipt_path(receipt.invoice_id)

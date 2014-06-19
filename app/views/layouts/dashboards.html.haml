@@ -1,9 +1,9 @@
 - content_for :nested_layout do
   .row
-    .col-sm-10
-      %ul.nav.nav-tabs.subnav-set-active
-        %li.disabled
-          %a
+    .col-sm-2
+      %ul.nav.nav-pills.nav-stacked.subnav-set-active
+        %li.disabled.navbar-brand
+          %p
             %strong
               Dashboard
 
@@ -19,7 +19,8 @@
           %a{ href: receipts_path }
             Receipts
 
-  .dashboards
-    = yield
+    .col-sm-8
+      .dashboards
+        = yield
 
 = render template: "layouts/application"

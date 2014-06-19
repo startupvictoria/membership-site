@@ -21,7 +21,7 @@
     .container
       = render "shared/flash_messages"
 
-      = yield
+      = content_for?(:nested_layout) ? yield(:nested_layout) : yield
 
     - if !content_for? :spartan_header_footer
       = render "shared/footer"

@@ -7,6 +7,9 @@
         %b.caret
 
       %ul.dropdown-menu
+        %li
+          = link_to "Dashboard", dashboards_path
+          %li.divider
         - if logged_in? && current_user.admin?
           %li
             = link_to "Admin", admin_root_path, style: "color: red"

@@ -7,7 +7,7 @@ class AuthenticationController < ApplicationController
 
   def create
     if log_in_form.save
-      redirect_to root_url
+      redirect_to dashboards_path
     else
       render :login, locals: {log_in_form: log_in_form}
     end

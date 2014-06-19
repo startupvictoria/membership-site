@@ -1,0 +1,20 @@
+- content_for :page_title do
+  Dashboards / Membership
+
+.membership
+  %h1
+    Membership Details
+
+  %h3
+    .row
+      .col-xs-3
+        Your Email
+      .col-xs-3.rhs
+        = current_user.email
+    
+  %h3
+    .row
+      .col-xs-3
+        Membership Started
+      .col-xs-3.rhs
+        = current_user.created_at.to_date

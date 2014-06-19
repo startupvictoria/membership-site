@@ -32,4 +32,9 @@ Rails.application.routes.draw do
     only: [:index, :show, :create, :update],
     path: "forgot-password"
 
+  resources :dashboards, only: [:index] do
+    get 'membership', on: :collection
+    get 'welcome', on: :collection
+  end
+
 end

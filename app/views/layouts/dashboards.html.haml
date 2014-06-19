@@ -1,0 +1,25 @@
+- content_for :nested_layout do
+  .row
+    .col-sm-10
+      %ul.nav.nav-tabs.subnav-set-active
+        %li.disabled
+          %a
+            %strong
+              Dashboard
+
+        %li.active
+          %a{ href: welcome_dashboards_path }
+            Welcome
+
+        %li
+          %a{ href: membership_dashboards_path }
+            Membership
+
+        %li
+          %a{ href: receipts_path }
+            Receipts
+
+  .dashboards
+    = yield
+
+= render template: "layouts/application"

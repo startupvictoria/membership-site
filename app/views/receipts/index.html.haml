@@ -15,11 +15,16 @@
         %th
           Receipt
     %tbody
-      - @receipts.each do |receipt|
+      - if ! @receipts.empty?
+        - @receipts.each do |receipt|
+          %tr
+            %td
+              = receipt.invoice_id
+            %td
+              = receipt.amount
+            %td
+              = link_to "Receipt", receipt_path(receipt.invoice_id)
+      - else
         %tr
-          %td
-            = receipt.invoice_id
-          %td
-            = receipt.amount
-          %td
-            = link_to "Receipt", receipt_path(receipt.invoice_id)
+          %td{ colspan: "3" }
+            You have no receipts.

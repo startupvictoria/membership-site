@@ -22,10 +22,12 @@ class Authenticator
 
   def log_in(user)
     @session[:user_id] = user.id
+    Raven.user_context user_id: user.id
   end
 
   def log_out
     @session.delete(:user_id)
+    Raven.user_context user_id: nil
   end
 
   attr_writer :user_finder

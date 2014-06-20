@@ -17,3 +17,4 @@
 //= require turbolinks
 //= require navbar-set-active
 //= require google-analytics-turbolinks
+//= require turbolinks-autofocus-workaround

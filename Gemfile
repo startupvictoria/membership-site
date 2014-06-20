@@ -10,6 +10,7 @@ gem 'draper'
 gem 'foreigner'
 gem 'foreman'
 gem 'haml'
+gem 'heroku_rails_deflate', :group => :production
 gem 'just-datetime-picker'
 gem 'pg'
 gem "prawn"

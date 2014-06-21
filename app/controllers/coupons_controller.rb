@@ -1,7 +1,15 @@
 class CouponsController < ApplicationController
 
   def index
-    @coupons = Coupon.all.map { |coupon| coupon.decorate }
+    @coupons = \
+      Coupon.
+        all.
+        select do |coupon|
+          logged_in? || coupon.name != 'learnable'
+        end.
+        map do |coupon|
+          coupon.decorate
+        end
   end
 
   def show

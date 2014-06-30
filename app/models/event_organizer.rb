@@ -1,4 +1,6 @@
 class EventOrganizer < ActiveRecord::Base
+  validates :code, presence: true
+
   before_validation do |eo|
     eo.code = eo.code.downcase
   end

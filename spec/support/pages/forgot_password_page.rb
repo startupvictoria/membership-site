@@ -5,6 +5,6 @@ class ForgotPasswordPage < SimpleDelegator
 
   def request_reset_for(email)
     fill_in "password_reset_form[email]", with: email
-    click_on "SEND PASSWORD"
+    click_on "Reset Password"
   end
 end

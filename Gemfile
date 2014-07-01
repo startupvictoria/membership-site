@@ -16,7 +16,6 @@ gem 'pg'
 gem "prawn"
 gem "prawn_rails"
 gem 'rails', '4.1.1'
-gem 'rails_12factor'
 gem 'rb-readline'
 gem 'sentry-raven'
 gem 'stripe'
@@ -37,4 +36,8 @@ group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'database_cleaner'
+end
+
+group :production do
+  gem 'rails_12factor'
 end

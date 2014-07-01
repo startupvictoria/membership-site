@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   has_many :password_reset_tokens,
     dependent: :destroy
 
-  enum faction: { unassigned: 0, civilian: 1, aspirant: 2, practitioner: 3 }
+  enum faction: { unassigned: 0, fan: 1, aspirant: 2, practitioner: 3 }
 
   scope :with_membership, -> { joins(:membership) }
 

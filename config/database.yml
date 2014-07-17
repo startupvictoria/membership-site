@@ -24,8 +24,6 @@ default: &default
 development:
   <<: *default
   database: startup_victoria_development
-  username: postgres
-  password: esfera
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -60,8 +58,6 @@ development:
 test:
   <<: *default
   database: startup_victoria_test
-  username: postgres
-  password: esfera
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -85,5 +81,5 @@ test:
 production:
   <<: *default
   database: startup_victoria_production
-  username: postgres 
-  password: esfera
+  username: startup_victoria
+  password: <%= ENV['STARTUP_VICTORIA_DATABASE_PASSWORD'] %>

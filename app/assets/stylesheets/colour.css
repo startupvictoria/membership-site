@@ -1,0 +1,282 @@
+/*
+Theme Name: FLATI - BLUE
+Description:  Designed by josweb.
+Author:  Jo
+Purchase:  http://themeforest.net/user/josweb
+*/
+
+.header { background: #323A45; }
+#banner { background: #e9e6e1;  }
+::-moz-selection{ color:#fff; background: #2BA6CB; }
+::selection { color: #fff; background: #2BA6CB; }
+blockquote { border-left: 3px solid #2BA6CB; }
+
+.zocial, a.zocial { color: #fff; background: #2BA6CB; }
+.zocial:hover, .zocial:focus { color: #fff; background: #2980B9; }
+
+.well { background-color: #D3CDC4; }
+.dropcap2 { color: #2BA6CB; }
+
+/**** BUTTONS ****/
+.btn-primary { background-color: #97242A; border: 0;}
+.btn-primary:hover { background-color: #34495E;}
+.btn-inverse { background-color: #323A45;}
+.btn-inverse:hover { background-color: #3e4957;}
+.btn:visited, .btn:focus { color: #fff; }
+
+/**** LINKS ****/
+a { color: #97242A; }
+a:hover { color: #555; }
+
+/**** WORK LINKS ****/
+.portfolio-links i { background-color: #3E4957; }
+.portfolio-links a:hover i { background-color: #323A45; }
+
+
+/***************************************************
+	COLOURS
+ ***************************************************/
+
+.hue { color: #97242A; }
+.white { color: #fff; }
+.magnolia { color: #E9E6E1; }
+.grey { color: #999; }
+.grey2 { color: #69767F; }
+.asphalt { color: #34495E; }
+.colour { color: #2BA6CB; }
+.hue_block { 
+	background-color: #97242A;
+	color: #fff;
+	padding: 0px 4px 2px; 
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.hue_block:hover { background-color: #97242A; }
+
+/**** IMAGE HOVER COLOUR ****/
+.hover_img:hover, .hover_colour {  
+	background: #2980B9 url(../img/zoom.png) no-repeat 50% 50%;
+	-webkit-box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15);
+	-moz-box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15);
+    box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15); 
+}
+
+/***************************************************
+	MENU
+ ***************************************************/
+
+#main_menu  .nav > li > a { color: #bbb; }
+#main_menu  .nav > .active > a, #main_menu  .nav> .active > a:hover { background: #2980B9; color: #fff!important; }
+#main_menu .nav > li > a:hover { background: transparent; color: #fff!important; }
+.dropdown-menu { background: #323A45; }
+.dropdown-menu  li a { color: #bbb;  }
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus, 
+.dropdown-submenu:hover > a, 
+.dropdown-submenu:focus > a,
+.nav > li > a:focus { text-decoration: none;  color: #fff; background: transparent!important; }
+.navbar-toggle { color: #2980B9; background-color: #252525; }
+.navbar-toggle > .btn:hover, .navbar-toggle > .btn:focus { color: #fff; text-decoration: none; }
+.navbar-toggle:hover { color: #fff; background-color: #2980B9; }
+
+/**** INDEX BOX ICONS ****/
+.intro-icon-large { color: #97242A; }
+.tile.tile-hot:before { background: url("../img/red_ribbon.png") 0 0 no-repeat; }
+
+
+/**** TEAM MEMBER COLOUR BORDERS ****/
+.th { background: #2BA6CB; }
+.th:hover { background: #2980B9; }
+
+/***************************************************
+	ABOUT PAGE
+ ***************************************************/
+
+/* Progress Bars */
+.progress .bar { background: #2980B9; }
+
+/* About Info Bottom Strip */
+.strip { background-color: #e9e6e1; }
+
+/* Big Button */
+.big_button {
+	display: block;
+	background: #e04a40;
+	color: #fff;
+	-webkit-box-shadow: 0 5px 0px #b1453e;
+    -moz-box-shadow: 0 5px 0px #b1453e;
+    box-shadow: 0 5px 0px #b1453e;
+}
+.big_button a{ color: #fff; opacity: 1.0;}
+.big_button:hover{
+	color: #fff;
+	background: #ee574d; 
+	-webkit-box-shadow: 0 5px 0px #9e3e37;
+	-moz-box-shadow: 0 5px 0px #9e3e37;
+	box-shadow: 0 5px 0px #9e3e37;
+}
+.big_button:active{
+	color: #fff;
+	background: #c23c33;
+	-webkit-box-shadow: 0 3px 0px #652824;
+	-moz-box-shadow: 0 3px 0px #652824;
+	box-shadow: 0 3px 0px #652824;
+}
+.big_button:visited, .big_button:focus { color:#fff; }
+
+
+/***************************************************
+	TESTIMONIALS
+ ***************************************************/
+
+.testimonial1, .testimonial2, .testimonial3 { background-color: #34495E; color: #bbb; }
+.testimonial1:after, .testimonial2:after, .testimonial3:after { border-top-color: #34495E; }
+.testimonial2 { background-color: #E9E6E1; color: #555; }
+.testimonial2:after { border-top-color: #E9E6E1; }
+.testimonial3 { background-color: #2BA6CB; color: #fff; }
+.testimonial3:after { border-top-color: #2BA6CB; }
+.quote_sections_hue { background: #2BA6CB; }
+.quote_sections_dark { background: #2C3E50; }
+.quote_sections_light { background: #E9E6E1; }
+
+/* Testimonial Icons */
+.testimonial-icon-disc, .testimonial-icon-disc2, .testimonial-icon-disc3 { background-color: #2BA6CB; }
+.testimonial-icon-disc2 { background-color: #2C3E50; }
+.testimonial-icon-disc3 { background-color: #E9E6E1; }
+
+
+/***************************************************
+	BLOG
+ ***************************************************/
+
+/* Date */
+.btn-blog1 { background: #2980B9; color: #fff; }
+/* Small Date */
+.btn-blog2 { background: #2980B9; color: #fff; }
+.btn-blog1:hover, .btn-blog2:hover { background: #2980B9; color: #fff; }
+a.com_no { color: #fff; }
+.post_link a:hover, .read_more a:hover { color: #2BA6CB; }
+
+/* Pager */
+.pager li > a, .pager li > span { color: #fff; background: #2BA6CB; }
+.pager li > a:hover,
+.pager li > a:focus,
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span  { color: #fff; background: #2980B9; }
+
+/* Pagination */
+.pagination ul > li > a, .pagination ul > li > span { border: 2px solid #2BA6CB; }
+.pagination ul > li > a:hover,
+.pagination ul > li > a:focus,
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+	background-color: #2BA6CB; 
+    color: #fff;
+}
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+    background-color: #2BA6CB; 
+    color: #fff;
+    cursor: default;
+}
+
+/***************************************************
+	CONTACT
+ ***************************************************/
+
+.required { color: #19C1C3; }
+#ajax-contact-form  input.btn-form:visited, #ajax-contact-form input.btn-form:focus { background:#2BA6CB; }
+
+/***************************************************
+	FOOTER
+ ***************************************************/
+
+#footer { background-color: #97242A;}
+#footer2 { background: #323A45; color: #999; }
+.copyright a { color: #888; }
+.copyright a:hover { color: #777; }
+
+
+/***************************************************
+	PORTFOLIO, GALLERY & THUMB CAROUSELS
+ ***************************************************/
+
+/**** PORTFOLIO ****/
+#filters li a, #filters2 li a { color: #555; border: 2px solid #767676; }
+#filters li a.selected, #filters2 li a.selected { background: #2BA6CD; color: #fff;  border: 2px solid #2BA6CD; }
+#filters li a:hover, #filters2 li  a:hover { color:#fff; border: 2px solid #34495E; background: #34495E; }
+
+/**** GALLERY ****/
+.holder a {  color: #555; border: 2px solid #767676; }
+.holder a:hover {color: #fff; border: 2px solid #34495E; background: #34495E; }
+.holder a.jp-previous, .holder a.jp-next, .holder a.jp-disabled, .holder a.jp-disabled, focus:a.jp-disabled {
+	border: 2px solid #767676;
+	color: #767676;
+}
+.holder a.jp-current { background: #2BA6CD; color: #fff; border: 2px solid #2BA6CD; }
+a.jp-disabled:hover, .holder a.jp-next:hover { color: #fff; border: 2px solid #34495E; background: #34495E; }
+
+/* CAROUSELS */	
+.slider-title { background-color: #34495E; color: #bbb; }
+.slider-title:after { border-top-color: #34495E; }
+
+/* Carousel Arrows*/
+.widget-scroll-prev:hover, .widget-scroll-next:hover, .widget-scroll-prev2:hover, .widget-scroll-next2:hover { background: #2BA6CB; }
+
+
+/***************************************************
+	404 PAGE, PRICING TABLE, ACCORDIAN, TABS
+ ***************************************************/
+
+/**** 404 PAGE ****/
+.screen-bg { background-color: #19C1C3; }
+
+/**** PRICING TABLE ****/
+.pricing-header-row-1 { background-color: #323A45; }
+.pricing-header-row-2 { background-color: #E7E7E7; }
+.pricing-content-row-odd { background-color: #eee; color: #555; }
+.pricing-content-row-even { background-color: #E7E7E7; color: #555; }
+.pricing-footer { background-color: #323A45; }
+.pricing-table h3 { color: #2BA6CB; }
+.tile2.tile-hot:before { background: url("../img/red_ribbon.png") 0 0 no-repeat;}
+
+/**** ACCORDION ****/
+.panel-heading { background-color: #2BA6CB!important; color: #fff!important; }
+.panel-heading a:hover { color: #fff; }
+.panel-heading .accordion-toggle:after { color: #fff; }
+.panel { background-color: #f6f6f6!important; }
+
+/**** TABS ****/
+.nav-tabs { border-bottom: 1px solid #ccc; }
+.nav-tabs a { color: #fff!important; background-color: #2BA6CB!important; }
+.nav-tabs .active a, .nav-tabs a:hover, .nav-tabs .active a:focus { background-color: #34495E!important;}
+
+/***************************************************
+	TIMELINE
+ ***************************************************/
+
+/* The line */
+.cbp_tmtimeline:before { background: #afdcf8; }
+/* The date/time */
+.cbp_tmtimeline > li .cbp_tmtime span:last-child { color: #3594cb; }
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child { color: #6cbfee; }
+/* Right content */
+.cbp_tmtimeline > li .cbp_tmlabel { background: #3594cb; color: #fff; }
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel { background: #6cbfee; }
+/* The triangle */
+.cbp_tmtimeline > li .cbp_tmlabel:after { border-right-color: #3594cb; }
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after { border-right-color: #6cbfee; }
+/* The icons */
+.cbp_tmtimeline > li .cbp_tmicon { color: #fff; background: #46a4da; box-shadow: 0 0 0 8px #afdcf8;}
+/* Media Queries */
+@media screen and (max-width: 47.2em) {
+.cbp_tmtimeline > li .cbp_tmlabel:after { border-bottom-color: #3594CB; }
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after { border-bottom-color: #6CBFEE; }
+ }
+
+/**** ICONS EXAMPLE BG HOVER ****/
+.fontawesome-icon-list .fa-hover a:hover{background-color:#2BA6CB;}

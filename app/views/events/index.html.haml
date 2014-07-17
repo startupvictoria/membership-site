@@ -2,28 +2,32 @@
   Events
 
 .row
-  .col-sm-10
-    %h2
-      Upcoming Events
+  #banner
+    .container.intro_wrapper
+      .inner_content
+        %h1.title
+          Upcoming Events
+        %h1.intro
+          %p
+            A list of startup-friendly events across Victoria
 
-    %p
-      A list of startup-friendly events across Victoria
-
+.container
 - @events.each do |event|
   %hr
   .row
-    .col-sm-2.col-sm-offset-1
-      .h4
-        = event.starts_at_day
-      %p
-        = event.starts_at_hour
+    .container
+      .col-sm-2.col-sm-offset-1
+        .h4
+          = event.starts_at_day
+        %p
+          = event.starts_at_hour
 
-    .col-sm-6
-      .h4
-        = event.title
-      %p
-        = event.short_description
+      .col-sm-6
+        .h4
+          = event.title
+        %p
+          = event.short_description
 
-    .col-sm-3
-      %br
-      = link_to "See Details", event.url, class: "btn btn-info btn-lg center-block"
+      .col-sm-3
+        %br
+        = link_to "See Details", event.url, class: "btn btn-info btn-lg center-block"

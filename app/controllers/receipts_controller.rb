@@ -17,7 +17,9 @@ class ReceiptsController < ApplicationController
   private
 
   def receipts
-    current_user.customer.nil? ? [] : [ Receipt.new(current_user) ]
+    [
+      Receipt.new(current_user)
+    ]
   end
 
   def enforce_correct_receipt_id

@@ -4,15 +4,18 @@
 - content_for :page_title do
   Become a member
 
-.col-sm-6.membership-new
+.membership-new
   .row
-    %h2
-      Become a member
+    #banner
+      .container.intro_wrapper
+        .inner_content
+          %h2.title
+            Become a member
 
-    %p
-      Startup Victoria membership costs only $99 per year.
+          %h1.intro
+            Startup Victoria membership costs only $99 per year.
 
-  .row
+  .col-sm-6.martop.btm2
     .form-basic.form-horizontal{ role: "form" }
       = form_for(registration_form, url: memberships_url, html: { id: "paymentForm",
           "data-stripe-publishable-key" => "#{StartupVictoria.config.stripe_publishable_key}" }) do |f|
@@ -43,7 +46,7 @@
           = label_tag(:expiry_date, "Expiry Date", :class => "col-sm-3 control-label")
           .col-sm-9
             .row
-              .col-xs-2
+              .col-xs-4
                 %select{ class: 'exp_month', id: 'exp_month', name: 'month', "data-stripe" => "exp-month" }
                   %option{ value: "" }
                     Month
@@ -54,7 +57,7 @@
 
               .col-xs-1
 
-              .col-xs-2
+              .col-xs-4
                 %select{ class: 'exp_year', id: "exp_year", name: 'year', "data-stripe" => "exp-year" }
 
                   %option{ value: "" }

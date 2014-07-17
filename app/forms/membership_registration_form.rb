@@ -16,8 +16,6 @@ class MembershipRegistrationForm
     presence: true,
     format: {with: Formats::EMAIL}
 
-  validate :email_is_unique
-
   validates :password,
     length: {minimum: PasswordPolicy::MINIMUM_LENGTH}
 
@@ -52,11 +50,4 @@ class MembershipRegistrationForm
       password: password
     )
   end
-
-  def email_is_unique
-    if User.exists? :email => email
-      errors.add(:email, "is taken.  If this is your email address, try logging in.")
-    end
-  end
-
 end

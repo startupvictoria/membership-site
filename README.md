@@ -9,17 +9,9 @@ and would like to tackle something on this roadmap, we'd be grateful!
 
 High Priority:
 
-* design
-
-* a blog on /blog (install octopress into /public ?)
-
 * /committees to showcase the committees
 
-* /supporters to acknowledge and thank sponsors and corporate members
-
-Medium Priority:
-
-* pdf receipts for membership payment that can be downloaded by members
+* /betterfounder to showcase the Better Founder Groups and their members
 
 * ActiveAdmin datepicker for the starts_at field of /admin/events/new
 
@@ -64,7 +56,8 @@ Run the bootstrap script to set up the app dependencies:
 ### Run!
 
 ```
-foreman start
+foreman start 
+localhost/5000
 ```
 
 ### Sanity Check

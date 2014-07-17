@@ -1,36 +1,53 @@
-.navbar.navbar-inverse.navbar-fixed-top{ role: "navigation" }
-  .container
-    .navbar-header
-      %button.navbar-toggle{ type: "button", "data-toggle" =>"collapse", "data-target" => ".navbar-collapse" }
-        %span.sr-only
-          Toggle navigation
-        .icon-bar
-        .icon-bar
-        .icon-bar
+.header
+  %nav#main_menu.navbar{"role" => "navigation"}
+    .container
+      .navbar-header
+        %button.navbar-toggle{ type: "button", "data-toggle" =>"collapse", "data-target" => ".navbar-collapse" }
+          %span.sr-only
+            Toggle navigation
+          %i.fa.fa-bars
 
-      %a.navbar-brand{ href: root_path }
-        Startup Victoria
+        .logo
+          %a.homelink
+            = image_tag "logo1.png"
 
-    .navbar-collapse.collapse
-      %ul.nav.navbar-nav.navbar-set-active
-        %li.active
-          %a{ href: root_path }
-            Home
-        %li
-          %a{ href: coupons_path }
-            Coupons
-        %li
-          %a{ href: memberships_path }
-            Membership
-        %li
-          %a{ href: events_path }
-            Events
-        %li
-          %a{ href: new_contact_path }
-            Contact
-        %li
-          %a{ href: about_us_path }
-            About
+      .navbar-collapse.collapse.menutop#menu.navbar-right
+        .new_menu
+          = render "shared/primary_navigation_right"
 
-      - if !content_for? :spartan_header_footer
-        = render "shared/primary_navigation_right"
+        %ul.nav.navbar-nav.pull-left-to.navbar-set-active
+          %li.homelink.active
+            %a{ href: root_path }
+              Home
+
+          %li.dropdown
+            %a{ href: coupons_path }
+              Coupons
+
+          %li
+            %a{ href: memberships_path }
+              Membership
+          %li
+            %a{ href: events_path }
+              Events
+          %li
+            %a{ href: "/sponsors" }
+              SPONSORS
+          %li
+            %a{ href: about_us_path }
+              About
+          %li
+            %a{href: "/blog"}
+              Blog
+
+
+
+
+
+
+
+
+
+
+
+

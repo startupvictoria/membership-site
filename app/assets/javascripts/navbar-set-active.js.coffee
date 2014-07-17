@@ -7,5 +7,7 @@ navbar_set_active_class = (parent_class) ->
 
 navbar_set_active = ->
   navbar_set_active_class(".navbar-set-active")
+  makeNavHover()
+  makeSlider()
 
 $(document).on 'ready page:load', navbar_set_active

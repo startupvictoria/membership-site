@@ -9,6 +9,10 @@
     %meta{ name: "description", content: "" }
     %meta{ name: "keywords", content: "" }
 
+
+    /[if IE 9]
+      %link{"href" => "/assets/ie/browserie9.css" , "media" => "all" , "rel" => "stylesheet"}
+
     = stylesheet_link_tag 'application', media: 'all', "data-turbolinks-track" => true
 
     = javascript_include_tag "application", "data-turbolinks-track" => true
@@ -17,10 +21,12 @@
 
     = csrf_meta_tags
 
+    %link{"href" => "http://fonts.googleapis.com/css?family=Lato:400,700,300" , "rel" => "stylesheet" , "type" => "text/css"}
+
   %body
     = render "shared/primary_navigation"
 
-    .container
+    %div.fullwidth-container
       = render "shared/flash_messages"
 
       = content_for?(:nested_layout) ? yield(:nested_layout) : yield

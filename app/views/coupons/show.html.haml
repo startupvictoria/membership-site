@@ -2,39 +2,37 @@
   = @coupon.company_name
   coupon for members
 
-.row
-  %h3
-    Coupon brought to you by
-    = @coupon.company_name
 
-.row
+
+.container.martopbtm
   .col-sm-4
     - if @coupon.has_logo?
       = image_tag @coupon.logo_path, border: "0"
 
   .col-sm-8.coupon-hsep
-    %h4
+    %h1
       Company Name
     %p
       = @coupon.company_name
 
-    %h4
+    %h1
       Company URL
-    %p
-    = @coupon.company_url
+    %a{"href" => @coupon.company_url}
+      = @coupon.company_url
+    
 
-    %h4
+    %h1
       About
     %p
       = @coupon.company_about
 
-    %h4
+    %h1
       Coupon
     %p
       = @coupon.description
 
     - if logged_in?
-      %h4
+      %h1
         How to redeem
       %p
         = @coupon.how_to_redeem.html_safe

@@ -1,4 +1,4 @@
-%ul.nav.navbar-nav.navbar-right
+%ul.nav.navbar-nav.navbar-right.navbar-set-active
   - if logged_in?
     %li.dropdown
 
@@ -22,3 +22,7 @@
     %li
       %a{ href: login_path }
         Login
+
+  %li
+    %a{ href: new_contact_path }
+      Contact

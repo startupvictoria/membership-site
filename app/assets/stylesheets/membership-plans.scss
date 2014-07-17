@@ -13,17 +13,16 @@
   margin-bottom: 40px;
 }
 
-.membership-plans .header {
+.membership-plans .header1 {
   text-align: center;
   color: white;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  padding:20px;
+  float:left;
+  margin-bottom:20px;
+  width:100%;
+  background:none repeat scroll 0 0 #E9E6E1;
 }
-.membership-plans .title {
-  padding-top: 0.4em;
-  font-size: 2em;
-  font-weight: bold;
-}
+
 .membership-plans .price {
   font-size: 1.4em;
   font-weight: bold;    
@@ -62,12 +61,12 @@
   background: rgb(224,234,242);
 }
 
-.membership-plans .header .plan1 a,
+.membership-plans .header1 .plan1 a,
 .membership-plans .bottom .plan1 a {
   background: rgb(72, 109, 139);
 }
 
-.membership-plans .header .plan1 {
+.membership-plans .header1 .plan1 {
   background: rgb(105, 153, 193);
   border-bottom: thick solid rgb(72, 109, 139);
   padding-left: 0.5em;
@@ -79,16 +78,17 @@
   background: rgb(230,235,218);
 }
 
-.membership-plans .header .plan2 a,
+.membership-plans .header1 .plan2 a,
 .membership-plans .bottom .plan2 a {
   background: rgb(108, 131, 62);
 }
 
-.membership-plans .header .plan2 {
+.membership-plans .header1 .plan2 {
   background: rgb(134, 162, 77);
   border-bottom: thick solid rgb(108, 131, 62);
   padding-left: 0.5em;
   padding-right: 0.5em;
+  float:right;
 }
 
 .membership-plans .plan-feature {
@@ -112,7 +112,7 @@
   text-align: center;
 }
 
-.membership-plans .header a,
+.membership-plans .header1 a,
 .membership-plans .bottom a {
   color: white;
   margin-top: 20px;

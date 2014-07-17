@@ -18,3 +18,6 @@
 //= require navbar-set-active
 //= require google-analytics-turbolinks
 //= require turbolinks-autofocus-workaround
+//= require jquery.themepunch.revolution.min
+//= require jquery.themepunch.plugins.min
+//= require dropdown

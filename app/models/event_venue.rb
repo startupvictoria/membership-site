@@ -1,6 +1,4 @@
 class EventVenue < ActiveRecord::Base
-  validates :code, presence: true
-
   before_validation do |ev|
     ev.code = ev.code.downcase
   end

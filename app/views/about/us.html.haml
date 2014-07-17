@@ -2,20 +2,21 @@
   About Us
 
 .row
+  #banner
+    .container.intro_wrapper
+      .inner_content
+        %h1.title
+          Who We Are 
+        %h1.intro
+          %p
+            Introduction
+          %p
+            Startup Victoria is a nonprofit organisation dedicated to supporting and building Victoria's startup ecosystem. 
+          
+
+.container#mission
   .col-sm-10
-    %h2
-      Who We Are
-
-    %h3
-      Introduction
-
-    %p
-      Startup Victoria is a nonprofit organisation dedicated to
-      supporting and building Victoria's startup ecosystem.
-
-.row#mission
-  .col-sm-10
-    %h3
+    %h1
       Our Mission
 
     %p
@@ -36,30 +37,43 @@
       the place to find resources to guide you and people to inspire
       you on your Startup journey.
 
-    %h3
+    %h1
       Become a volunteer
 
     %br
 
     .row
-      .col-sm-6
+      .col-sm-12
         %p
-          Startup Victoria is a volunteer-driven organisation.
-        %p
-          We threw together this video to give you a feel for the vibe.
-        %p
-          We encourage you to volunteer - 
-
+          Startup Victoria is an volunteer-driven organisation. We threw together this video to give you a feel for the vibe. We encourage you to volunteer - 
           %a{ href: new_contact_path }
             get in touch
           \!
 
-      .col-sm-6
-        %iframe{ class: "Video", src: "//www.youtube.com/embed/7HwP1GCacEY", frameborder: "0", :allowfullscreen => true }
 
-    %h3
+    %h1
       Our Board of directors
 
     .row
       - director_attributes.each_index do |i|
         = render :partial => "director", :locals => { director: director_attributes[i] }
+
+    %h1
+      Our Management
+    .row
+      .col-sm-3
+        %center
+          = image_tag "larsprofile.jpg", class: "img-circle"
+          %h3
+            %a{"href" => "http://au.linkedin.com/in/larslindstromoz/ "}
+              Lars Lindstrom
+            %p
+              Chief Executive Officer
+      .col-sm-3
+        %center
+          = image_tag "thomas.png", class: "img-circle"
+          %h3
+            %a{"href" => "http://www.linkedin.com/profile/view?id=234851115&trk=nav_responsive_tab_profile "}
+              Thomas Anbeek
+            %p
+              Events Manager

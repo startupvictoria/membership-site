@@ -15,6 +15,14 @@
         %th
           Receipt
     %tbody
+      - if @receipts.empty?
+        %tr
+          %td{ colspan: 3 }
+            %p
+              You have not made any payments.
+            %p
+              No payments ==> no receipts.
+
       - @receipts.each do |receipt|
         %tr
           %td

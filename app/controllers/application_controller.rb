@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_action :set_raven_context
+
   include UserAuthentication
 
   protected
@@ -26,4 +28,11 @@ class ApplicationController < ActionController::Base
   def authenticator
     @_authenticator ||= ::Authenticator.new(session)
   end
+
+  def set_raven_context
+    if !current_user.nil?
+      Raven.extra_context user_id: current_user.id, email: current_user.email
+    end
+  end
+
 end

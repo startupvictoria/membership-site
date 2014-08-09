@@ -35,6 +35,12 @@
           .col-sm-9
             = f.password_field :password, class: "form-control", placeholder: "Password (at least 6 characters)"
 
+        .form-group
+          = label_tag(:phone_number, "Phone Number", :class => "col-sm-3 control-label")
+          .col-sm-9
+            = f.phone_field :phone_number, class: "form-control", placeholder: "0411 111 111"
+            (If supplied, a startup victoria member will give you a welcome call.)
+
         %br
 
         .form-group

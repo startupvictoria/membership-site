@@ -1,0 +1,17 @@
+A new member signed up with Startup Victoria.
+
+Full Name: <%= @user.full_name %>
+
+Email: <%= @user.email %>
+
+Phone Number: <%= @user.phone_number.blank? ? "not supplied" : @user.phone_number %>
+
+Membership number: <%= @user.membership_number %>
+
+Add notes on this member: <%= admin_member_url(@user.id) %>
+
+Cheers -
+
+Lars Lindstrom
+CEO
+Startup Victoria.

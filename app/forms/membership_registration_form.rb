@@ -6,6 +6,7 @@ class MembershipRegistrationForm
   attr_accessor :full_name
   attr_accessor :email
   attr_accessor :password
+  attr_accessor :phone_number
   attr_accessor :card_token
   attr_accessor :authenticator
 
@@ -47,7 +48,8 @@ class MembershipRegistrationForm
     @_user ||= User.new(
       full_name: full_name,
       email: email,
-      password: password
+      password: password,
+      phone_number: phone_number
     )
   end
 end

@@ -324,7 +324,8 @@ CREATE TABLE users (
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     admin boolean DEFAULT false NOT NULL,
-    faction integer DEFAULT 0 NOT NULL
+    faction integer DEFAULT 0 NOT NULL,
+    phone_number character varying(255)
 );
 
 
@@ -639,4 +640,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140525030604');
 INSERT INTO schema_migrations (version) VALUES ('20140525030608');
 
 INSERT INTO schema_migrations (version) VALUES ('20140525030854');
+
+INSERT INTO schema_migrations (version) VALUES ('20140809153701');
 

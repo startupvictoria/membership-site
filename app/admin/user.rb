@@ -10,10 +10,16 @@ ActiveAdmin.register User, :as => "Member" do
 
   actions :all, :except => [ :destroy, :new ]
 
-  permit_params :email, :full_name, :faction, :admin
+  permit_params \
+    :email,
+    :full_name,
+    :phone_number,
+    :faction,
+    :admin
 
   filter :email
   filter :full_name
+  filter :phone_number
   filter :faction, as: :select, collection: proc { User.factions }
   filter :admin
   filter :created_at
@@ -24,6 +30,7 @@ ActiveAdmin.register User, :as => "Member" do
     end
     column :email
     column :full_name
+    column :phone_number
     column :faction
     column :admin
     column :created_at
@@ -38,6 +45,7 @@ ActiveAdmin.register User, :as => "Member" do
       end
       row :email
       row :full_name
+      row :phone_number
       row :faction
       row :admin
       row :created_at
@@ -50,6 +58,7 @@ ActiveAdmin.register User, :as => "Member" do
     f.inputs "Member Details" do
       f.input :email
       f.input :full_name
+      f.input :phone_number
       f.input :faction,
         as: :radio,
         collection: User.factions.keys,

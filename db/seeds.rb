@@ -44,7 +44,9 @@ Coupon.create \
       description: "Get a xx months Learnable membership with access to all books and courses FREE!",
       how_to_redeem: "not shown"
 
+Event.delete_all
 EventVenue.delete_all
+EventOrganizer.delete_all
 
 EventVenue.create! \
       code: "inspire9",
@@ -52,14 +54,10 @@ EventVenue.create! \
       address: "Level 1, 41-43 Stewart st, Richmond, VIC 3121",
       url: "http://inspire9.com"
 
-EventOrganizer.delete_all
-
 EventOrganizer.create! \
       code: "startup-victoria",
       name: "Startup Victoria",
       url: "https://startupvictoria.com.au"
-
-Event.delete_all
 
 Event.create! \
       title: "The ups-and-downs of the entrepreneurial journey",
@@ -67,4 +65,48 @@ Event.create! \
       event_venue: EventVenue.find_by_code("inspire9"),
       event_organizer: EventOrganizer.find_by_code("startup-victoria"),
       url: "http://www.meetup.com/Lean-Startup-Melbourne/events/182531822/",
-      starts_at: DateTime.parse('27 May 2014 6:30 PM')
+      starts_at: 1.month.from_now
+
+Event.create! \
+      title: "The best event since sliced bread was invented",
+      short_description: "a panel of fantastic bread experts will take you on a journey never to be repeated",
+      event_venue: EventVenue.find_by_code("inspire9"),
+      event_organizer: EventOrganizer.find_by_code("startup-victoria"),
+      url: "http://example.com",
+      starts_at: 2.month.from_now
+
+PasswordResetToken.delete_all
+Membership.delete_all
+Customer.delete_all
+User.delete_all
+
+u1 = User.create! \
+  email: 'alice@example.com',
+  password: '111',
+  full_name: "Alice Bloggs",
+  admin: false
+
+u2 = User.create! \
+  email: 'bob@example.com',
+  password: '222',
+  full_name: "Bob Bloggs",
+  phone_number: "123 456 789",
+  admin: true
+
+c1 = Customer.create! \
+  user_id: u1.id,
+  stripe_id: 111,
+  stripe_card_id: 111
+
+c2 = Customer.create! \
+  user_id: u2.id,
+  stripe_id: 111,
+  stripe_card_id: 111
+
+Membership.create! \
+  customer_id: c1.id,
+  plan_id: MembershipPlan.premium.id
+
+Membership.create! \
+  customer_id: c2.id,
+  plan_id: MembershipPlan.premium.id

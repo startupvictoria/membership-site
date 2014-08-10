@@ -30,7 +30,7 @@ ActiveAdmin.register Coupon do
     end
     column :created_at
 
-    default_actions
+    actions
   end
 
 end

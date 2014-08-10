@@ -35,7 +35,7 @@ ActiveAdmin.register User, :as => "Member" do
     column :admin
     column :created_at
 
-    default_actions
+    actions
   end
 
   show do

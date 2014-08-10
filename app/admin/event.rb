@@ -37,7 +37,7 @@ ActiveAdmin.register Event do
       event.starts_at.to_date
     end
 
-    default_actions
+    actions
   end
 
   form do |f|

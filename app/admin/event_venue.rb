@@ -24,7 +24,7 @@ ActiveAdmin.register EventVenue do
     end
     column :created_at
 
-    default_actions
+    actions
   end
 
 end

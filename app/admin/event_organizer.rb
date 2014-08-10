@@ -23,7 +23,7 @@ ActiveAdmin.register EventOrganizer do
     end
     column :created_at
 
-    default_actions
+    actions
   end
 
 end

@@ -1,11 +1,10 @@
-class PasswordResetMailer < ActionMailer::Base
+class PasswordResetMailer < StartupVictoriaMailer
   def reset_password(token)
     @token = token
 
-    mail(
+    mail \
       to: token.user.email,
-      from: "\"Startup Victoria\" <no-reply@startupvictoria.com.au>",
+      from: default_from,
       subject: "Startup Victoria password reset confirmation"
-    )
   end
 end

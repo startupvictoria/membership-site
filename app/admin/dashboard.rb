@@ -29,6 +29,11 @@ ActiveAdmin.register_page "Dashboard" do
             column "count", :c
           end
         end
+
+        panel "Useful Links" do
+          para link_to "Stripe", "https://stripe.com"
+          para link_to "Mailer Previews", "/rails/mailers" if Rails.env.development?
+        end
       end
     end
   end

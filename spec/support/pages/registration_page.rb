@@ -7,7 +7,8 @@ class RegistrationPage < SimpleDelegator
     enter_personal_details(
       full_name: "Peter Gregory",
       email: "peter@hooli.com",
-      password: "c1cadas"
+      password: "c1cadas",
+      phone_number: "0411 111 111"
     )
   end
 
@@ -20,9 +21,10 @@ class RegistrationPage < SimpleDelegator
   end
 
   def enter_personal_details(attrs={})
-    fill_in "membership_registration_form[full_name]", with: attrs[:full_name]
-    fill_in "membership_registration_form[email]",     with: attrs[:email]
-    fill_in "membership_registration_form[password]",  with: attrs[:password]
+    fill_in "membership_registration_form[full_name]",    with: attrs[:full_name]
+    fill_in "membership_registration_form[email]",        with: attrs[:email]
+    fill_in "membership_registration_form[password]",     with: attrs[:password]
+    fill_in "membership_registration_form[phone_number]", with: attrs[:phone_number]
   end
 
   def submit_registration

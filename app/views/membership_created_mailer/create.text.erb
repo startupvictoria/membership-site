@@ -2,13 +2,15 @@ Hi there!
 
 Welcome to Startup Victoria!
 
-Your membership number is: <%= @user.membership_number %>
+Here are some details you'll want to keep handy:
 
-You can login to access your membership benefits here:
+  Login: <%= login_url %>
 
-  <%= login_url %>
+  Email: <%= @user.email %>
 
-A receipt for your membership payment is available here:
+  Membership number: <%= @user.membership_number %>
+
+A receipt for your payment is available here:
 
   <%= receipts_url %>
 
@@ -17,10 +19,20 @@ access to a wide range startup-friendly companies, see:
 
   <%= coupons_url %>
 
+<% if !@user.phone_number.blank? %>
+A Startup Victoria volunteer will give you a call soon to say
+hello, learn more about what you’re up to and see how we can
+be of assistance to you and your startup.
+
+<% end %>
 If you have any questions about Startup Victoria or your membership,
 please email us at hello@startupvictoria.com.au
 
-Yours,
+Thanks for becoming a member!
 
+Regards -
+
+Lars Lindstrom,
+CEO,
 Startup Victoria.
 https://startupvictoria.com.au

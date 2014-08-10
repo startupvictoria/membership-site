@@ -26,6 +26,7 @@ class MembershipsController < ApplicationController
       :full_name,
       :email,
       :password,
+      :phone_number,
       :card_token
     )
   end

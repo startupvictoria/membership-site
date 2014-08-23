@@ -57,7 +57,7 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         "Lars Lindstrom",
         "lars@startupvictoria.com.au",
         "Chief Executive Officer",
-        "larsprofile.jpg",
+        "Lars-Lindstrom.jpg",
         "http://au.linkedin.com/in/larslindstromoz/",
         :staff
       ],
@@ -65,7 +65,7 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         "Thomas Anbeek",
         "thomas@startupvictoria.com.au",
         "Events Manager",
-        "thomas.png",
+        "Thomas-Anbeek.png",
         "http://au.linkedin.com/pub/thomas-anbeek/66/799/263/",
         :staff
       ],

@@ -1,7 +1,7 @@
 .col-sm-3
   %center
 
-    = image_tag asset_path("person/" + person.image_filename), border: "0", class: "img-circle"
+    = image_tag "person/#{person.image_filename}", border: "0", class: "img-circle"
 
     %h3
       = person.name_linked_to

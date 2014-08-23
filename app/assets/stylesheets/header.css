@@ -101,11 +101,6 @@ background:none !important;
     margin-bottom: 20px;
 }
 
-#new_contact_form input[type="text"] , #new_contact_form input[type="email"]
-{
-    width:70%;
-}
-
 .formrow1btn
 {
     width:100px;

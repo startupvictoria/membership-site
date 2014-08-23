@@ -60,7 +60,7 @@
               Message
               %span.required
                 *
-            = f.text_area :message, class: "form-control", id: "contact-us-form-text-area", placeholder: "Message"
+            = f.text_area :message, class: "form-control", placeholder: "Message"
 
           = render :partial => "shared/on_form_error", :locals => { form: contact_form }
 

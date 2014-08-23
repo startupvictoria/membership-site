@@ -1,4 +1,4 @@
-class Person < Struct.new(:name, :bio, :image_filename, :linkedin, :role)
+class Person < Struct.new(:name, :bio, :image_filename, :url, :role)
   def self.directors
     all.select { |p| p.director? }
   end

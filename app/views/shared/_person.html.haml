@@ -4,10 +4,10 @@
     = image_tag asset_path("person/" + person.image_filename), border: "0", class: "img-circle"
 
     %h3
-      - if person.linkedin.empty?
+      - if person.url.empty?
         = person.name
       - else
-        = link_to person.name, person.linkedin
+        = link_to person.name, person.url
 
     %p
       = person.bio

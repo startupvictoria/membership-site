@@ -1,4 +1,6 @@
 class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
+  include Draper::Decoratable
+
   def self.directors
     all.select { |p| p.director? }
   end

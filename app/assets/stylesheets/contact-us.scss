@@ -3,10 +3,10 @@
 
 }
 
-.new_contact_form .formrow1 {
-  width: 70%;
+.form-basic .new_contact_form textarea {
+  height: 150px;
 }
 
-.form-basic .new_contact_form textarea {
-  height: 200px;
+.new_contact_form .row {
+  margin-bottom: 10px;
 }

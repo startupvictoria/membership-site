@@ -6,67 +6,90 @@
     %h1.title.martop
       Contact Us
 
-  .container
-    .col-sm-6.col-md-4
-      %h3
-        Please feel free to send us an email or fill in our handy contact form. We aim to reply within 24 hours.
+    .col-md-8
+      .form-basic{ role: "form" }
+        = form_for(contact_form, url: contacts_path) do |f|
 
-      .addressinfo
-        %span
-          Address
+          .row
+            .col-md-10
+              %h3
+                %p
+                  We'd love to hear from you!
+                %p
+                  For a general question, use the form and we'll aim to reply within 24 hours.
+                %p
+                  For a specific question for one of our staff, reach out to them directly (below).
+
+          .row
+            .col-md-2
+              Name
+            .col-md-8
+              = f.text_field :full_name, class: "form-control", placeholder: "Full Name", :autofocus => 'autofocus'
+
+          .row
+            .col-md-2
+              Email
+            .col-md-8
+              = f.email_field :email, class: "form-control", placeholder: "me@example.com"
+
+          .row
+            .col-md-2
+              Subject
+            .col-md-8
+              = f.text_field :subject, class: "form-control", placeholder: "Subject"
+
+          .row
+            .col-md-2
+              Message
+            .col-md-8
+              = f.text_area :message, class: "form-control", placeholder: "Message"
+
+          .row
+            = render :partial => "shared/on_form_error", :locals => { form: contact_form }
+
+          .row
+            .col-md-8.col-md-offset-2
+              %button.btn.btn-lg.btn-primary.btn-block{ type: "submit" }
+                Send
+
+      .col-md-8
+        %h2
+          Our People
+
+
+    .col-md-4
+      %h2
+        Our Physical Address
+
+      %p
+        Management moves between various co-working spaces in Melbourne so as to spread the love.
+
+      %p
+        If you'd like to come visit us, currently mon-thu we're at:
+
+      %address
+        The Village, NAB
         %br
-        Level 2
+        700 Bourke st
         %br
-        41-43 Stewart st,
+        Melbourne
         %br
-        Richmond,
+        Australia
+        %br
+        (between Southern Cross Station and Etihad Stadium)
+
+      %h2
+        Our Postal Address
+
+      %address
+        PO Box to-be-advised
+        %br
+        Richmond South,
         %br
         VIC, 3121
         %br
         Australia
         %br
         %br
-        %span
-          Email
-        %br
-        %a{"href" => "mailto:hello@startupvictoria.com.au "}
-          hello@startupvictoria.com.au 
-
-    .col-sm-6.col-md-8
-      .form-basic{ role: "form" }
-        = form_for(contact_form, url: contacts_path) do |f|
-          .formrow1
-            %p
-              Name
-              %span.required
-                *
-            = f.text_field :full_name, class: "form-control", placeholder: "Full Name", :autofocus => 'autofocus'
-          .formrow1
-            %p
-              Email
-              %span.required
-                *
-            = f.email_field :email, class: "form-control", placeholder: "me@example.com"
-
-          .formrow1
-            %p
-              Subject
-              %span.required
-                *
-            = f.text_field :subject, class: "form-control", placeholder: "Subject"
-
-          .formrow1
-            %p
-              Message
-              %span.required
-                *
-            = f.text_area :message, class: "form-control", placeholder: "Message"
-
-          = render :partial => "shared/on_form_error", :locals => { form: contact_form }
-
-          .formrow1btn
-            %button.btn.btn-lg.btn-primary.btn-block{ type: "submit" }
-              Send
-
 
 = javascript_include_tag "on-form-error"

@@ -21,3 +21,4 @@ deploy:
 notifications:
   email:
     - leni@startupvictoria.com.au
+    - lars@startupvictoria.com.au

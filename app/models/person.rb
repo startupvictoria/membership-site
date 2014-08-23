@@ -1,4 +1,4 @@
-class Person < Struct.new(:name, :bio, :image_filename, :url, :role)
+class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
   def self.directors
     all.select { |p| p.director? }
   end
@@ -21,6 +21,7 @@ class Person < Struct.new(:name, :bio, :image_filename, :url, :role)
     [
       [
         "Leni Mayo",
+        "",
         "Leni is a software engineer, angel investor and chairman of Startup Victoria.",
         "Leni-Mayo.png",
         "http://moniker.net/leni/bio/",
@@ -28,6 +29,7 @@ class Person < Struct.new(:name, :bio, :image_filename, :url, :role)
       ],
       [
         "Michelle Bourke",
+        "",
         "Michelle is the director of Artlivemedia and co-director of The Talent Door.",
         "Michelle-Bourke.png",
         "http://au.linkedin.com/in/michellebourke/",
@@ -35,6 +37,7 @@ class Person < Struct.new(:name, :bio, :image_filename, :url, :role)
       ],
       [
         "Scott Handsaker",
+        "",
         "Scott is the CEO of Attendly and Eventarc and a mentor at AngelCube.",
         "Scott-Handsaker.png",
         "http://au.linkedin.com/in/scotthandsaker/",
@@ -42,6 +45,7 @@ class Person < Struct.new(:name, :bio, :image_filename, :url, :role)
       ],
       [
         "Brendan Lewis",
+        "",
         "Brendan is the founder of Churchill Club and the Australian representative of London & Partners.",
         "Brendan-Lewis.png",
         "http://au.linkedin.com/in/brendanlewis/",
@@ -49,6 +53,7 @@ class Person < Struct.new(:name, :bio, :image_filename, :url, :role)
       ],
       [
         "Lars Lindstrom",
+        "lars@startupvictoria.com.au",
         "Chief Executive Officer",
         "larsprofile.jpg",
         "http://au.linkedin.com/in/larslindstromoz/",
@@ -56,6 +61,7 @@ class Person < Struct.new(:name, :bio, :image_filename, :url, :role)
       ],
       [
         "Thomas Anbeek",
+        "thomas@startupvictoria.com.au",
         "Events Manager",
         "thomas.png",
         "http://au.linkedin.com/pub/thomas-anbeek/66/799/263/",

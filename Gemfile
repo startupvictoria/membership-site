@@ -4,6 +4,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails'
 gem 'draper'
+gem "font-awesome-rails"
 gem 'foreigner'
 gem 'foreman'
 gem 'haml'

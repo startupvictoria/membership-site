@@ -17,3 +17,7 @@ deploy:
   app: quiet-gorge-2868
   on:
     repo: startupvictoria/membership-site
+
+notifications:
+  email:
+    - leni@startupvictoria.com.au

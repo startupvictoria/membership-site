@@ -1,0 +1,13 @@
+.col-sm-3
+  %center
+
+    = image_tag asset_path("person/" + person.image_filename), border: "0", class: "img-circle"
+
+    %h3
+      - if person.linkedin.empty?
+        = person.name
+      - else
+        = link_to person.name, person.linkedin
+
+    %p
+      = person.bio

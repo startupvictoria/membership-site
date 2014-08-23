@@ -50,30 +50,18 @@
             get in touch
           \!
 
+    .row
+      .col-sm-12
+        %h1
+          Our Board of directors
 
-    %h1
-      Our Board of directors
+        - Person.directors.each do |p|
+          = render :partial => "shared/person", :locals => { person: p }
 
     .row
-      - director_attributes.each_index do |i|
-        = render :partial => "director", :locals => { director: director_attributes[i] }
+      .col-sm-12
+        %h1
+          Our Management
 
-    %h1
-      Our Management
-    .row
-      .col-sm-3
-        %center
-          = image_tag "larsprofile.jpg", class: "img-circle"
-          %h3
-            %a{"href" => "http://au.linkedin.com/in/larslindstromoz/ "}
-              Lars Lindstrom
-            %p
-              Chief Executive Officer
-      .col-sm-3
-        %center
-          = image_tag "thomas.png", class: "img-circle"
-          %h3
-            %a{"href" => "http://www.linkedin.com/profile/view?id=234851115&trk=nav_responsive_tab_profile "}
-              Thomas Anbeek
-            %p
-              Events Manager
+        - Person.staff.each do |p|
+          = render :partial => "shared/person", :locals => { person: p }

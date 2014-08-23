@@ -1,0 +1,4 @@
+test:
+  <<: *default
+  username: postgres
+  database: startup_victoria_test

@@ -1,4 +1,8 @@
 language: ruby
 rvm:
   - 2.1.1
-script: bundle exec rspec spec
+
+before_script:
+  - psql -c 'create database startup_victoria_test;' -U postgres
+  - cat config/database.yml.travis >> config/database.yml
+  

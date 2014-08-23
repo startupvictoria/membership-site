@@ -11,6 +11,6 @@ describe PasswordResetMailer do
   end
 
   it "includes a link to use the token" do
-    expect(mail.body).to match(/#{password_reset_url(token)}/)
+    expect(mail.body).to include("forgot-password/#{token.token}")
   end
 end

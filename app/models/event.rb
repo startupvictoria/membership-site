@@ -1,4 +1,6 @@
 class Event < ActiveRecord::Base
+  audited
+
   belongs_to :event_venue
   belongs_to :event_organizer
 

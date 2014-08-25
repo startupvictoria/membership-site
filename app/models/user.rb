@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  audited
+
   has_secure_password
 
   has_one :customer,

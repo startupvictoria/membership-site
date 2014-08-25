@@ -1664,7 +1664,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 #footer_alt  .col-md-3 { margin-left: 0px; margin-right: 0px;  }
 }
 
-/* line 1, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/body.scss */
+/* line 1, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/body.scss */
 body {
   font: 14px/24px 'Lato',sans-serif;
   padding-top: 60px;
@@ -1961,27 +1961,27 @@ a.jp-disabled:hover, .holder a.jp-next:hover { color: #fff; border: 2px solid #3
 
 /**** ICONS EXAMPLE BG HOVER ****/
 .fontawesome-icon-list .fa-hover a:hover{background-color:#2BA6CB;}
-/* line 1, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/contact-us.scss */
+/* line 1, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/contact-us.scss */
 .contact-page h2 {
   margin-bottom: 25px;
 }
 
-/* line 6, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/contact-us.scss */
+/* line 6, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/contact-us.scss */
 .form-basic .new_contact_form textarea {
   height: 150px;
 }
 
-/* line 10, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/contact-us.scss */
+/* line 10, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/contact-us.scss */
 .new_contact_form .row {
   margin-bottom: 10px;
 }
-/* line 1, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/coupons.scss */
+/* line 1, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/coupons.scss */
 .offerslink {
   color: #333;
   font-weight: bold;
 }
 
-/* line 5, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/coupons.scss */
+/* line 5, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/coupons.scss */
 .inneroffer {
   float: left;
   border: 1px solid #c3c3c3;
@@ -1991,7 +1991,7 @@ a.jp-disabled:hover, .holder a.jp-next:hover { color: #fff; border: 2px solid #3
   overflow: hidden;
 }
 
-/* line 13, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/coupons.scss */
+/* line 13, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/coupons.scss */
 .compname {
   padding: 10px;
   text-align: center;
@@ -1999,7 +1999,7 @@ a.jp-disabled:hover, .holder a.jp-next:hover { color: #fff; border: 2px solid #3
   margin: 0;
 }
 
-/* line 19, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/coupons.scss */
+/* line 19, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/coupons.scss */
 .showdet {
   opacity: 0.9;
   background-color: #a20018;
@@ -2013,28 +2013,28 @@ a.jp-disabled:hover, .holder a.jp-next:hover { color: #fff; border: 2px solid #3
   text-align: center;
 }
 
-/* line 32, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/coupons.scss */
+/* line 32, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/coupons.scss */
 .offerslink:hover .inneroffer {
   border: 1px solid #a20018;
   background-color: #a20018;
 }
 
-/* line 36, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/coupons.scss */
+/* line 36, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/coupons.scss */
 .offerslink:hover .compname {
   color: #fff;
   background-color: #760018;
 }
 
-/* line 40, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/coupons.scss */
+/* line 40, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/coupons.scss */
 .offerslink:hover .showdet {
   display: block;
 }
 
-/* line 43, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/coupons.scss */
+/* line 43, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/coupons.scss */
 .coupon-hsep h4 {
   margin: 20px 0 0 0;
 }
-/* line 1, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/dashboards.scss */
+/* line 1, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/dashboards.scss */
 .dashboards .membership .rhs {
   font-weight: normal;
 }
@@ -2062,28 +2062,28 @@ table{max-width:100%;background-color:transparent}
 .fontawesome-icon-list .fa-hover a:hover{color:#fff;text-decoration:none}.fontawesome-icon-list .fa-hover a:hover .fa{font-size:28px;vertical-align:-6px}
 .fontawesome-icon-list .fa-hover a:hover .text-muted{color:#bbe2d5}
 
-/* line 1, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/footer.scss */
+/* line 1, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/footer.scss */
 .footer {
   background-color: #DBDBDB;
   margin: 20px 0 0 0;
 }
-/* line 1, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/form-basic.scss */
+/* line 1, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/form-basic.scss */
 .form-basic {
   margin: 0 auto;
 }
 
-/* line 6, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/form-basic.scss */
+/* line 6, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/form-basic.scss */
 .form-basic .form-basic-heading,
 .form-basic .checkbox {
   margin-bottom: 10px;
 }
 
-/* line 10, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/form-basic.scss */
+/* line 10, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/form-basic.scss */
 .form-basic .checkbox {
   font-weight: normal;
 }
 
-/* line 14, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/form-basic.scss */
+/* line 14, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/form-basic.scss */
 .form-basic .form-control {
   position: relative;
   height: auto;
@@ -2094,31 +2094,31 @@ table{max-width:100%;background-color:transparent}
   font-size: 16px;
 }
 
-/* line 24, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/form-basic.scss */
+/* line 24, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/form-basic.scss */
 .form-basic .form-control:focus {
   z-index: 2;
 }
 
-/* line 28, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/form-basic.scss */
+/* line 28, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/form-basic.scss */
 .form-basic input[type="email"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-/* line 34, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/form-basic.scss */
+/* line 34, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/form-basic.scss */
 .form-basic input[type="password"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-/* line 40, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/form-basic.scss */
+/* line 40, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/form-basic.scss */
 .form-basic .form-instructions-after-submit {
   margin-top: 40px;
 }
 
-/* line 44, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/form-basic.scss */
+/* line 44, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/form-basic.scss */
 .form-basic .form-instructions-after-heading {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -2466,28 +2466,120 @@ ul.pull-left-to {
 {
 	text-align:center;
 }
-/* line 1, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/home-index.scss */
+/* line 1, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/home-index.scss */
 .home-index .band1 {
   font-size: 21px;
   font-weight: 200;
 }
-/* line 1, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/html.scss */
+/* line 1, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/html.scss */
 html {
   overflow-y: scroll;
 }
-/* line 1, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/login.scss */
+/*
+	jBar v2.0.0
+	URL: www.toddmotto.com
+*/
+
+/*------------------------------------*\
+    jBar
+\*------------------------------------*/
+
+
+.jbar {
+	font-family:inherit; /* inherit your fonts */
+	background:#DB5903;
+	border-bottom:3px solid #FFF;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:998; /* set high to avoid possible existing z-indexes */
+	width:100%;
+}
+.jbar,
+.jbar-push {
+	display:none;
+	transition:margin-top .25s linear;
+	-webkit-transition:margin-top .25s linear;
+	-moz-transition:margin-top .25s linear;
+}
+.jbar-wrap {
+	padding:0 25px;
+	margin:8px 0;
+	text-align:center;
+}
+.jbar p {
+	margin:0;
+	padding:0;
+	font-size:14px;
+}
+.jbar p,
+.jbar-button {
+	color:#FFF;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+}
+.jbar-button {
+	background:#333;
+	text-decoration:none;
+	margin:0 10px;
+	padding:5px 15px;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+}
+.jbar-button:hover {
+	background:#222;
+}
+.jbar-up-toggle {
+	position:absolute;
+	top:0;
+	right:50px;
+	display:block;
+	padding:10px;
+}
+.jbar-down-toggle {
+	visibility:hidden;
+	position:fixed;
+	top:0;
+	right:50px;
+	z-index:999;
+	display:block;
+	padding:10px 10px 5px;
+	background:#DB5903;
+	border:3px solid #FFF;
+	border-top:none;
+	border-radius:0 0 4px 4px;
+	box-shadow:0 1px 4px rgba(0,0,0,0.3);
+	-webkit-box-shadow:0 1px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow:0 1px 4px rgba(0,0,0,0.3);
+	transition:margin-top .15s linear;
+	-webkit-transition:margin-top .15s linear;
+	-moz-transition:margin-top .15s linear;
+}
+.jbar-up-arrow {
+	width:17px;
+	height:19px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAATCAMAAABBexbDAAAADFBMVEXu7u5JSUkAAAAAAABdVQ4zAAAABHRSTlOGfRIAX3wErQAAADtJREFUeNrNzrENACAMA8EH9t8ZKXrjFXDlXONwzEohsEMEdojAI4QSQgmhhFBCKDHxYjKLyvQfBPrbBQBhAvZmanT9AAAAAElFTkSuQmCC) no-repeat center center;
+}
+.jbar-down-arrow {
+	width:21px;
+	height:23px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAXCAMAAADTAfSvAAAAnFBMVEWgoKD///8PDw8RERH///+cnJyfn58rKyv///////////8mJib///////+ampr///+FhYX///////////////+Dg4P///////+Li4sGBgb///////////8hISGOjo7///////////+WlpaRkZH///////8vLy////////////////////8XFxf///8cHBz///8MDAwAAAAAAAAAAABgXTkEAAAANHRSTlNWJmUsKVVVMBsYOS8XGlMBSQUfMzVIBANLKjI4HS5NNx4vUE8tJDE6IzQrNiwhLQIrYSkAN4qAdAAAAIRJREFUeNrdz0UWwzAQA9ApMyVlprATt9b979bWjuH5CNVu/mYkgsxbR521Cp2/0qj5G2pUzaaSKuElzglRl3mYjAlodFou9pKB/NaeviyOhhNIneV3w6dDXzfjz0fN1eVo+/LbeSexuLor+H77RVaUcBWbbC5YptAq1stVmMJXLAKD+AAYmVm/0d4W0wAAAABJRU5ErkJggg==) no-repeat center center;
+}
+/* line 1, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/login.scss */
 .login-form {
   max-width: 330px;
   padding: 15px;
 }
-/* line 1, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-new.scss */
+/* line 1, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-new.scss */
 .membership-new h3 {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 /* Use a wide full screen for small screens like tablets. */
 @media (min-width: 768px) and (max-width: 992px) {
-  /* line 4, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+  /* line 4, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
   .membership-plans {
     width: initial;
     padding-left: 2em;
@@ -2495,12 +2587,12 @@ html {
   }
 }
 /* --- Plans ---------------------------- */
-/* line 13, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 13, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .preface {
   margin-bottom: 40px;
 }
 
-/* line 17, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 17, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .header1 {
   text-align: center;
   color: white;
@@ -2511,31 +2603,31 @@ html {
   background: none repeat scroll 0 0 #E9E6E1;
 }
 
-/* line 27, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 27, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .price {
   font-size: 1.4em;
   font-weight: bold;
 }
 
-/* line 33, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 33, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .description {
   margin-top: 1em;
 }
 
 @media (max-width: 768px) {
-  /* line 38, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+  /* line 38, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
   .membership-plans .title {
     font-size: small;
   }
 }
 /* --- Features ------------------------- */
 @media (max-width: 768px) {
-  /* line 49, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+  /* line 49, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
   .membership-plans .feature {
     text-align: center;
   }
 }
-/* line 54, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 54, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .feature-row {
   margin-top: 0.2em;
   margin-bottom: 0.2em;
@@ -2543,18 +2635,18 @@ html {
 }
 
 /* --- Plan 1 --------------------------- */
-/* line 61, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 61, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .feature-row .plan1 {
   background: #e0eaf2;
 }
 
-/* line 66, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 66, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .header1 .plan1 a,
 .membership-plans .bottom .plan1 a {
   background: #486d8b;
 }
 
-/* line 70, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 70, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .header1 .plan1 {
   background: #6999c1;
   border-bottom: thick solid #486d8b;
@@ -2563,18 +2655,18 @@ html {
 }
 
 /* --- Plan 2 --------------------------- */
-/* line 78, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 78, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .feature-row .plan2 {
   background: #e6ebda;
 }
 
-/* line 83, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 83, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .header1 .plan2 a,
 .membership-plans .bottom .plan2 a {
   background: #6c833e;
 }
 
-/* line 87, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 87, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .header1 .plan2 {
   background: #86a24d;
   border-bottom: thick solid #6c833e;
@@ -2583,33 +2675,33 @@ html {
   float: right;
 }
 
-/* line 95, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 95, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .plan-feature {
   text-align: center;
   font-size: 2em;
 }
 
-/* line 100, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 100, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .plan-feature i.check {
   color: green;
 }
 
-/* line 104, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 104, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .glyphicon-ok {
   color: green;
 }
 
-/* line 108, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 108, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .glyphicon-remove {
   color: red;
 }
 
-/* line 112, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 112, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .bottom {
   text-align: center;
 }
 
-/* line 117, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 117, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .header1 a,
 .membership-plans .bottom a {
   color: white;
@@ -2619,12 +2711,12 @@ html {
   font-weight: bold;
 }
 
-/* line 124, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 124, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .feature .parent {
   padding: 0.5% 0;
 }
 
-/* line 128, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/membership-plans.scss */
+/* line 128, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/membership-plans.scss */
 .membership-plans .feature .child {
   padding: 1% 0;
 }
@@ -3106,7 +3198,7 @@ html {
 	
 	
 	
-/* line 1, /Users/larslindstrom/workspace/membership-site/app/assets/stylesheets/on-form-error.scss */
+/* line 1, /home/leni/wrk/startupvictoria/membership-site/app/assets/stylesheets/on-form-error.scss */
 .on-form-error-messages li {
   color: red;
 }

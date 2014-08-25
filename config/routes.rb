@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get  "/login", to: "authentication#login", as: :login
   get  "/logout", to: "authentication#destroy", as: :logout
   get  "/privacy", to: "static_pages#privacy", as: :privacy
+  get  "/jobs", to: "static_pages#jobs", as: :jobs
   get  "/terms", to: "static_pages#terms_and_conditions", as: :terms_and_conditions
 
   resource :contacts, only: [:create]

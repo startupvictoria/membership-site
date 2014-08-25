@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.1.2"
+
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem "audited-activerecord", "~> 4.0.0.rc1", github: 'collectiveidea/audited'
 gem 'bcrypt', '~> 3.1.7'

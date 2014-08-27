@@ -63,20 +63,30 @@ ActiveAdmin.register_page "Dashboard" do
     helper_method :admin_membership_subtotals
 
     def admin_user_subtotals
-      total = User.count
-      premium = User.with_membership_plan("premium").count
-      free = User.with_membership_plan("free").count
+      users_total         = User.count
+      members_total       = User.with_membership.count
+      members_premium     = User.with_membership_plan("premium").count
+      members_free        = User.with_membership_plan("free").count
+      members_problematic = members_total - members_premium - members_free
 
       ret = []
-      ret.push({ type: "non members",              c: (total - User.with_membership.count) })
-      ret.push({ type: "premium members",          c: premium })
-      ret.push({ type: "free members",             c: free })
-      ret.push({ type: "neither premium nor free", c: (User.with_membership.count - premium - free) })
-      ret.push({ type: "TOTAL" ,                   c: total })
+      ret.push({ type: "non members",              c: (users_total - members_total) })
+      ret.push({ type: "premium members",          c: members_premium })
+      ret.push({ type: "free members",             c: members_free })
+      ret.push({ type: "TOTAL" ,                   c: users_total })
+
+      if members_problematic > 0
+        # This gives me comfort that if something goes screwy
+        # with someone's user.membership.plan_id value, it'll be surfaced somewhere.
+        # This is important because members vote in elections,
+        # so if something's amiss with the membership roll we want to know about it.
+        #
+        ret.push({ type: "problematic members", c: members_problematic })
+      end
+
       ret
     end
     helper_method :admin_user_subtotals
-
 
   end
 end

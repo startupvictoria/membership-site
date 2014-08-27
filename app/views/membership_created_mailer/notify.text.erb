@@ -8,7 +8,7 @@ Phone Number: <%= @user.phone_number.blank? ? "not supplied" : @user.phone_numbe
 
 Membership number: <%= @user.membership_number %>
 
-Add notes on this member: <%= admin_member_url(@user.id) %>
+Add notes on this member: <%= redirect_to_user_admin_membership_url(@user.membership_number) %>
 
 Cheers -
 

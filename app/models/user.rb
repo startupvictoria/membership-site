@@ -16,9 +16,15 @@ class User < ActiveRecord::Base
 
   scope :with_membership, -> { joins(:membership) }
 
+  scope :with_membership_plan, ->(id) { joins(:membership).where("memberships.plan_id = (?)", id) }
+
   scope :created_last_n_days, ->(n) { where("users.created_at >= ?", n.days.ago) }
 
   def membership_number
     membership.nil? ? nil : membership.id
+  end
+
+  def is_member?
+    !membership_number.nil?
   end
 end

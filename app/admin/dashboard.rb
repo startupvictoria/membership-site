@@ -65,13 +65,13 @@ ActiveAdmin.register_page "Dashboard" do
     def admin_user_subtotals
       total = User.count
       premium = User.with_membership_plan("premium").count
-      paid = User.with_membership_plan("paid").count
+      free = User.with_membership_plan("free").count
 
       ret = []
       ret.push({ type: "non members",              c: (total - User.with_membership.count) })
       ret.push({ type: "premium members",          c: premium })
-      ret.push({ type: "paid members",             c: paid })
-      ret.push({ type: "neither premium nor paid", c: (User.with_membership.count - premium - paid) })
+      ret.push({ type: "free members",             c: free })
+      ret.push({ type: "neither premium nor free", c: (User.with_membership.count - premium - free) })
       ret.push({ type: "TOTAL" ,                   c: total })
       ret
     end

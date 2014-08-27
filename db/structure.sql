@@ -153,8 +153,8 @@ ALTER SEQUENCE coupons_id_seq OWNED BY coupons.id;
 CREATE TABLE customers (
     id integer NOT NULL,
     user_id integer NOT NULL,
-    stripe_id character varying(255) NOT NULL,
-    stripe_card_id character varying(255) NOT NULL,
+    stripe_id character varying(255) DEFAULT NULL::character varying,
+    stripe_card_id character varying(255) DEFAULT NULL::character varying,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
 );
@@ -736,4 +736,6 @@ INSERT INTO schema_migrations (version) VALUES ('20140525030854');
 INSERT INTO schema_migrations (version) VALUES ('20140809153701');
 
 INSERT INTO schema_migrations (version) VALUES ('20140825100927');
+
+INSERT INTO schema_migrations (version) VALUES ('20140827012326');
 

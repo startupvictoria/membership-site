@@ -13,7 +13,7 @@ ActiveAdmin.register_page "Dashboard" do
         panel "New members last 7 days" do
           table_for User.with_membership.last(5).reverse do
             column "Name" do |u|
-              link_to(u.full_name, admin_member_path(u.id))
+              link_to(u.full_name, admin_user_path(u.id))
             end
             column "email", :email
             column "Faction", :faction
@@ -23,7 +23,14 @@ ActiveAdmin.register_page "Dashboard" do
       end
 
       column do
-        panel "Membership Composition" do
+        panel "Users" do
+          table_for admin_user_subtotals do
+            column "type", :type
+            column "count", :c
+          end
+        end
+
+        panel "Membership Faction Composition" do
           table_for admin_membership_subtotals do
             column "Faction", :faction
             column "count", :c
@@ -54,5 +61,22 @@ ActiveAdmin.register_page "Dashboard" do
         ret
     end
     helper_method :admin_membership_subtotals
+
+    def admin_user_subtotals
+      total = User.count
+      premium = User.with_membership_plan("premium").count
+      paid = User.with_membership_plan("paid").count
+
+      ret = []
+      ret.push({ type: "non members",              c: (total - User.with_membership.count) })
+      ret.push({ type: "premium members",          c: premium })
+      ret.push({ type: "paid members",             c: paid })
+      ret.push({ type: "neither premium nor paid", c: (User.with_membership.count - premium - paid) })
+      ret.push({ type: "TOTAL" ,                   c: total })
+      ret
+    end
+    helper_method :admin_user_subtotals
+
+
   end
 end

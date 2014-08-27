@@ -14,7 +14,7 @@
 	position:fixed;
 	top:0;
 	left:0;
-	z-index:998; /* set high to avoid possible existing z-indexes */
+	z-index:1001; /* set high to avoid possible existing z-indexes */
 	width:100%;
 }
 .jbar,
@@ -58,14 +58,14 @@
 	top:0;
 	right:50px;
 	display:block;
-	padding:10px;
+	padding:15px;
 }
 .jbar-down-toggle {
 	visibility:hidden;
 	position:fixed;
 	top:0;
 	right:50px;
-	z-index:999;
+	z-index:1001;
 	display:block;
 	padding:10px 10px 5px;
 	background:#DB5903;
@@ -89,3 +89,17 @@
 	height:23px;
 	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAXCAMAAADTAfSvAAAAnFBMVEWgoKD///8PDw8RERH///+cnJyfn58rKyv///////////8mJib///////+ampr///+FhYX///////////////+Dg4P///////+Li4sGBgb///////////8hISGOjo7///////////+WlpaRkZH///////8vLy////////////////////8XFxf///8cHBz///8MDAwAAAAAAAAAAABgXTkEAAAANHRSTlNWJmUsKVVVMBsYOS8XGlMBSQUfMzVIBANLKjI4HS5NNx4vUE8tJDE6IzQrNiwhLQIrYSkAN4qAdAAAAIRJREFUeNrdz0UWwzAQA9ApMyVlprATt9b979bWjuH5CNVu/mYkgsxbR521Cp2/0qj5G2pUzaaSKuElzglRl3mYjAlodFou9pKB/NaeviyOhhNIneV3w6dDXzfjz0fN1eVo+/LbeSexuLor+H77RVaUcBWbbC5YptAq1stVmMJXLAKD+AAYmVm/0d4W0wAAAABJRU5ErkJggg==) no-repeat center center;
 }
+
+@media (max-width: 480px) {
+	.jbar-down-toggle {
+		display: none !important;
+	}
+	.jbar-up-toggle {
+		bottom: -4px;
+		right: 10px;
+		top: auto;
+	}
+	.jbar-button {
+		margin-top: 8px;
+	}
+};

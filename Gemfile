@@ -15,6 +15,7 @@ gem 'heroku_rails_deflate', :group => :production
 gem 'just-datetime-picker'
 gem 'pg'
 gem 'prawn'
+gem 'prawn-table'
 gem 'prawn_rails'
 gem 'rails', '4.1.1'
 gem 'rb-readline'

@@ -156,6 +156,7 @@ GEM
     prawn (1.2.1)
       pdf-core (~> 0.2.5)
       ttfunk (~> 1.2.0)
+    prawn-table (0.1.1)
     prawn_rails (0.0.11)
       prawn (>= 0.11.1)
       railties (>= 3.0.0)
@@ -289,6 +290,7 @@ DEPENDENCIES
   pg
   poltergeist
   prawn
+  prawn-table
   prawn_rails
   rails (= 4.1.1)
   rails_12factor

@@ -23,4 +23,5 @@ notifications:
   email:
     - leni@startupvictoria.com.au
     - lars@startupvictoria.com.au
+    - jay@startupvictoria.com.au
   on_success: always

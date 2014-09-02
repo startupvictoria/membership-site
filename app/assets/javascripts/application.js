@@ -20,5 +20,4 @@
 //= require turbolinks-autofocus-workaround
 //= require jquery.themepunch.revolution.min
 //= require jquery.themepunch.plugins.min
-//= require jbar
 //= require dropdown

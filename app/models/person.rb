@@ -69,6 +69,14 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         "http://au.linkedin.com/pub/thomas-anbeek/66/799/263/",
         :staff
       ],
+      [
+        "Jay Lynch",
+        "jay@startupvictoria.com.au",
+        "Chief Technology Officer",
+        "Jay-Lynch.png",
+        "https://www.linkedin.com/in/lynchjay/",
+        :staff
+      ],
     ].map do |a|
       new *a
     end

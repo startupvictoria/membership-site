@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   audited
 
+  validates :email, uniqueness: true, on: :create
+
   has_secure_password
 
   has_one :customer,

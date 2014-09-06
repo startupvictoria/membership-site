@@ -42,6 +42,13 @@ class MembershipRegistrationForm
   rescue Stripe::StripeError => e
     errors.add(e.param || :base, e.message)
     false
+  rescue ActiveRecord::RecordInvalid => e
+    if e.message =~ /Email has already been taken/
+      errors.add(:base, "This email address is already a member")
+    else
+      errors.add(:base, e.message)
+    end
+    false
   end
 
   def user

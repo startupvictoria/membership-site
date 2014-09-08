@@ -8,43 +8,69 @@
           %i.fa.fa-bars
 
         .logo
-          %a.homelink
+          %a.homelink{ href: root_path }
             = image_tag "logo1.png"
 
-      .navbar-collapse.collapse.menutop#menu.navbar-right
-        .new_menu
-          = render "shared/primary_navigation_right"
-
-        %ul.nav.navbar-nav.pull-left-to.navbar-set-active
-          %li.homelink.active
-            %a{ href: root_path }
-              Home
-
+      %ul.nav.navbar-nav.pull-left-to.navbar-set-active.navbar-collapse.menutop
+        - if logged_in?
           %li.dropdown
-            %a{ href: coupons_path }
-              Coupons
+            %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown" }
+              = current_user.full_name
+              %b.caret
+
+            %ul.dropdown-menu
+              %li
+                = link_to "Dashboard", dashboards_path
+
+              - if logged_in? && current_user.admin?
+                %li
+                  = link_to "Admin", admin_root_path, style: "color: red"
+
+              %li
+                %a{ href: logout_path }
+                  Logout
+        - else
           %li
-            %a{ href: memberships_path }
-              Membership
-          %li
-            %a{ href: events_path }
-              Events
-          %li
-            %a{ href: "/sponsors" }
-              Sponsors
-          %li
-            %a{ href: about_us_path }
-              About
-          %li
-            %a{href: "/blog"}
-              Blog
+            %a{ href: login_path }
+              Login
 
 
+        %li.dropdown
+          %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown"}
+            About
+            %b.caret
 
+          %ul.dropdown-menu
+            %li
+              %a{ href: about_us_path }
+                Who We Are
 
+            %li
+              %a{ href: "/sponsors" }
+                Sponsors
 
+            %li
+              %a{ href: new_contact_path }
+                Contact
 
+        %li.dropdown
+          %a.dropdown-toggle{ href: "#", "data-toggle" => "dropdown"}
+            Membership
+            %b.caret
 
+          %ul.dropdown-menu
+            %li
+              %a{ href: memberships_path }
+                Benefits / Join
 
+            %li
+              %a{ href: coupons_path }
+                Coupons
 
+        %li
+          %a{ href: events_path }
+            Events
 
+        %li
+          %a{href: "/blog"}
+            Blog

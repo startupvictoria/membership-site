@@ -9,4 +9,8 @@ class EventDecorator < Draper::Decorator
     starts_at.strftime("%l %p")
   end
 
+  def starts_at_time
+  	starts_at.strftime("%l:%M %p")
+  end
+
 end

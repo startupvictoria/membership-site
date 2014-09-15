@@ -2,6 +2,9 @@ class StaticPagesController < ApplicationController
   def about
   end
 
+  def committees
+  end
+
   def jobs
   end
 

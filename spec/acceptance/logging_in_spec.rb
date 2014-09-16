@@ -15,11 +15,11 @@ feature "logging in" do
     log_in_page.enter_password("att1cus")
     log_in_page.submit
 
-    expect(page).to have_content("atty")
+    expect(page).to have_content("ATTY")
 
     page.click_on "atty"
     page.click_on "Logout"
 
-    expect(page).to have_content("Login")
+    expect(page).to have_content("LOGIN")
   end
 end

@@ -1836,3 +1836,10 @@ span.nav-close:before { color: #555; }
 	font-size: 10px;
 }
 
+
+blockquote footer {
+	margin: 1em 3em 0 auto;
+}
+	blockquote cite {
+		font-style: italic;
+	}

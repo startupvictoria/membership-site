@@ -4,8 +4,11 @@ class Event < ActiveRecord::Base
   belongs_to :event_venue
   belongs_to :event_organizer
 
-  scope :upcoming, -> do
-    where("starts_at > ?", Time.now).order("events.starts_at ASC")
+  scope :with_time_horizon, ->(time_horizon) do
+    case time_horizon
+      when :upcoming then where("starts_at > ?", Time.now).order("events.starts_at ASC")
+      when :previous then where("starts_at <= ?", Time.now).order("events.starts_at DESC")
+    end
   end
 
   scope :with_venue, ->(arg) do

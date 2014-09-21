@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require bootstrap.min
 //= require turbolinks
+//= require events-tab
 //= require navbar-set-active
 //= require google-analytics-turbolinks
 //= require turbolinks-autofocus-workaround

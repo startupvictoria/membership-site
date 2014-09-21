@@ -1,0 +1,7 @@
+.event-list-item {
+    border-top-style: solid;
+    padding: 10px 0 10px 0;
+}
+.event-list-item:last-child {
+    border-style: solid none solid none;
+}

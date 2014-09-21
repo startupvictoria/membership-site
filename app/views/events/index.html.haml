@@ -6,28 +6,25 @@
     .container.intro_wrapper
       .inner_content
         %h1.title
-          Upcoming Events
+          Startup-friendly events in Victoria
         %h1.intro
           %p
-            A list of startup-friendly events across Victoria
+            This list aims to be comprehensive.
+            %a{ href: new_contact_path }
+              Let us know
+            if something is missing.
 
 .container
-- @events.each do |event|
-  %hr
-  .row
-    .container
-      .col-sm-2.col-sm-offset-1
-        .h4
-          = event.starts_at_day
-        %p
-          = event.starts_at_time
+  %ul#events-tab.nav.nav-tabs{ role: "tablist" }
+    %li.active
+      %a{ href: "#upcoming" }
+        Upcoming
+    %li
+      %a{ href: "#previous" }
+        Previous
 
-      .col-sm-6
-        .h4
-          = event.title
-        %p
-          = event.short_description
-
-      .col-sm-3
-        %br
-        = link_to "See Details", event.url, class: "btn btn-info btn-lg center-block"
+  .tab-content
+    .tab-pane.active{ id: "upcoming" }
+      = render :partial => "event_list", :locals => { time_horizon: :upcoming }
+    .tab-pane{ id: "previous" }
+      = render :partial => "event_list", :locals => { time_horizon: :previous }

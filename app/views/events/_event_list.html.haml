@@ -1,0 +1,19 @@
+.container
+  - events(time_horizon).each do |event|
+    .row.event-list-item
+      .container
+        .col-sm-2.col-sm-offset-1
+          .h4
+            = event.starts_at_day
+          %p
+            = event.starts_at_time
+
+        .col-sm-6
+          .h4
+            = event.title
+          %p
+            = event.short_description
+
+        .col-sm-3
+          %br
+          = link_to "See Details", event.url, class: "btn btn-info btn-lg center-block"

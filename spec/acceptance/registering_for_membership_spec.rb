@@ -1,25 +1,29 @@
 require 'acceptance_spec_helper'
 
 feature "registering for membership", :vcr do
-  scenario "I can register for a membership when I am logged out" do
-    page = RegistrationPage.new(self)
-    page.visit
+  if ENV['STRIPE_PUBLISHABLE_KEY'].blank?
+    pending "isn't tested.  Please contact Startup Victoria to get a valid STRIPE_PUBLISHABLE_KEY"
+  else
+    scenario "I can register for a membership when I am logged out" do
+      page = RegistrationPage.new(self)
+      page.visit
 
-    page.enter_valid_personal_details
-    page.enter_valid_payment_details
-    page.submit_registration
+      page.enter_valid_personal_details
+      page.enter_valid_payment_details
+      page.submit_registration
 
-    expect(page).to have_content("Payment Complete.  Welcome to Startup Victoria!")
-  end
+      expect(page).to have_content("Payment Complete.  Welcome to Startup Victoria!")
+    end
 
-  scenario "I see errors when my registration fails" do
-    page = RegistrationPage.new(self)
-    page.visit
+    scenario "I see errors when my registration fails" do
+      page = RegistrationPage.new(self)
+      page.visit
 
-    page.enter_valid_personal_details
-    page.enter_invalid_payment_details
-    page.submit_registration
+      page.enter_valid_personal_details
+      page.enter_invalid_payment_details
+      page.submit_registration
 
-    expect(page).to have_content("Your card was declined")
+      expect(page).to have_content("Your card was declined")
+    end
   end
 end

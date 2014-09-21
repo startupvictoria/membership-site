@@ -29,10 +29,10 @@ Rails.application.routes.draw do
 
   resources :events,
     only: [:index]
-    
+
   resources :sponsors,
     only: [:index, :show]
-  
+
   resources :memberships,
     only: [:index, :create, :new]
 

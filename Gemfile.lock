@@ -93,6 +93,11 @@ GEM
       request_store (~> 1.0.3)
     erubis (2.7.0)
     execjs (2.2.1)
+    factory_girl (4.4.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.4.1)
+      factory_girl (~> 4.4.0)
+      railties (>= 3.0.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
     font-awesome-rails (4.1.0.0)
@@ -280,6 +285,7 @@ DEPENDENCIES
   database_cleaner
   dotenv-rails
   draper
+  factory_girl_rails (~> 4.0)
   font-awesome-rails
   foreigner
   foreman

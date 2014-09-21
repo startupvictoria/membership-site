@@ -1406,7 +1406,6 @@ span.nav-close:before { content: "\f00d"; }
 	border: 0 none!important;
 	-webkit-backface-visibility: hidden;
 }
-.tab-content { margin-top: 20px!important; }
 
 /*************************************************************
 	TOOLTIPS

@@ -15,4 +15,15 @@ feature "the events page" do
     expect(page).not_to have_content("title-now")
     expect(page).not_to have_content("title-1.month.ago")
   end
+
+  context "the Previous tab" do
+    it "shows previous events" do
+      click_on "Previous"
+
+      expect(page).to have_content("title-1.month.ago")
+      expect(page).to have_content("title-now")
+
+      expect(page).not_to have_content("title-1.month.from_now")
+    end
+  end
 end

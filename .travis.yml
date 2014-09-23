@@ -3,7 +3,9 @@ language: ruby
 rvm:
   - 2.1.2
 
-cache: bundler
+cache:
+  bundler: true
+  apt: true
 
 before_script:
   - psql -c 'create database startup_victoria_test;' -U postgres

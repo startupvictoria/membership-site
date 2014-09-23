@@ -24,31 +24,35 @@ class MembershipRegistrationForm
     presence: true
 
   def save
-    return false unless valid?
+    ret = false
 
-    User.transaction do
-      user.save!
+    if valid?
+      begin
+        User.transaction do
+          user.save!
 
-      CreatesMembership.new(
-        user: user,
-        plan: MembershipPlan.premium,
-        card_token: card_token
-      ).call
+          CreatesMembership.new(
+            user: user,
+            plan: MembershipPlan.premium,
+            card_token: card_token
+          ).call
 
-      authenticator.log_in(user)
+          authenticator.log_in(user)
+        end
+
+        ret = true
+      rescue Stripe::StripeError => e
+        errors.add(e.param || :base, e.message)
+      rescue ActiveRecord::RecordInvalid => e
+        if e.message =~ /Email has already been taken/
+          errors.add(:base, "This email address is already a member")
+        else
+          errors.add(:base, e.message)
+        end
+      end
     end
 
-    true
-  rescue Stripe::StripeError => e
-    errors.add(e.param || :base, e.message)
-    false
-  rescue ActiveRecord::RecordInvalid => e
-    if e.message =~ /Email has already been taken/
-      errors.add(:base, "This email address is already a member")
-    else
-      errors.add(:base, e.message)
-    end
-    false
+    ret
   end
 
   def user

@@ -1,6 +1,16 @@
 class RegistrationPage < SimpleDelegator
-  def visit
-    super("/memberships/new")
+  def visit_directly
+    visit("/memberships/new")
+  end
+
+  def visit_via_home_and_memberships_pages
+    visit("/")
+    visit("/memberships")
+    visit("/memberships/new")
+  end
+
+  def create_user_beforehand
+    User.create!(email: "peter@hooli.com", password: "irrelevant", full_name: "blah")
   end
 
   def enter_valid_personal_details

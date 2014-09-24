@@ -18,7 +18,6 @@ membership_new_on_ready = ->
     $form = $(this)
 
     $form.find('button').prop 'disabled', true
-
     Stripe.setPublishableKey $('#paymentForm').data('stripe-publishable-key')
     Stripe.card.createToken $form, stripe_response_handler
 
@@ -26,4 +25,5 @@ membership_new_on_ready = ->
 
   $('#paymentForm').submit submit
 
-$(document).on 'ready page:load', membership_new_on_ready
+$(document).ready(membership_new_on_ready)
+$(document).on 'page:load', membership_new_on_ready

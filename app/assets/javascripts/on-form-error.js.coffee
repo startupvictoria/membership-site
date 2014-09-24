@@ -3,4 +3,6 @@ on_form_error = ->
     $(".on-form-error-focus").focus()
     $(".on-form-error-group").addClass("has-error")
 
-$(document).on 'ready page:load', on_form_error
+$(document).ready(on_form_error)
+$(document).on 'page:load', on_form_error
+

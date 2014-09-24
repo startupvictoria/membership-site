@@ -10,4 +10,5 @@ navbar_set_active = ->
   makeNavHover()
   makeSlider()
 
-$(document).on 'ready page:load', navbar_set_active
+$(document).ready(navbar_set_active)
+$(document).on 'page:load', navbar_set_active

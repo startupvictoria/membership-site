@@ -3,4 +3,5 @@ events_tab_show = ->
     e.preventDefault()
     $(this).tab('show')
 
-$(document).on 'ready page:load', events_tab_show
+$(document).ready(events_tab_show)
+$(document).on 'page:load', events_tab_show

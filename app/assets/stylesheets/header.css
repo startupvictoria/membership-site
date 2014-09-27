@@ -11,8 +11,6 @@
     background: none repeat scroll 0 0 #323A45 !important;
 }
 
-
-
 .menutop > ul > li > a 
 {
     font-size: 13px ;
@@ -27,44 +25,6 @@
 {
     background: none repeat scroll 0 0 #97242A !important;
     color: #FFFFFF !important;
-}
-
-
-.dropdown-menu {
-    display: none;
-    left: -40px !important;
-    padding: 0;
-    position: absolute;
-    top: 80px;
-    width: 170px;
-    z-index: 300;
-}
-
-.dropdown-menu {
-    background: none repeat scroll 0 0 #323A45;
-}
-.dropdown-menu li a {
-    color: #BBBBBB;
-}
-
-.dropdown-menu > li:first-child {
-    margin-top: 4px;
-}
-
-.dropdown-menu > li > a {
-    clear: both;
-  
-    display: block;
-    font-weight: 400;
-    line-height: 1.42857;
-    padding: 3px 20px;
-    white-space: nowrap;
-}
-
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-    background:none !important;
-    color: #fff;
-    text-decoration: none;
 }
 
 .jumbotron

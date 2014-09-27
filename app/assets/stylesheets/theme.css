@@ -264,12 +264,9 @@ h1.intro {  line-height: 40px; font-weight: 300;}
 	left: -40px!important;
 	padding: 0;
 	position: absolute;
-	top: 80px;
-	width: 170px;
 	z-index: 300;
 	-webkit-border-radius: 4px!important;
 	-moz-border-radius: 4px!important;
-	border-radius: 4px!important;
 	box-shadow:none !important;
 	border: 0px none!important;
 }
@@ -281,8 +278,6 @@ h1.intro {  line-height: 40px; font-weight: 300;}
 	text-align: left;
 	text-transform: none;
 }
-.dropdown-menu > li:first-child { margin-top: 4px;}
-.dropdown-menu > li:last-child { margin-bottom: 6px;}
 
 .dropdown-menu .sub-menu { visibility: hidden; left: 175px!important; }
 .dropdown-menu li:hover .sub-menu  { visibility: visible; }

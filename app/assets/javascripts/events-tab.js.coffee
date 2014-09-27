@@ -1,5 +1,5 @@
 events_tab_show = ->
-  $('#events-tab a').click (e) ->
+  $('#events-tab > li > a').click (e) ->
     e.preventDefault()
     $(this).tab('show')
 

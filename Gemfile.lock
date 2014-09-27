@@ -59,6 +59,7 @@ GEM
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
+    bootstrap-select-rails (1.6.2)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -281,6 +282,7 @@ DEPENDENCIES
   activeadmin!
   audited-activerecord (~> 4.0.0.rc1)!
   bcrypt (~> 3.1.7)
+  bootstrap-select-rails
   capybara
   database_cleaner
   dotenv-rails

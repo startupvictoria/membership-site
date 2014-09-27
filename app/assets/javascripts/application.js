@@ -14,6 +14,7 @@
 //= require jquery.min
 //= require jquery_ujs
 //= require bootstrap.min
+//= require bootstrap-select
 //= require turbolinks
 //= require events-tab
 //= require navbar-set-active

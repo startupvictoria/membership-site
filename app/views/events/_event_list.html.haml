@@ -1,6 +1,6 @@
 .container
   - events(time_horizon).each do |event|
-    .row.event-list-item
+    .row.event-list-item{ "data-event-organizer" => "#{event.event_organizer.name}" }
       .container
         .col-sm-2.col-sm-offset-1
           .h4

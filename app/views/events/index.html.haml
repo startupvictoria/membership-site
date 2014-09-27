@@ -23,6 +23,24 @@
       %a{ href: "#previous" }
         Previous
 
+    %select.selectpicker.pull-right#fred{ "data-style" => "btn-warning",
+      "data-width" => "auto",
+      "data-default-option" => "Show All Events" }
+      %option
+        Show All Events
+
+      %option{ "data-divider" => "true" }
+
+      %option
+        Startup Victoria
+
+      %option{ "data-divider" => "true" }
+
+      - organizer_names(:upcoming).each do |organizer_name|
+        - if organizer_name != 'Startup Victoria'
+          %option
+            = organizer_name
+
   .tab-content
     .tab-pane.active{ id: "upcoming" }
       = render :partial => "event_list", :locals => { time_horizon: :upcoming }

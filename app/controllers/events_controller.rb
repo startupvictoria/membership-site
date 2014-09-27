@@ -12,4 +12,14 @@ class EventsController < ApplicationController
   end
   helper_method :events
 
+  def organizer_names(time_horizon)
+    Event
+      .includes(:event_organizer)
+      .with_time_horizon(time_horizon)
+      .map { |e| e.event_organizer.name }
+      .uniq
+      .sort
+  end
+  helper_method :organizer_names
+
 end

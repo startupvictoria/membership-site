@@ -1373,7 +1373,7 @@ span.nav-close:before { content: "\f00d"; }
 	color: #fff;
 	padding: 0 10px; 
 	margin-top: -9px;
-  	  background: none repeat scroll 0 0 #97242a;
+  	  background: none repeat scroll 0 0 green;
     border-radius: 5px;
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;

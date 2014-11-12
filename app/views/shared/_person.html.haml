@@ -1,10 +1,12 @@
-.col-sm-3
+.col-sm-3{ "itemscope" => true, "itemtype" => "http://data-vocabulary.org/Person"}
   %center
 
-    = image_tag "persons/#{person.image_filename}", border: "0", class: "img-circle"
+    = image_tag "persons/#{person.image_filename}", border: "0", class: "img-circle", "itemprop" => "photo"
 
-    %h3
+    %h3{"itemprop" => "name"}
       = person.name_linked_to
 
-    %p
+    %p{"itemprop" => "role"}
       = person.bio
+
+    %meta{"itemprop" => "affiliation", "content" => "Startup Victoria"}

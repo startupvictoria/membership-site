@@ -4,7 +4,9 @@
 }
 
 .homerow {
-  background: url("/assets/slider.jpg") 0px center no-repeat;
+  background-position: 0px center;
+  background-repeat: no-repeat;
+  background-image: image-url("slider.jpg");
   background-size: cover;
   margin: 0 auto;
   min-height: 356px;

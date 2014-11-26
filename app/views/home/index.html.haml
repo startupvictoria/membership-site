@@ -1,5 +1,64 @@
 .homerow
-  = image_tag "slider.jpg"
+  .container.wrapper
+    .inner_content
+      .row.pad45
+        .col-sm-6.col-md-3
+          .tile
+            .intro-icon-disc.cont-large
+              %i.fa.fa-calendar.intro-icon-large
+            %h6
+              %span
+                =link_to("EVENTS", events_path)
+                %br
+
+            %p
+              For beginners and experts. Educational events are open to the public but members get free (or discounted) access.
+              %br
+              %br
+          .pad25
+
+        .col-sm-6.col-md-3
+          .tile
+            .intro-icon-disc.cont-large
+              %i.fa.fa-magic.intro-icon-large
+            %h6
+              %span
+                =link_to("INSPIRATION", "http://aboveallhuman.co/", :target => "_blank")
+                %br
+
+            %p
+              Startup Victoria holds an annual conference as part of Startup Week that challenges people to think in new ways.
+              %br
+              %br
+          .pad25
+
+        .col-sm-6.col-md-3
+          .tile
+            .intro-icon-disc.cont-large
+              %i.fa.fa-users.intro-icon-large
+            %h6
+              %span
+                NETWORKING
+                %br
+
+            %p
+              Speed-dating events (co-founders, mentors) are focused on networking but most networking happens in the regular event calendar.
+          .pad25
+
+
+        .col-sm-6.col-md-3
+          .tile
+            .intro-icon-disc.cont-large
+              %i.fa.fa-book.intro-icon-large
+            %h6
+              %span
+                RESOURCES
+                %br
+
+            %p
+              Startup Victoria wants to lower the cost of paperwork by having standard documents for privacy, terms of service, capital raising etc.
+          .pad25
+
 .home-index#banner
   .jumbotron.container.intro_wrapper
     .inner_content
@@ -9,63 +68,3 @@
         encourage more people to be founders
         %br
         and help founders be more successful
-
-.container.wrapper
-  .inner_content
-    .row.pad45
-      .col-sm-6.col-md-3
-        .tile
-          .intro-icon-disc.cont-large
-            %i.fa.fa-calendar.intro-icon-large
-          %h6
-            %span
-              EVENTS
-              %br
-              
-          %p
-            For beginners and experts. Educational events are open to the public but members get free (or discounted) access.
-            %br
-            %br
-        .pad25
-
-      .col-sm-6.col-md-3
-        .tile
-          .intro-icon-disc.cont-large
-            %i.fa.fa-magic.intro-icon-large
-          %h6
-            %span
-              INSPIRATION
-              %br
-           
-          %p
-            Startup Victoria holds an annual conference as part of Startup Week that challenges people to think in new ways.
-            %br
-            %br
-        .pad25
-
-      .col-sm-6.col-md-3
-        .tile
-          .intro-icon-disc.cont-large
-            %i.fa.fa-users.intro-icon-large
-          %h6
-            %span
-              NETWORKING
-              %br
-           
-          %p
-            Speed-dating events (co-founders, mentors) are focused on networking but most networking happens in the regular event calendar.
-        .pad25
-
-
-      .col-sm-6.col-md-3
-        .tile
-          .intro-icon-disc.cont-large
-            %i.fa.fa-book.intro-icon-large
-          %h6
-            %span
-              RESOURCES
-              %br
-           
-          %p
-            Startup Victoria wants to lower the cost of paperwork by having standard documents for privacy, terms of service, capital raising etc.
-        .pad25

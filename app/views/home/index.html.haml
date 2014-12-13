@@ -17,6 +17,23 @@
               %br
           .pad25
 
+        .col-sm-12.col-md-6
+          .tile
+            .intro-icon-disc.cont-large
+              %i.fa.fa-pencil-square-o.intro-icon-large
+            %h6
+              %span
+                =link_to("JOIN", memberships_path)
+                %br
+
+            %p
+              Startup Victoria members receive access to a wide range of benefits, from exclusive access to unique events to discounts on essential services and Q&A with community leaders.
+
+            %a.btn.btn-pricing{"href" => new_membership_path}
+              %h5
+                Join Now
+          .pad25
+
         .col-sm-6.col-md-3
           .tile
             .intro-icon-disc.cont-large
@@ -32,32 +49,7 @@
               %br
           .pad25
 
-        .col-sm-6.col-md-3
-          .tile
-            .intro-icon-disc.cont-large
-              %i.fa.fa-users.intro-icon-large
-            %h6
-              %span
-                NETWORKING
-                %br
 
-            %p
-              Speed-dating events (co-founders, mentors) are focused on networking but most networking happens in the regular event calendar.
-          .pad25
-
-
-        .col-sm-6.col-md-3
-          .tile
-            .intro-icon-disc.cont-large
-              %i.fa.fa-book.intro-icon-large
-            %h6
-              %span
-                RESOURCES
-                %br
-
-            %p
-              Startup Victoria wants to lower the cost of paperwork by having standard documents for privacy, terms of service, capital raising etc.
-          .pad25
 
 .home-index#banner
   .jumbotron.container.intro_wrapper

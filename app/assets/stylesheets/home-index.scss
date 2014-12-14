@@ -12,3 +12,13 @@
   min-height: 356px;
   width: 100%;
 }
+
+@media (min-width: 768px) {
+  .landing-banner-item {
+    height: 260px;
+
+    .tile {
+      height: 100%;
+    }
+  }
+}

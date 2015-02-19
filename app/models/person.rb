@@ -46,14 +46,6 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         :director
       ],
       [
-        "Brendan Lewis",
-        "",
-        "Brendan is the founder of Churchill Club and the Australian representative of London & Partners.",
-        "Brendan-Lewis.png",
-        "http://au.linkedin.com/in/brendanlewis/",
-        :director
-      ],
-      [
         "Miguel Wood",
         "",
         "Miguel is Co-founder and CEO of Euler's Bridge and Co-founder of Tin Alley beta.",
@@ -62,11 +54,11 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         :director
       ],
       [
-        "Lars Lindstrom",
-        "lars@startupvictoria.com.au",
-        "Chief Executive Officer",
-        "Lars-Lindstrom.jpg",
-        "http://au.linkedin.com/in/larslindstromoz/",
+        "Scott Handsaker",
+        "scott.handsaker@startupvictoria.com.au",
+        "Interim Chief Executive Officer",
+        "Scott-Handsaker.png",
+        "http://au.linkedin.com/in/scotthandsaker/",
         :staff
       ],
       [

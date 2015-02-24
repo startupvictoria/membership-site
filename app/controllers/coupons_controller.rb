@@ -1,7 +1,7 @@
 class CouponsController < ApplicationController
 
   def index
-    @coupons = Coupon.all.map { |coupon| coupon.decorate }
+    @coupons = Coupon.all.order(:teaser_name).map { |coupon| coupon.decorate }
   end
 
   def show

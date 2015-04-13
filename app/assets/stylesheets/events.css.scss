@@ -1,3 +1,9 @@
+#events-tab {
+    margin-top: 60px;
+    margin-bottom: 15px;
+    border-bottom: none;
+}
+
 .event-list-item {
     border-top-style: solid;
     padding: 10px 0 10px 0;
@@ -8,4 +14,8 @@
 .event-time {
 	line-height: 150%;
 	text-align: center;
+}
+
+.bootstrap-select > button {
+	padding: 10px 15px !important;
 }

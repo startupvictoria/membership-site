@@ -3,6 +3,10 @@
     font-weight: 200;
 }
 
+.home-index {
+  margin-bottom: -60px !important;
+}
+
 .homerow {
   background-position: 0px center;
   background-repeat: no-repeat;
@@ -13,7 +17,25 @@
   width: 100%;
 }
 
+.homerow > .wrapper {
+  padding: 0;
+}
+
+.homerow .inner_content {
+  padding: 25px 0;
+}
+
+.homerow .inner_content .row > :last-child .tile {
+  margin-bottom: 0;
+}
+
 @media (min-width: 768px) {
+  .homerow .inner_content {
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 980px) {
   .landing-banner-item {
     height: 260px;
 

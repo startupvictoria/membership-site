@@ -15,34 +15,35 @@
             if something is missing.
 
 .container
-  %ul#events-tab.nav.nav-tabs{ role: "tablist" }
-    %li.active
-      %a{ href: "#upcoming" }
-        Upcoming
-    %li
-      %a{ href: "#previous" }
-        Previous
+  .row
+    .col-xs-12
+      %ul#events-tab.nav.nav-tabs.row{ role: "tablist" }
+        %li.active.col-xs-12.col-sm-3
+          %a{ href: "#upcoming" }
+            Upcoming
+        %li.col-xs-12.col-sm-3
+          %a{ href: "#previous" }
+            Previous
 
-    %select.selectpicker.pull-right#fred{ "data-style" => "btn-warning",
-      "data-width" => "auto",
-      "data-default-option" => "Show All Events" }
-      %option
-        Show All Events
-
-      %option{ "data-divider" => "true" }
-
-      %option
-        Startup Victoria
-
-      %option{ "data-divider" => "true" }
-
-      - organizer_names(:upcoming).each do |organizer_name|
-        - if organizer_name != 'Startup Victoria'
+        %select.selectpicker.pull-right.col-xs-12.col-sm-3#fred{ "data-style" => "btn-warning",
+          "data-default-option" => "Show All Events" }
           %option
-            = organizer_name
+            Show All Events
 
-  .tab-content
-    .tab-pane.active{ id: "upcoming" }
-      = render :partial => "event_list", :locals => { time_horizon: :upcoming }
-    .tab-pane{ id: "previous" }
-      = render :partial => "event_list", :locals => { time_horizon: :previous }
+          %option{ "data-divider" => "true" }
+
+          %option
+            Startup Victoria
+
+          %option{ "data-divider" => "true" }
+
+          - organizer_names(:upcoming).each do |organizer_name|
+            - if organizer_name != 'Startup Victoria'
+              %option
+                = organizer_name
+
+      .tab-content
+        .tab-pane.active{ id: "upcoming" }
+          = render :partial => "event_list", :locals => { time_horizon: :upcoming }
+        .tab-pane{ id: "previous" }
+          = render :partial => "event_list", :locals => { time_horizon: :previous }

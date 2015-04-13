@@ -14,52 +14,53 @@
   .container
     .row
       .col-sm-12
-        .col-sm-3
-          %ul.list-unstyled
-            %li.foot_white
-              %h4
-                &copy; Startup Victoria, 2014
-            %li
-              %a{ href: privacy_path, target: "_blank" }
-                Privacy Policy
-            %li
-              %a{ href: terms_and_conditions_path, target: "_blank" }
-                Terms and Conditions
+        .row
+          .col-sm-3
+            %ul.list-unstyled
+              %li.foot_white
+                %h4
+                  &copy; Startup Victoria, 2014
+              %li
+                %a{ href: privacy_path, target: "_blank" }
+                  Privacy Policy
+              %li
+                %a{ href: terms_and_conditions_path, target: "_blank" }
+                  Terms and Conditions
 
-        .col-sm-3
-          %ul.list-unstyled
-            %li.foot_white
-              %h4
-                About Us
-            %li
-              = link_to "Our Mission", about_us_path(:anchor => "mission")
+          .col-sm-3
+            %ul.list-unstyled
+              %li.foot_white
+                %h4
+                  About Us
+              %li
+                = link_to "Our Mission", about_us_path(:anchor => "mission")
 
-        .col-sm-3
-          %ul.list-unstyled
-            %li.foot_white
-              %h4
-                Things to do
-            %li
-              %a{ href: "https://confirmsubscription.com/h/i/EFC3DD47E212C653", rel: "nofollow" }
-                Subscribe to the newsletter
+          .col-sm-3
+            %ul.list-unstyled
+              %li.foot_white
+                %h4
+                  Things to do
+              %li
+                %a{ href: "https://confirmsubscription.com/h/i/EFC3DD47E212C653", rel: "nofollow" }
+                  Subscribe to the newsletter
 
-            %li
-              %a{ href: new_contact_path }
-                Volunteer
+              %li
+                %a{ href: new_contact_path }
+                  Volunteer
 
-            %li
-              %a{ href: "http://www.meetup.com/Lean-Startup-Melbourne/", target: "_blank" }
-                Join Lean Startup Melbourne
+              %li
+                %a{ href: "http://www.meetup.com/Lean-Startup-Melbourne/", target: "_blank" }
+                  Join Lean Startup Melbourne
 
 
-        .col-sm-3
-          %ul.list-unstyled
-            %li.foot_white
-              %h4
-                Open Source
-            %li
-              %a{ href: "https://github.com/startupvictoria/membership-site" }
-                Fork me on Github
+          .col-sm-3
+            %ul.list-unstyled
+              %li.foot_white
+                %h4
+                  Open Source
+              %li
+                %a{ href: "https://github.com/startupvictoria/membership-site" }
+                  Fork me on Github
 
 
 = render "shared/google_analytics_footer"

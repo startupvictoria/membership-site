@@ -72,6 +72,7 @@ background:none !important;
 .pricing-table h3
 {
 color:#97242A !important;
+margin: 0;
 }
 .navbar-collapse.collapse.navbar-right {
   width: 75%;

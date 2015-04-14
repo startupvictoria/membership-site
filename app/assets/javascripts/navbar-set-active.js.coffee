@@ -2,7 +2,7 @@ navbar_set_active_class = (parent_class) ->
   $(parent_class + " li a").each ->
     if (window.location.pathname == $(this).attr("href"))
       $(parent_class + " li").removeClass "active"
-      $(this).parent().addClass "active"
+      $(this).parents('li').addClass "active"
       return false
 
 navbar_set_active = ->

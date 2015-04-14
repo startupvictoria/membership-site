@@ -1,21 +1,38 @@
 #events-tab {
     margin-top: 60px;
-    margin-bottom: 15px;
     border-bottom: none;
+}
+
+#events-tab > li {
+    margin-bottom: 15px;
+}
+
+#events-tab .bootstrap-select {
+    margin-bottom: 15px;
 }
 
 .event-list-item {
     border-top-style: solid;
     padding: 10px 0 10px 0;
 }
+
 .event-list-item:last-child {
     border-style: solid none solid none;
 }
+
 .event-time {
-	line-height: 150%;
-	text-align: center;
+    line-height: 150%;
+    text-align: center;
 }
 
 .bootstrap-select > button {
-	padding: 10px 15px !important;
+    padding: 10px 15px !important;
+}
+
+.bootstrap-select .dropdown-menu {
+    padding-top: 20px;
+}
+
+.bootstrap-select .dropdown-menu li.divider:hover {
+    background-color: #e5e5e5 !important;
 }

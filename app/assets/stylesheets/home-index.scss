@@ -29,18 +29,26 @@
   margin-bottom: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .homerow .inner_content {
     padding: 60px 0;
   }
-}
-
-@media (min-width: 980px) {
   .landing-banner-item {
-    height: 260px;
+    height: 345px;
 
     .tile {
       height: 100%;
     }
+
+  }
+}
+
+@media (min-width: 1200px) {
+  .landing-banner-item {
+    height: 290px;
+  }
+
+  .landing-banner-item:nth-child(2) .tile {
+    padding: 15px 50px;
   }
 }

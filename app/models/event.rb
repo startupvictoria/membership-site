@@ -4,6 +4,8 @@ class Event < ActiveRecord::Base
   belongs_to :event_venue
   belongs_to :event_organizer
 
+  just_define_datetime_picker :starts_at
+
   scope :with_time_horizon, ->(time_horizon) do
     case time_horizon
       when :upcoming then where("starts_at > ?", Time.now).order("events.starts_at ASC")

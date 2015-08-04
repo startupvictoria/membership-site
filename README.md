@@ -13,8 +13,6 @@ High Priority:
 
 * /betterfounder to showcase the Better Founder Groups and their members
 
-* ActiveAdmin datepicker for the starts_at field of /admin/events/new
-
 Low Priority:
 
 * email capture for the newsletter that doesn't take the user off site.

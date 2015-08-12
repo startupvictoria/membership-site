@@ -19,25 +19,22 @@
               = link_to("member", memberships_path)
               to access the coupon codes.
 
-%hr
-
-.container
-  - @coupons.each_index do |i|
-    - coupon = @coupons[i]
-    - if (i % 3) == 0
-      .row
-    .col-sm-4
-      %a.offerslink{ href: coupon_path(coupon) }
-        .inneroffer
-          %div
-            - if coupon.has_logo?
-              = image_tag coupon.logo_path, border: "0"
-            .showdet
-              %br
-              %h3
-                Coupon Details
-              %br
-              %br
-              = coupon.teaser_description
-          .compname
-            = coupon.teaser_name
+.container.container--coupons
+  .row
+    - @coupons.each_index do |i|
+      - coupon = @coupons[i]
+      .col-xs-12.col-sm-4.col-lg-3
+        %a.offerslink{ href: coupon_path(coupon) }
+          .inneroffer
+            %div
+              - if coupon.has_logo?
+                = image_tag coupon.logo_path, border: "0"
+              .showdet
+                %br
+                %h3
+                  Coupon Details
+                %br
+                %br
+                = coupon.teaser_description
+            .compname
+              = coupon.teaser_name

@@ -18,9 +18,13 @@
 }
 
 #footer_alt  li {
-	padding-bottom: 5px;
 	border-bottom: 1px #444 solid;
 	line-height: 22px;
+	padding: 5px 0;
+}
+
+#footer_alt li a {
+	display: inline-block;
 }
 
 #footer_alt li:last-child { border-bottom: 0; }

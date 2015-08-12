@@ -15,55 +15,56 @@
             We are a nonprofit organisation dedicated to building and supporting Victoria's startup ecosystem. 
 
 .container#mission
-  .col-sm-10
-    %h1
-      Our Mission
+  .row
+    .col-sm-10
+      %h1
+        Our Mission
 
-    %p
-      Startups are hard, and they require resilience and
-      determination. If they were easy, everyone would be starting
-      one. Since there aren't that many of us crazy enough to take on
-      this huge challenge, we need to band together.
+      %p
+        Startups are hard, and they require resilience and
+        determination. If they were easy, everyone would be starting
+        one. Since there aren't that many of us crazy enough to take on
+        this huge challenge, we need to band together.
 
-    %p
-      Startup Victoria is all about helping you find the other people
-      around you who are fighting the good fight as well. It's a place
-      to celebrate your wins, commiserate over struggles and push each
-      other further along the path to success.
+      %p
+        Startup Victoria is all about helping you find the other people
+        around you who are fighting the good fight as well. It's a place
+        to celebrate your wins, commiserate over struggles and push each
+        other further along the path to success.
 
-    %p
-      We all need a support team to help us keep going when times are
-      tough, and startup founders are no different. Startup Victoria is
-      the place to find resources to guide you and people to inspire
-      you on your Startup journey.
+      %p
+        We all need a support team to help us keep going when times are
+        tough, and startup founders are no different. Startup Victoria is
+        the place to find resources to guide you and people to inspire
+        you on your Startup journey.
 
-    %h1
-      Become a volunteer
+      %h1
+        Become a volunteer
 
-    %br
+      %br
 
-    .row
-      .col-sm-12
-        %p
-          Startup Victoria is a volunteer-driven organisation. We threw together this video to give you a feel for the vibe. We encourage you to volunteer - 
-          %a{ href: new_contact_path }
-            get in touch
-          \!
+      .row
+        .col-sm-12
+          %p
+            Startup Victoria is a volunteer-driven organisation. We threw together this video to give you a feel for the vibe. We encourage you to volunteer - 
+            %a{ href: new_contact_path }
+              get in touch
+            \!
 
-    .row
-      .col-sm-12
-        %h1
-          Our Board of directors
+      .row
+        .col-sm-12
+          %h1
+            Our Board of directors
+          .row
+            - Person.directors.each do |p|
+              - p = p.decorate context: { href_style: :url }
+              = render :partial => "shared/person", :locals => { person: p }
 
-        - Person.directors.each do |p|
-          - p = p.decorate context: { href_style: :url }
-          = render :partial => "shared/person", :locals => { person: p }
-
-    .row
-      .col-sm-12
-        %h1
-          Our Management
-
-        - Person.staff.each do |p|
-          - p = p.decorate context: { href_style: :url }
-          = render :partial => "shared/person", :locals => { person: p }
+      .row
+        .col-sm-12
+          %h1
+            Our Management
+          .row
+            - Person.staff.each do |p|
+              - p = p.decorate context: { href_style: :url }
+              = render :partial => "shared/person", :locals => { person: p }

@@ -1,6 +1,5 @@
-.contact-page h2 {
-  margin-bottom: 25px;
-
+.form-basic h3 {
+	margin: 0 0 40px 0;
 }
 
 .form-basic .new_contact_form textarea {
@@ -9,4 +8,18 @@
 
 .new_contact_form .row {
   margin-bottom: 10px;
+}
+
+.contact--form {
+	margin-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+	.contact--form {
+		margin-bottom: 0;
+	}
+}
+
+.contact--staff {
+	margin-top: 40px;
 }

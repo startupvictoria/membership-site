@@ -1,19 +1,18 @@
-.container
-  - events(time_horizon).each do |event|
-    .row.event-list-item{"itemscope" => true,
-      "data-event-organizer" => "#{event.event_organizer.name}",
-      "itemtype" => "http://data-vocabulary.org/Event" }
-      .container
-        .col-sm-2.col-sm-offset-1{"datetime" => "#{event.starts_at.strftime("%F")}T#{event.starts_at.strftime("%T%:z")}", "itemprop" => "startDate" }
-          .h4.event-time
-            = event.starts_at.strftime("%-d %b %Y, %-I:%M%p")
+- events(time_horizon).each do |event|
+  .event-list-item{"itemscope" => true,
+    "data-event-organizer" => "#{event.event_organizer.name}",
+    "itemtype" => "http://data-vocabulary.org/Event" }
+    .row
+      .col-sm-2.col-sm-offset-1{"datetime" => "#{event.starts_at.strftime("%F")}T#{event.starts_at.strftime("%T%:z")}", "itemprop" => "startDate" }
+        .h4.event-time
+          = event.starts_at.strftime("%-d %b %Y, %-I:%M%p")
 
-        .col-sm-6
-          .h4{ "itemprop" => "summary" }
-            = event.title
-          %p{ "itemprop" => "description" }
-            = event.short_description
+      .col-sm-6
+        .h4{ "itemprop" => "summary" }
+          = event.title
+        %p{ "itemprop" => "description" }
+          = event.short_description
 
-        .col-sm-3
-          %br
-          = link_to "See Details", event.url, class: "btn btn-info btn-lg center-block", itemprop: "url"
+      .col-sm-3
+        %br
+        = link_to "See Details", event.url, class: "btn btn-info btn-lg center-block", itemprop: "url"

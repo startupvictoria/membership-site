@@ -34,7 +34,7 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         "",
         "Michelle is the director of Artlivemedia and co-director of The Talent Door.",
         "Michelle-Bourke.png",
-        "http://au.linkedin.com/in/michellebourke/",
+        "https://au.linkedin.com/in/michellebourke/",
         :director
       ],
       [
@@ -42,7 +42,7 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         "",
         "Scott is the CEO of Attendly and Eventarc and a mentor at AngelCube.",
         "Scott-Handsaker.png",
-        "http://au.linkedin.com/in/scotthandsaker/",
+        "https://au.linkedin.com/in/scotthandsaker/",
         :director
       ],
       [
@@ -50,7 +50,7 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         "",
         "Miguel is Co-founder and CEO of Euler's Bridge and Co-founder of Tin Alley beta.",
         "Miguel-Wood.png",
-        "http://au.linkedin.com/in/migster/",
+        "https://au.linkedin.com/in/migster/",
         :director
       ],
       [
@@ -66,7 +66,7 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         "scott.handsaker@startupvictoria.com.au",
         "Interim Chief Executive Officer",
         "Scott-Handsaker.png",
-        "http://au.linkedin.com/in/scotthandsaker/",
+        "https://au.linkedin.com/in/scotthandsaker/",
         :staff
       ],
       [
@@ -74,7 +74,7 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         "thomas@startupvictoria.com.au",
         "Events Manager",
         "Thomas-Anbeek.png",
-        "http://au.linkedin.com/pub/thomas-anbeek/66/799/263/",
+        "https://au.linkedin.com/pub/thomas-anbeek/66/799/263/",
         :staff
       ],
       [

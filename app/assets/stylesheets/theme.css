@@ -1836,3 +1836,10 @@ blockquote footer {
 	blockquote cite {
 		font-style: italic;
 	}
+
+.person {
+  margin-bottom: 20px;
+}
+  .person.director p {
+    text-align: left;;
+  }

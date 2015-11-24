@@ -54,6 +54,14 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         :director
       ],
       [
+        "Sarah Hamilton",
+        "",
+        "Sarah is co-founder and CEO of bellabox.",
+        "Sarah-Hamilton.jpg",
+        "https://au.linkedin.com/in/sarahhamilton4",
+        :director
+      ],
+      [
         "Scott Handsaker",
         "scott.handsaker@startupvictoria.com.au",
         "Interim Chief Executive Officer",

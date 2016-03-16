@@ -3,7 +3,7 @@ language: ruby
 sudo: false
 
 rvm:
-  - 2.1.2
+  - 2.1.8
 
 cache:
   bundler: true
@@ -25,6 +25,5 @@ deploy:
 
 notifications:
   email:
-    - leni@startupvictoria.com.au
     - jay@startupvictoria.com.au
   on_success: always

@@ -72,7 +72,7 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
       [
         "Thomas Anbeek",
         "thomas@startupvictoria.com.au",
-        "Events Manager",
+        "Business Operations",
         "Thomas-Anbeek.png",
         "https://au.linkedin.com/pub/thomas-anbeek/66/799/263/",
         :staff

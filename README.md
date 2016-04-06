@@ -9,8 +9,6 @@ and would like to tackle something on this roadmap, we'd be grateful!
 
 High Priority:
 
-* /committees to showcase the committees
-
 * /betterfounder to showcase the Better Founder Groups and their members
 
 Low Priority:

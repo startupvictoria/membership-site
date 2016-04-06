@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   get  "/about/us", to: "about#us", as: :about_us
-  get  "/committees", to: "static_pages#committees", as: :committees
   post "/authenticate", to: "authentication#create", as: :authenticate
   get  "/contact-us", to: "contacts#new", as: :new_contact
   get  "/login", to: "authentication#login", as: :login

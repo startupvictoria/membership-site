@@ -9,11 +9,7 @@ and would like to tackle something on this roadmap, we'd be grateful!
 
 High Priority:
 
-* /committees to showcase the committees
-
 * /betterfounder to showcase the Better Founder Groups and their members
-
-* ActiveAdmin datepicker for the starts_at field of /admin/events/new
 
 Low Priority:
 

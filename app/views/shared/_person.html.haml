@@ -1,4 +1,4 @@
-.col-sm-3{ "itemscope" => true, "itemtype" => "http://data-vocabulary.org/Person"}
+.col-sm-4{ "itemscope" => true, "class" => "person #{person.role}", "itemtype" => "http://data-vocabulary.org/Person"}
   %center
 
     = image_tag "persons/#{person.image_filename}", border: "0", class: "img-circle", "itemprop" => "photo"

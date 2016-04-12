@@ -15,7 +15,9 @@ ActiveAdmin.register Event do
     :event_venue_id,
     :event_organizer_id,
     :url,
-    :starts_at,
+    :starts_at_date,
+    :starts_at_time_hour,
+    :starts_at_time_minute,
   )
 
   sidebar :organizers_and_venues do
@@ -47,7 +49,7 @@ ActiveAdmin.register Event do
       f.input :event_venue, :include_blank => false
       f.input :event_organizer, :include_blank => false
       f.input :url, placeholder: "http://example.com"
-      f.input :starts_at
+      f.input :starts_at, as: :just_datetime_picker
     end
 
     f.actions

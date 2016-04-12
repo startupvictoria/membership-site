@@ -34,7 +34,7 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         "",
         "Michelle is the director of Artlivemedia and co-director of The Talent Door.",
         "Michelle-Bourke.png",
-        "http://au.linkedin.com/in/michellebourke/",
+        "https://au.linkedin.com/in/michellebourke/",
         :director
       ],
       [
@@ -42,31 +42,39 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         "",
         "Scott is the CEO of Attendly and Eventarc and a mentor at AngelCube.",
         "Scott-Handsaker.png",
-        "http://au.linkedin.com/in/scotthandsaker/",
+        "https://au.linkedin.com/in/scotthandsaker/",
         :director
       ],
       [
-        "Brendan Lewis",
+        "Miguel Wood",
         "",
-        "Brendan is the founder of Churchill Club and the Australian representative of London & Partners.",
-        "Brendan-Lewis.png",
-        "http://au.linkedin.com/in/brendanlewis/",
+        "Miguel is Co-founder and CEO of Euler's Bridge and Co-founder of Tin Alley beta.",
+        "Miguel-Wood.png",
+        "https://au.linkedin.com/in/migster/",
         :director
       ],
       [
-        "Lars Lindstrom",
-        "lars@startupvictoria.com.au",
-        "Chief Executive Officer",
-        "Lars-Lindstrom.jpg",
-        "http://au.linkedin.com/in/larslindstromoz/",
+        "Sarah Hamilton",
+        "",
+        "Sarah is co-founder and CEO of bellabox.",
+        "Sarah-Hamilton.jpg",
+        "https://au.linkedin.com/in/sarahhamilton4",
+        :director
+      ],
+      [
+        "Scott Handsaker",
+        "scott.handsaker@startupvictoria.com.au",
+        "Interim Chief Executive Officer",
+        "Scott-Handsaker.png",
+        "https://au.linkedin.com/in/scotthandsaker/",
         :staff
       ],
       [
         "Thomas Anbeek",
         "thomas@startupvictoria.com.au",
-        "Events Manager",
+        "Business Operations",
         "Thomas-Anbeek.png",
-        "http://au.linkedin.com/pub/thomas-anbeek/66/799/263/",
+        "https://au.linkedin.com/pub/thomas-anbeek/66/799/263/",
         :staff
       ],
       [

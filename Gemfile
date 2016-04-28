@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.1.8"
+ruby "2.3.1"
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem "audited-activerecord", "~> 4.0.0.rc1", github: 'collectiveidea/audited'

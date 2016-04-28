@@ -1,0 +1,12 @@
+db:
+  image: postgres:9.4.6
+
+web:
+  build: .
+  ports:
+    - 3000:3000
+  volumes:
+    - '.:/app'
+  command: rake db:create db:migrate db:seed && foreman start
+  links:
+    - db

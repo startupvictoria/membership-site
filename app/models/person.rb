@@ -85,6 +85,14 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         "https://www.linkedin.com/in/lynchjay/",
         :staff
       ],
+      [
+        "Rohit Bhargava",
+        "rohit@startupvictoria.com.au",
+        "Events & Community Manager",
+        "Rohit-Bhargava.jpg",
+        "https://www.linkedin.com/in/rohbhargava/",
+        :staff
+      ],
     ].map do |a|
       new *a
     end

@@ -6,13 +6,18 @@
     .container.intro_wrapper
       .inner_content
         %h1.title
-          Startup-friendly events in Victoria
+          Startup Victoria
         %h1.intro
           %p
-            This list aims to be comprehensive.
-            %a{ href: new_contact_path }
-              Let us know
-            if something is missing.
+            Startup Victoria organises some of the biggest Tech Startup events in Melbourne and with a 4,500+ membership base we are one of the largest entrepreneurship groups in Australia. We are a nonprofit organisation dedicated to building and supporting Victoria's startup ecosystem.
+        %h1.title
+          Events
+        -# %h1.intro
+        -#   %p
+        -#     This list aims to be comprehensive.
+        -#     %a{ href: new_contact_path }
+        -#       Let us know
+        -#     if something is missing.
 
 .container
   %ul#events-tab.nav.nav-tabs{ role: "tablist" }
@@ -23,7 +28,7 @@
       %a{ href: "#previous" }
         Previous
 
-    %select.selectpicker.pull-right#fred{ "data-style" => "btn-warning",
+    %select.selectpicker.pull-right#fred{ "data-style" => "btn-primary",
       "data-width" => "auto",
       "data-default-option" => "Show All Events" }
       %option

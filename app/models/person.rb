@@ -62,19 +62,11 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         :director
       ],
       [
-        "Scott Handsaker",
-        "scott.handsaker@startupvictoria.com.au",
-        "Interim Chief Executive Officer",
-        "Scott-Handsaker.png",
-        "https://au.linkedin.com/in/scotthandsaker/",
-        :staff
-      ],
-      [
-        "Thomas Anbeek",
-        "thomas@startupvictoria.com.au",
-        "Business Operations",
-        "Thomas-Anbeek.png",
-        "https://au.linkedin.com/pub/thomas-anbeek/66/799/263/",
+        "Georgia Beattie",
+        "georgia.beattie@startupvictoria.com.au",
+        "Chief Executive Officer",
+        "georgia_beattie.png",
+        "https://au.linkedin.com/in/gbeattie/",
         :staff
       ],
       [
@@ -86,11 +78,11 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         :staff
       ],
       [
-        "Rohit Bhargava",
-        "rohit@startupvictoria.com.au",
-        "Events & Community Manager",
-        "Rohit-Bhargava.jpg",
-        "https://www.linkedin.com/in/rohbhargava/",
+        "Mei Chan",
+        "mei.chan@startupvictoria.com.au",
+        "Community and Events Manager",
+        "mei_chan.png",
+        "https://www.linkedin.com/in/meiyuanchan/",
         :staff
       ],
     ].map do |a|

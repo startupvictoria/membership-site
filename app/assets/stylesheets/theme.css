@@ -895,7 +895,7 @@ input[type="text"], input[type="search"] {
 .follow_us { text-align:center; margin:0 auto;  }
 .follow_us a {
 	font-size: 50px;
-	color: #fff;
+	color: #ff0032;
 	margin: 20px 25px 30px;
 	text-align: center;
 	-webkit-transition: all 0.2s ease-out;
@@ -905,7 +905,7 @@ input[type="text"], input[type="search"] {
 	background: transparent;
 	opacity: 0.3;
 }
-.follow_us a:hover {opacity: 1.0; color: #fff;}
+.follow_us a:hover {opacity: 1.0; color: #ff0032;}
 
 #footer h1 {
 	letter-spacing: 0.25em;

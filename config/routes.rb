@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   ActiveAdmin.routes(self)
 
-  root to: "home#index"
+  # root to: "home#index"
+  root to: "events#index"
 
   get  "/about/us", to: "about#us", as: :about_us
   post "/authenticate", to: "authentication#create", as: :authenticate

@@ -6,13 +6,20 @@
     .container.intro_wrapper
       .inner_content
         %h1.title
-          Startup-friendly events in Victoria
+          Startup Victoria
         %h1.intro
           %p
-            This list aims to be comprehensive.
-            %a{ href: new_contact_path }
-              Let us know
-            if something is missing.
+            Startup Victoria is a not-for-profit organisation set up to create More Founders and Better Founders.
+          %p  
+            Startup Victoria is the go-to destination for all startup related topics. We believe that Melbourne can be one of the world’s best cities to build a startup. We want to help make that a reality by helping to accelerate the growth of Victoria’s startup ecosystem.
+        %h1.title
+          Events
+        -# %h1.intro
+        -#   %p
+        -#     This list aims to be comprehensive.
+        -#     %a{ href: new_contact_path }
+        -#       Let us know
+        -#     if something is missing.
 
 .container
   %ul#events-tab.nav.nav-tabs{ role: "tablist" }
@@ -23,7 +30,7 @@
       %a{ href: "#previous" }
         Previous
 
-    %select.selectpicker.pull-right#fred{ "data-style" => "btn-warning",
+    %select.selectpicker.pull-right#fred{ "data-style" => "btn-primary",
       "data-width" => "auto",
       "data-default-option" => "Show All Events" }
       %option

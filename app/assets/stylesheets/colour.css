@@ -5,8 +5,8 @@ Author:  Jo
 Purchase:  http://themeforest.net/user/josweb
 */
 
-.header { background: #323A45; }
-#banner { background: #e9e6e1;  }
+.header { background: #ffffff; }
+#banner { background: white;  }
 ::-moz-selection{ color:#fff; background: #2BA6CB; }
 ::selection { color: #fff; background: #2BA6CB; }
 blockquote { border-left: 3px solid #2BA6CB; }
@@ -18,14 +18,14 @@ blockquote { border-left: 3px solid #2BA6CB; }
 .dropcap2 { color: #2BA6CB; }
 
 /**** BUTTONS ****/
-.btn-primary { background-color: #97242A; border: 0;}
+.btn-primary { background-color: #ff0032; border: 0;}
 .btn-primary:hover { background-color: #34495E;}
 .btn-inverse { background-color: #323A45;}
 .btn-inverse:hover { background-color: #3e4957;}
 .btn:visited, .btn:focus { color: #fff; }
 
 /**** LINKS ****/
-a { color: #97242A; }
+a { color: #ff0032; }
 a:hover { color: #555; }
 
 /**** WORK LINKS ****/
@@ -37,52 +37,52 @@ a:hover { color: #555; }
 	COLOURS
  ***************************************************/
 
-.hue { color: #97242A; }
+.hue { color: #ff0032; }
 .white { color: #fff; }
 .magnolia { color: #E9E6E1; }
 .grey { color: #999; }
 .grey2 { color: #69767F; }
 .asphalt { color: #34495E; }
 .colour { color: #2BA6CB; }
-.hue_block { 
-	background-color: #97242A;
+.hue_block {
+	background-color: #ff0032;
 	color: #fff;
-	padding: 0px 4px 2px; 
+	padding: 0px 4px 2px;
 	-moz-transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
-.hue_block:hover { background-color: #97242A; }
+.hue_block:hover { background-color: #ff0032; }
 
 /**** IMAGE HOVER COLOUR ****/
-.hover_img:hover, .hover_colour {  
+.hover_img:hover, .hover_colour {
 	background: #2980B9 url(../img/zoom.png) no-repeat 50% 50%;
 	-webkit-box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15);
 	-moz-box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15);
-    box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15); 
+    box-shadow: inset 0 0 0 7px rgba(255,255,255,0.15);
 }
 
 /***************************************************
 	MENU
  ***************************************************/
 
-#main_menu  .nav > li > a { color: #bbb; }
-#main_menu  .nav > .active > a, #main_menu  .nav> .active > a:hover { background: #2980B9; color: #fff!important; }
-#main_menu .nav > li > a:hover { background: transparent; color: #fff!important; }
-.dropdown-menu { background: #323A45; }
-.dropdown-menu  li a { color: #bbb;  }
-.dropdown-menu > li > a:hover, 
-.dropdown-menu > li > a:focus, 
-.dropdown-submenu:hover > a, 
+#main_menu  .nav > li > a { color: #ff0032; }
+#main_menu  .nav > .active > a, #main_menu  .nav> .active > a:hover { background: #ff0032; color: #fff!important; }
+#main_menu .nav > li > a:hover { background: transparent; color: #ff0032!important; }
+.dropdown-menu { background: #ff0032; }
+.dropdown-menu  li a { color: #d1d0d0;  }
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
 .dropdown-submenu:focus > a,
 .nav > li > a:focus { text-decoration: none;  color: #fff; background: transparent!important; }
 .navbar-toggle { color: #2980B9; background-color: #252525; }
-.navbar-toggle > .btn:hover, .navbar-toggle > .btn:focus { color: #fff; text-decoration: none; }
+.navbar-toggle > .btn:hover, .navbar-toggle > .btn:focus { color: #ff0032; text-decoration: none; }
 .navbar-toggle:hover { color: #fff; background-color: #2980B9; }
 
 /**** INDEX BOX ICONS ****/
-.intro-icon-large { color: #97242A; }
+.intro-icon-large { color: #ff0032; }
 .tile.tile-hot:before { background: url("../img/red_ribbon.png") 0 0 no-repeat; }
 
 
@@ -112,7 +112,7 @@ a:hover { color: #555; }
 .big_button a{ color: #fff; opacity: 1.0;}
 .big_button:hover{
 	color: #fff;
-	background: #ee574d; 
+	background: #ee574d;
 	-webkit-box-shadow: 0 5px 0px #9e3e37;
 	-moz-box-shadow: 0 5px 0px #9e3e37;
 	box-shadow: 0 5px 0px #9e3e37;
@@ -174,12 +174,12 @@ a.com_no { color: #fff; }
 .pagination ul > li > a:focus,
 .pagination ul > .active > a,
 .pagination ul > .active > span {
-	background-color: #2BA6CB; 
+	background-color: #2BA6CB;
     color: #fff;
 }
 .pagination ul > .active > a,
 .pagination ul > .active > span {
-    background-color: #2BA6CB; 
+    background-color: #2BA6CB;
     color: #fff;
     cursor: default;
 }
@@ -195,7 +195,7 @@ a.com_no { color: #fff; }
 	FOOTER
  ***************************************************/
 
-#footer { background-color: #97242A;}
+#footer { background-color: white;}
 #footer2 { background: #323A45; color: #999; }
 .copyright a { color: #888; }
 .copyright a:hover { color: #999; }
@@ -220,7 +220,7 @@ a.com_no { color: #fff; }
 .holder a.jp-current { background: #2BA6CD; color: #fff; border: 2px solid #2BA6CD; }
 a.jp-disabled:hover, .holder a.jp-next:hover { color: #fff; border: 2px solid #34495E; background: #34495E; }
 
-/* CAROUSELS */	
+/* CAROUSELS */
 .slider-title { background-color: #34495E; color: #bbb; }
 .slider-title:after { border-top-color: #34495E; }
 
@@ -252,8 +252,8 @@ a.jp-disabled:hover, .holder a.jp-next:hover { color: #fff; border: 2px solid #3
 
 /**** TABS ****/
 .nav-tabs { border-bottom: 1px solid #ccc; }
-.nav-tabs a { color: #fff!important; background-color: #2BA6CB!important; }
-.nav-tabs .active a, .nav-tabs a:hover, .nav-tabs .active a:focus { background-color: #34495E!important;}
+.nav-tabs a { color: #ff0032!important; background-color: white!important; }
+.nav-tabs .active a, .nav-tabs a:hover, .nav-tabs .active a:focus { background-color: rgba(255, 0, 50, 0.25)!important; color: #ff0032!important;}
 
 /***************************************************
 	TIMELINE

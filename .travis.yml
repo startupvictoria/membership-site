@@ -17,7 +17,7 @@ before_script:
 deploy:
   provider: heroku
   api_key:
-    secure: XZdezmth64p43J0uyTJ+oI+63e34lsrVcVygi3SW19p3OjQv/IpTMsXuvnTIilkBWHzVe/XEwglrwW9hXV4gaN31pFRBiVJvuZ5fzwYN6oJrX19cC7Ke412I0k44//4fB+Bq/dQl5rUBh2nDEZiK+C3fO4++S2ZD0/fyZ/yFXfs=
+    secure: "Nabq6z272QocI0BXDw+I8HvTqFHSFZUtQwcFQztSrg1XExoTXe5wROAlxbHVAVaYlKL2Oul8PbLYSiz7HK0qysTCoywjMKAkSS1uMqyZzUK7QGDMWFoQavayWkma4VtCwG+kNBaitpOmu6dgvYin70SEwlBTO1yXZrbE2i8cuRc="
   app: quiet-gorge-2868
   on:
     repo: startupvictoria/membership-site

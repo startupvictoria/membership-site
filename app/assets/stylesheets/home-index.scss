@@ -13,7 +13,36 @@
   width: 100%;
 }
 
+.tile.announcement {
+  margin: 2em 1em;
+  text-align: center;
+
+  .intro-icon-disc {
+    display: inline-block;
+
+    .intro-icon-large {
+      margin: 14px;
+    }
+  }
+
+  p {
+    display: inline-block;
+    font-size: 1.5em;
+  }
+}
+
 @media (min-width: 768px) {
+  .tile.announcement {
+    margin-bottom: -2em;
+    text-align: left;
+
+    p {
+      margin-left: 1em;
+      max-width: 80%;
+      vertical-align: middle;
+    }
+  }
+
   .landing-banner-item {
     height: 260px;
     margin: 10px auto;

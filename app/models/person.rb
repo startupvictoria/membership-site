@@ -46,14 +46,6 @@ class Person < Struct.new(:name, :email, :bio, :image_filename, :url, :role)
         :director
       ],
       [
-        "Miguel Wood",
-        "",
-        "Miguel is Co-founder and CEO of Euler's Bridge and Co-founder of Tin Alley beta.",
-        "Miguel-Wood.png",
-        "https://au.linkedin.com/in/migster/",
-        :director
-      ],
-      [
         "Sarah Hamilton",
         "",
         "Sarah is co-founder and CEO of bellabox.",

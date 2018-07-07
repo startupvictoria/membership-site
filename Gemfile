@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.1.8"
+ruby "2.2.9"
 
 gem 'activeadmin', '~> 1.0.0'
 gem "audited-activerecord", "~> 4.0.0"

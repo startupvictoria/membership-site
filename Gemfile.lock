@@ -330,9 +330,7 @@ DEPENDENCIES
   minitest
   pg (= 0.20)
   poltergeist
-  prawn
   prawn-rails
-  prawn-table
   rails (= 4.2.10)
   rails_12factor
   rb-readline

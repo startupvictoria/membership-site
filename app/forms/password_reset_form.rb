@@ -15,7 +15,7 @@ class PasswordResetForm
       token.save!
     end
 
-    PasswordResetMailer.reset_password(token).deliver
+    PasswordResetMailer.reset_password(token).deliver_now
 
     true
   end

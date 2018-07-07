@@ -100,10 +100,10 @@ GEM
       request_store (~> 1.0)
     erubis (2.7.0)
     execjs (2.7.0)
-    factory_girl (4.9.0)
+    factory_bot (4.10.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
+    factory_bot_rails (4.10.0)
+      factory_bot (~> 4.10.0)
       railties (>= 3.0.0)
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
@@ -172,7 +172,7 @@ GEM
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     pdf-core (0.7.0)
-    pg (0.21.0)
+    pg (0.20.0)
     poltergeist (1.18.1)
       capybara (>= 2.1, < 4)
       cliver (~> 0.3.1)
@@ -318,7 +318,7 @@ DEPENDENCIES
   database_cleaner
   dotenv-rails
   draper
-  factory_girl_rails (~> 4.0)
+  factory_bot_rails
   font-awesome-rails
   foreigner
   foreman
@@ -326,7 +326,7 @@ DEPENDENCIES
   heroku_rails_deflate
   jquery-rails
   just-datetime-picker
-  pg (~> 0.21)
+  pg (= 0.20)
   poltergeist
   prawn
   prawn-table

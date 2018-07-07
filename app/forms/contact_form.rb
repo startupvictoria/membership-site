@@ -27,7 +27,7 @@ class ContactForm
   def save
     return false unless valid?
 
-    ContactMailer.contact(attributes).deliver
+    ContactMailer.contact(attributes).deliver_now
 
     true
   end

@@ -2,7 +2,7 @@ ActiveAdmin.register User do
 
   actions :all, :except => [ :destroy ]
 
-  action_item :only => [ :edit ], :if => proc { u = User.find(params[:id]); u && !u.is_member? } do
+  action_item :edit, :if => proc { u = User.find(params[:id]); u && !u.is_member? } do
     link_to('Make This User A Member', make_member_admin_user_path(user))
   end
 

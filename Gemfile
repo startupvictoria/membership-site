@@ -14,7 +14,7 @@ gem 'foreman'
 gem 'haml'
 gem 'heroku_rails_deflate', :group => :production
 gem 'just-datetime-picker'
-gem 'pg', '~> 0.21'
+gem 'pg', '0.20'
 gem 'prawn'
 gem 'prawn-table'
 gem 'prawn_rails'
@@ -39,7 +39,7 @@ end
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
-  gem "factory_girl_rails", "~> 4.0"
+  gem "factory_bot_rails"
   gem 'poltergeist'
   gem 'rspec-rails', '>= 3.1.0'
   gem 'shoulda-matchers'

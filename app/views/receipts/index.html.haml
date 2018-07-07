@@ -4,7 +4,7 @@
 %h1
   Receipts
 
-.col-xs-8
+.col-xs-8{"data-turbolinks" => "false"}
   %table.table
     %thead
       %tr
@@ -30,4 +30,4 @@
           %td
             = receipt.amount
           %td
-            = link_to "Download", receipt_path(receipt.invoice_id)
+            = link_to "Download", receipt_path(receipt.invoice_id, :format => :pdf)

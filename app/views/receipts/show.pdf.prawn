@@ -1,6 +1,3 @@
-require "prawn"
-require 'prawn/table'
-
 prawn_document(filename: "startup-victoria-receipt-{receipt.invoice_id}.pdf", force_download: false) do |pdf|
   pdf.font "Helvetica" do
 

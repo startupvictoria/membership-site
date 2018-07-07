@@ -182,11 +182,12 @@ GEM
     prawn (2.2.2)
       pdf-core (~> 0.7.0)
       ttfunk (~> 1.5)
+    prawn-rails (1.2.0)
+      prawn
+      prawn-table
+      rails (>= 3.1.0)
     prawn-table (0.2.2)
       prawn (>= 1.3.0, < 3.0.0)
-    prawn_rails (0.0.11)
-      prawn (>= 0.11.1)
-      railties (>= 3.0.0)
     public_suffix (3.0.2)
     rack (1.6.10)
     rack-test (0.6.3)
@@ -262,8 +263,8 @@ GEM
       sprockets-rails (~> 2.0)
     sentry-raven (2.7.4)
       faraday (>= 0.7.6, < 1.0)
-    shoulda-matchers (3.1.2)
-      activesupport (>= 4.0.0)
+    shoulda-matchers (2.5.0)
+      activesupport (>= 3.0.0)
     sprockets (2.12.5)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -326,19 +327,20 @@ DEPENDENCIES
   heroku_rails_deflate
   jquery-rails
   just-datetime-picker
+  minitest
   pg (= 0.20)
   poltergeist
   prawn
+  prawn-rails
   prawn-table
-  prawn_rails
   rails (= 4.2.10)
   rails_12factor
   rb-readline
   responders (~> 2.0)
-  rspec-rails (>= 3.1.0)
+  rspec-rails (~> 3.4)
   sass-rails (~> 4.0.3)
   sentry-raven
-  shoulda-matchers
+  shoulda-matchers (= 2.5)
   stripe
   turbolinks
   uglifier (>= 1.3.0)

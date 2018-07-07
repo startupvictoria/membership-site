@@ -15,9 +15,7 @@ gem 'haml'
 gem 'heroku_rails_deflate', :group => :production
 gem 'just-datetime-picker'
 gem 'pg', '0.20'
-gem 'prawn'
-gem 'prawn-table'
-gem 'prawn_rails'
+gem 'prawn-rails'
 gem 'rails', '4.2.10'
 gem 'rb-readline'
 gem 'responders', '~> 2.0'
@@ -40,9 +38,10 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem "factory_bot_rails"
+  gem 'minitest'
   gem 'poltergeist'
-  gem 'rspec-rails', '>= 3.1.0'
-  gem 'shoulda-matchers'
+  gem 'rspec-rails', '~> 3.4'
+  gem 'shoulda-matchers', '2.5'
   gem 'vcr'
   gem 'webmock'
 end
